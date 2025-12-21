@@ -29,19 +29,19 @@ export default function NavBar() {
           <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/shop"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
             >
               My Shop
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
             >
               About Me
             </Link>
             <Link
               href="/blog"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
             >
               Stuff I&apos;ve Written
             </Link>
@@ -81,8 +81,8 @@ export default function NavBar() {
                 </svg>
 
                 {/* Rising bubbles outside jar */}
-                <div className="absolute -top-1 left-3 w-1.5 h-1.5 bg-kimchi-red/40 rounded-full animate-bounce" style={{ animationDuration: '1.2s' }} />
-                <div className="absolute -top-2 right-3 w-1 h-1 bg-kimchi-red/30 rounded-full animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }} />
+                <div className="absolute -top-1 left-3 w-1.5 h-1.5 bg-red-900/40 rounded-full animate-bounce" style={{ animationDuration: '1.2s' }} />
+                <div className="absolute -top-2 right-3 w-1 h-1 bg-red-900/30 rounded-full animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }} />
               </div>
 
               {/* Lightning bolts */}
@@ -125,7 +125,7 @@ export default function NavBar() {
             {/* Cart */}
             <Link
               href="/cart"
-              className="relative p-2 text-gray-700 hover:text-kimchi-red transition-colors group"
+              className="relative p-2 text-gray-700 hover:text-red-900 transition-colors group"
               aria-label="Shopping cart"
             >
               <svg
@@ -143,7 +143,7 @@ export default function NavBar() {
                 />
               </svg>
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-kimchi-red text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
+                <span className="absolute -top-1 -right-1 bg-red-900 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
                   {cartCount}
                 </span>
               )}
@@ -152,7 +152,7 @@ export default function NavBar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-kimchi-red transition-colors"
+              className="md:hidden p-2 text-gray-700 hover:text-red-900 transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -190,7 +190,7 @@ export default function NavBar() {
                 <svg className="w-3 h-4 text-yellow-400 animate-pulse" viewBox="0 0 12 16" fill="currentColor">
                   <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
                 </svg>
-                <span className="font-black text-kimchi-red">IT&apos;S ALIVE!</span>
+                <span className="font-black text-red-900">IT&apos;S ALIVE!</span>
                 <svg className="w-3 h-4 text-yellow-400 animate-pulse" style={{ animationDelay: '0.3s' }} viewBox="0 0 12 16" fill="currentColor">
                   <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
                 </svg>
@@ -199,21 +199,21 @@ export default function NavBar() {
 
             <Link
               href="/shop"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               My Shop
             </Link>
             <Link
               href="/about"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               About Me
             </Link>
             <Link
               href="/blog"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
+              className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Stuff I&apos;ve Written
@@ -222,7 +222,7 @@ export default function NavBar() {
             {/* Mobile Shop CTA */}
             <Link
               href="/shop"
-              className="mx-4 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
+              className="mx-4 py-3 bg-red-900 text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Grab Some Kimchi

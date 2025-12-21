@@ -100,7 +100,7 @@ export default function PairingSuggestions({ pairings, title = 'Perfect Pairings
                             <h4 className="font-semibold text-gray-900 flex items-center gap-2">
                               {pairing.name}
                               {pairing.isPerfectMatch && (
-                                <span className="px-2 py-0.5 bg-kimchi-red text-white text-xs font-medium rounded-full">
+                                <span className="px-2 py-0.5 bg-red-900 text-white text-xs font-medium rounded-full">
                                   Perfect Match
                                 </span>
                               )}

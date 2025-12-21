@@ -62,9 +62,9 @@ export default async function ArticlePage({ params }: Props) {
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="flex text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-kimchi-red">Home</Link>
+          <Link href="/" className="hover:text-red-900">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-kimchi-red">Blog</Link>
+          <Link href="/blog" className="hover:text-red-900">Blog</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900 truncate">{article.title}</span>
         </nav>
@@ -72,7 +72,7 @@ export default async function ArticlePage({ params }: Props) {
         {/* Header */}
         <header className="mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-kimchi-red/10 text-kimchi-red text-sm font-medium rounded-full">
+            <span className="px-3 py-1 bg-red-900/10 text-red-900 text-sm font-medium rounded-full">
               {article.category}
             </span>
             {article.published_at && (
@@ -103,7 +103,7 @@ export default async function ArticlePage({ params }: Props) {
             prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
             prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
             prose-p:text-gray-700 prose-p:leading-relaxed
-            prose-a:text-kimchi-red prose-a:no-underline hover:prose-a:underline
+            prose-a:text-red-900 prose-a:no-underline hover:prose-a:underline
             prose-strong:text-gray-900
             prose-ul:my-4 prose-li:text-gray-700
             prose-img:rounded-xl"
@@ -134,7 +134,7 @@ export default async function ArticlePage({ params }: Props) {
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://ollieskimchi.co.uk/blog/${article.slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-kimchi-red transition-colors"
+              className="text-gray-500 hover:text-red-900 transition-colors"
               aria-label="Share on Twitter"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export default async function ArticlePage({ params }: Props) {
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://ollieskimchi.co.uk/blog/${article.slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-kimchi-red transition-colors"
+              className="text-gray-500 hover:text-red-900 transition-colors"
               aria-label="Share on Facebook"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -181,10 +181,10 @@ export default async function ArticlePage({ params }: Props) {
                     </div>
                   )}
                   <div>
-                    <span className="text-xs text-kimchi-red font-medium">
+                    <span className="text-xs text-red-900 font-medium">
                       {related.category}
                     </span>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors line-clamp-2">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-red-900 transition-colors line-clamp-2">
                       {related.title}
                     </h3>
                   </div>
@@ -194,7 +194,7 @@ export default async function ArticlePage({ params }: Props) {
             <div className="mt-8 text-center">
               <Link
                 href="/blog"
-                className="text-kimchi-red font-medium hover:underline"
+                className="text-red-900 font-medium hover:underline"
               >
                 View all articles &rarr;
               </Link>
@@ -204,7 +204,7 @@ export default async function ArticlePage({ params }: Props) {
       )}
 
       {/* CTA */}
-      <section className="bg-kimchi-red py-16">
+      <section className="bg-red-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Try the Best Kimchi in London?
@@ -214,7 +214,7 @@ export default async function ArticlePage({ params }: Props) {
           </p>
           <Link
             href="/shop"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-kimchi-red font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-red-900 font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
           >
             Shop Now
           </Link>

@@ -122,15 +122,15 @@ export default function EmailPopup() {
                     type="checkbox"
                     checked={agreed}
                     onChange={(e) => setAgreed(e.target.checked)}
-                    className="mt-1 w-4 h-4 text-kimchi-red border-gray-300 rounded focus:ring-kimchi-red"
+                    className="mt-1 w-4 h-4 text-red-900 border-gray-300 rounded focus:ring-kimchi-red"
                   />
                   <span className="text-xs text-gray-600">
                     I agree to receive marketing emails and accept the{' '}
-                    <Link href="/privacy" className="text-kimchi-red underline" target="_blank">
+                    <Link href="/privacy" className="text-red-900 underline" target="_blank">
                       Privacy Policy
                     </Link>{' '}
                     and{' '}
-                    <Link href="/terms" className="text-kimchi-red underline" target="_blank">
+                    <Link href="/terms" className="text-red-900 underline" target="_blank">
                       Terms of Service
                     </Link>
                   </span>
@@ -141,7 +141,7 @@ export default function EmailPopup() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-kimchi-red text-white font-bold py-3 px-6 rounded-xl hover:bg-red-600 transition-colors disabled:opacity-50"
+                  className="w-full bg-red-900 text-white font-bold py-3 px-6 rounded-xl hover:bg-red-600 transition-colors disabled:opacity-50"
                 >
                   {isLoading ? 'Joining...' : 'Get My 15% Off'}
                 </button>
@@ -167,7 +167,7 @@ export default function EmailPopup() {
               Use this code at checkout:
             </p>
             <div className="mt-4 bg-gray-100 rounded-xl p-4">
-              <p className="text-4xl font-black text-kimchi-red tracking-wider">
+              <p className="text-4xl font-black text-red-900 tracking-wider">
                 OLLIE15
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function EmailPopup() {
             </p>
             <button
               onClick={handleClose}
-              className="mt-6 w-full bg-kimchi-red text-white font-bold py-3 px-8 rounded-xl hover:bg-red-600 transition-colors"
+              className="mt-6 w-full bg-red-900 text-white font-bold py-3 px-8 rounded-xl hover:bg-red-600 transition-colors"
             >
               Start Shopping
             </button>

@@ -44,7 +44,7 @@ export default function ComparisonTable({ data }: ComparisonTableProps) {
               <button
                 onClick={() => setActiveView('table')}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                  activeView === 'table' ? 'bg-white text-kimchi-red' : 'text-white'
+                  activeView === 'table' ? 'bg-white text-red-900' : 'text-white'
                 }`}
               >
                 Table
@@ -52,7 +52,7 @@ export default function ComparisonTable({ data }: ComparisonTableProps) {
               <button
                 onClick={() => setActiveView('cards')}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                  activeView === 'cards' ? 'bg-white text-kimchi-red' : 'text-white'
+                  activeView === 'cards' ? 'bg-white text-red-900' : 'text-white'
                 }`}
               >
                 Cards

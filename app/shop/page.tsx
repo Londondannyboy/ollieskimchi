@@ -147,7 +147,7 @@ export default async function ShopPage() {
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-display text-4xl font-semibold text-gray-900 text-center">
-            My <span className="text-kimchi-red">Kimchi</span> Shop
+            My <span className="text-red-900">Kimchi</span> Shop
           </h1>
           <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Handcrafted, naturally fermented kimchi delivered fresh to your door.
@@ -209,7 +209,7 @@ export default async function ShopPage() {
                     className="object-cover grayscale-[30%]"
                   />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <span className="bg-kimchi-red text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
+                    <span className="bg-red-900 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
                       Coming Soon
                     </span>
                   </div>
@@ -256,13 +256,13 @@ export default async function ShopPage() {
                   )}
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-red-900 transition-colors">
                     {product.title}
                   </h3>
                   <p className="mt-2 text-sm text-gray-600 line-clamp-2">
                     {product.description}
                   </p>
-                  <p className="mt-4 text-lg font-bold text-kimchi-red">
+                  <p className="mt-4 text-lg font-bold text-red-900">
                     {formatPrice(product.price)}
                   </p>
                 </div>
@@ -277,8 +277,8 @@ export default async function ShopPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="w-12 h-12 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                 </svg>
               </div>
@@ -286,8 +286,8 @@ export default async function ShopPage() {
               <p className="mt-2 text-sm text-gray-600">On orders over £30</p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -295,8 +295,8 @@ export default async function ShopPage() {
               <p className="mt-2 text-sm text-gray-600">Made in small batches</p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>

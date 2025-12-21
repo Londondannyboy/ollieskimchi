@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h2 className="text-3xl font-bold mb-2">
-              Ollie&apos;s <span className="text-kimchi-red">Kimchi</span>
+              Ollie&apos;s <span className="text-red-900">Kimchi</span>
             </h2>
             <p className="text-red-400 font-bold text-xl mb-4 electric-alive inline-block">
               It&apos;s Alive!
@@ -24,27 +24,27 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/shop" className="text-gray-300 hover:text-kimchi-red transition-colors">
+                <Link href="/shop" className="text-gray-300 hover:text-red-900 transition-colors">
                   My Shop
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-kimchi-red transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-red-900 transition-colors">
                   About Me
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-kimchi-red transition-colors">
+                <Link href="/blog" className="text-gray-300 hover:text-red-900 transition-colors">
                   Stuff I&apos;ve Written
                 </Link>
               </li>
               <li>
-                <Link href="/recipes" className="text-gray-300 hover:text-kimchi-red transition-colors">
+                <Link href="/recipes" className="text-gray-300 hover:text-red-900 transition-colors">
                   Recipes
                 </Link>
               </li>
               <li>
-                <Link href="/health" className="text-gray-300 hover:text-kimchi-red transition-colors">
+                <Link href="/health" className="text-gray-300 hover:text-red-900 transition-colors">
                   Health Benefits
                 </Link>
               </li>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@ollieskimchi.co.uk"
-                  className="hover:text-kimchi-red transition-colors"
+                  className="hover:text-red-900 transition-colors"
                 >
                   hello@ollieskimchi.co.uk
                 </a>
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://instagram.com/ollieskimchi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-kimchi-red transition-colors"
+                className="text-gray-300 hover:text-red-900 transition-colors"
                 aria-label="Follow me on Instagram"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -100,10 +100,10 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p>&copy; {new Date().getFullYear()} Ollie&apos;s Kimchi. Made by me, Ollie!</p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-kimchi-red transition-colors">
+              <Link href="/privacy" className="hover:text-red-900 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-kimchi-red transition-colors">
+              <Link href="/terms" className="hover:text-red-900 transition-colors">
                 Terms of Service
               </Link>
             </div>

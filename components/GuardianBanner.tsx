@@ -41,7 +41,7 @@ export default function GuardianBanner() {
           href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
           target="_blank"
           rel="noopener noreferrer"
-          className="ml-2 text-kimchi-red hover:text-red-400 font-semibold underline underline-offset-2 transition-colors"
+          className="ml-2 text-red-900 hover:text-red-400 font-semibold underline underline-offset-2 transition-colors"
         >
           Read Review →
         </Link>

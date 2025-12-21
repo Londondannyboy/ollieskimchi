@@ -52,7 +52,7 @@ export default function ProductCards({ products, title = 'Recommended Products' 
                 {/* Ollie's Pick Badge */}
                 {product.isOlliesPick && (
                   <div className="absolute top-3 right-3 z-10">
-                    <span className="px-3 py-1 bg-kimchi-red text-white text-xs font-bold rounded-full shadow-lg">
+                    <span className="px-3 py-1 bg-red-900 text-white text-xs font-bold rounded-full shadow-lg">
                       Ollie&apos;s Pick
                     </span>
                   </div>
@@ -88,7 +88,7 @@ export default function ProductCards({ products, title = 'Recommended Products' 
 
                   {/* Price Range */}
                   {product.priceRange && (
-                    <p className="text-lg font-semibold text-kimchi-red mb-3">
+                    <p className="text-lg font-semibold text-red-900 mb-3">
                       {product.priceRange}
                     </p>
                   )}
@@ -143,7 +143,7 @@ export default function ProductCards({ products, title = 'Recommended Products' 
                       href={product.buyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block w-full text-center px-4 py-2 bg-kimchi-red text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
+                      className="block w-full text-center px-4 py-2 bg-red-900 text-white font-medium rounded-lg hover:bg-red-700 transition-colors"
                     >
                       View Product
                     </a>

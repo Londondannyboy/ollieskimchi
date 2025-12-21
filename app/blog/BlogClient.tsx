@@ -70,7 +70,7 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-4xl font-bold text-gray-900 text-center">
-            The <span className="text-kimchi-red">Kimchi</span> Blog
+            The <span className="text-red-900">Kimchi</span> Blog
           </h1>
           <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             {articles.length} articles about recipes, health benefits, and everything kimchi.
@@ -121,8 +121,8 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
             onClick={() => setSelectedCategory(null)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               selectedCategory === null
-                ? 'bg-kimchi-red text-white'
-                : 'bg-white text-gray-700 border border-gray-200 hover:border-kimchi-red hover:text-kimchi-red'
+                ? 'bg-red-900 text-white'
+                : 'bg-white text-gray-700 border border-gray-200 hover:border-kimchi-red hover:text-red-900'
             }`}
           >
             All ({articles.length})
@@ -135,8 +135,8 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
                 onClick={() => setSelectedCategory(selectedCategory === category ? null : category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === category
-                    ? 'bg-kimchi-red text-white'
-                    : 'bg-white text-gray-700 border border-gray-200 hover:border-kimchi-red hover:text-kimchi-red'
+                    ? 'bg-red-900 text-white'
+                    : 'bg-white text-gray-700 border border-gray-200 hover:border-kimchi-red hover:text-red-900'
                 }`}
               >
                 {categoryLabels[category] || category} ({count})
@@ -163,7 +163,7 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
                 setSearchQuery('')
                 setSelectedCategory(null)
               }}
-              className="mt-4 text-kimchi-red hover:underline"
+              className="mt-4 text-red-900 hover:underline"
             >
               Clear filters
             </button>
@@ -193,13 +193,13 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
                       {categoryLabels[article.category] || article.category}
                     </span>
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors line-clamp-2">
+                  <h2 className="text-xl font-semibold text-gray-900 group-hover:text-red-900 transition-colors line-clamp-2">
                     {article.title}
                   </h2>
                   <p className="mt-2 text-gray-600 line-clamp-3">
                     {article.excerpt}
                   </p>
-                  <div className="mt-4 text-kimchi-red font-medium text-sm group-hover:underline">
+                  <div className="mt-4 text-red-900 font-medium text-sm group-hover:underline">
                     Read more &rarr;
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
       </div>
 
       {/* Newsletter CTA */}
-      <div className="bg-kimchi-red py-16">
+      <div className="bg-red-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Get Fermentation Tips in Your Inbox
@@ -226,7 +226,7 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
             />
             <button
               type="submit"
-              className="px-6 py-3 bg-white text-kimchi-red font-semibold rounded-full hover:bg-gray-100 transition-colors"
+              className="px-6 py-3 bg-white text-red-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
             >
               Subscribe
             </button>

@@ -127,13 +127,13 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           <article className="lg:col-span-8">
         {/* Breadcrumb */}
         <nav className="flex text-sm text-gray-500 mb-6">
-          <Link href="/" className="hover:text-kimchi-red">Home</Link>
+          <Link href="/" className="hover:text-red-900">Home</Link>
           <span className="mx-2">/</span>
           {article.cluster !== 'pillar' && (
             <>
               <Link
                 href={`/${article.cluster === 'recipes' ? 'recipes' : article.cluster}`}
-                className="hover:text-kimchi-red capitalize"
+                className="hover:text-red-900 capitalize"
               >
                 {article.cluster}
               </Link>
@@ -146,7 +146,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
         {/* Header */}
         <header className="mb-10">
           <div className="flex items-center gap-3 mb-6">
-            <span className="px-4 py-1.5 bg-kimchi-red text-white text-sm font-bold rounded-full capitalize">
+            <span className="px-4 py-1.5 bg-red-900 text-white text-sm font-bold rounded-full capitalize">
               {article.cluster}
             </span>
             {article.published_at && (
@@ -181,7 +181,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
               />
               <div>
                 <p className="font-medium text-gray-900">{article.author}</p>
-                <p className="text-xs text-kimchi-red font-medium">Kimchi Obsessive</p>
+                <p className="text-xs text-red-900 font-medium">Kimchi Obsessive</p>
               </div>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
                 <li key={heading.id}>
                   <a
                     href={`#${heading.id}`}
-                    className="text-gray-600 hover:text-kimchi-red transition-colors"
+                    className="text-gray-600 hover:text-red-900 transition-colors"
                   >
                     {heading.text}
                   </a>
@@ -237,11 +237,11 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           className="article-content prose prose-xl prose-gray max-w-none
             prose-headings:text-gray-900 prose-headings:font-bold prose-headings:tracking-tight
             prose-h1:text-4xl prose-h1:mt-16 prose-h1:mb-6 prose-h1:pb-4 prose-h1:border-b-2 prose-h1:border-kimchi-red
-            prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:scroll-mt-20 prose-h2:text-kimchi-red
+            prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:scroll-mt-20 prose-h2:text-red-900
             prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
             prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:font-semibold
             prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
-            prose-a:text-kimchi-red prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-red-700
+            prose-a:text-red-900 prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-red-700
             prose-strong:text-gray-900 prose-strong:font-bold
             prose-em:text-gray-800 prose-em:italic
             prose-ul:my-6 prose-ul:pl-6
@@ -249,12 +249,12 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
             prose-li:text-gray-700 prose-li:text-lg prose-li:mb-3 prose-li:leading-relaxed
             prose-blockquote:border-l-4 prose-blockquote:border-kimchi-red prose-blockquote:bg-red-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:italic prose-blockquote:text-gray-700
             prose-table:my-8 prose-table:rounded-xl prose-table:overflow-hidden
-            prose-th:bg-kimchi-red prose-th:text-white prose-th:px-6 prose-th:py-4 prose-th:text-left prose-th:font-bold
+            prose-th:bg-red-900 prose-th:text-white prose-th:px-6 prose-th:py-4 prose-th:text-left prose-th:font-bold
             prose-td:px-6 prose-td:py-4 prose-td:border-t prose-td:border-gray-200
             prose-tr:even:bg-gray-50
             prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8
             prose-hr:my-12 prose-hr:border-gray-200
-            prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-kimchi-red prose-code:font-mono
+            prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-red-900 prose-code:font-mono
             prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6"
           dangerouslySetInnerHTML={{ __html: parsedContent }}
         />
@@ -310,7 +310,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(`https://ollieskimchi.co.uk/${article.slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-kimchi-red transition-colors"
+              className="text-gray-500 hover:text-red-900 transition-colors"
               aria-label="Share on Twitter"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -321,7 +321,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://ollieskimchi.co.uk/${article.slug}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-kimchi-red transition-colors"
+              className="text-gray-500 hover:text-red-900 transition-colors"
               aria-label="Share on Facebook"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -332,7 +332,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
               href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://ollieskimchi.co.uk/${article.slug}`)}&title=${encodeURIComponent(article.title)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-kimchi-red transition-colors"
+              className="text-gray-500 hover:text-red-900 transition-colors"
               aria-label="Share on LinkedIn"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -377,26 +377,26 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-kimchi-red/20 to-red-100 flex items-center justify-center">
-                        <svg className="w-16 h-16 text-kimchi-red/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-16 h-16 text-red-900/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                       </div>
                     )}
                     <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 bg-kimchi-red text-white text-xs font-bold rounded-full capitalize">
+                      <span className="px-3 py-1 bg-red-900 text-white text-xs font-bold rounded-full capitalize">
                         {related.cluster}
                       </span>
                     </div>
                   </div>
                   {/* Content */}
                   <div className="p-5">
-                    <h3 className="font-bold text-gray-900 group-hover:text-kimchi-red transition-colors line-clamp-2 mb-2">
+                    <h3 className="font-bold text-gray-900 group-hover:text-red-900 transition-colors line-clamp-2 mb-2">
                       {related.title}
                     </h3>
                     <p className="text-sm text-gray-600 line-clamp-2">
                       {related.excerpt}
                     </p>
-                    <div className="mt-4 flex items-center text-kimchi-red font-medium text-sm">
+                    <div className="mt-4 flex items-center text-red-900 font-medium text-sm">
                       Read more
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -411,7 +411,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
       )}
 
       {/* CTA */}
-      <section className="bg-kimchi-red py-16">
+      <section className="bg-red-900 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Try Authentic Kimchi?
@@ -421,7 +421,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           </p>
           <Link
             href="/shop"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-kimchi-red font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-red-900 font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
           >
             Shop Now
           </Link>

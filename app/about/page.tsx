@@ -21,7 +21,7 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl lg:text-6xl font-semibold mb-6">
-            Olli&apos;s <span className="text-kimchi-red">Story</span>
+            Olli&apos;s <span className="text-red-900">Story</span>
           </h1>
           <p className="text-xl lg:text-2xl text-gray-300">
             From professional kitchens to jars of living, breathing kimchi.
@@ -42,7 +42,7 @@ export default function AboutPage() {
                 height={600}
                 className="rounded-2xl shadow-xl mx-auto"
               />
-              <div className="absolute -bottom-4 -right-4 bg-kimchi-red text-white px-6 py-3 rounded-full font-display font-semibold shadow-lg">
+              <div className="absolute -bottom-4 -right-4 bg-red-900 text-white px-6 py-3 rounded-full font-display font-semibold shadow-lg">
                 Chef & Founder
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function AboutPage() {
             {/* Story */}
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900 mb-6">
-                Meet <span className="text-kimchi-red">Olli</span>
+                Meet <span className="text-red-900">Olli</span>
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
-              The <span className="text-kimchi-red">Craft</span>
+              The <span className="text-red-900">Craft</span>
             </h2>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
               What I learned in professional kitchens, I now put into every jar.
@@ -94,8 +94,8 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-              <div className="w-16 h-16 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -106,8 +106,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-              <div className="w-16 h-16 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -118,8 +118,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-              <div className="w-16 h-16 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -130,8 +130,8 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-              <div className="w-16 h-16 bg-kimchi-red/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-kimchi-red text-white">
+      <section className="py-20 bg-red-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-4xl lg:text-5xl font-semibold mb-6 italic">
             It&apos;s Alive!
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/shop"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-kimchi-red font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-red-900 font-semibold rounded-full text-lg hover:bg-gray-100 transition-colors"
             >
               Shop Now
             </Link>

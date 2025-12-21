@@ -189,9 +189,9 @@ export default async function ProductPage({ params }: Props) {
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <nav className="flex text-sm text-gray-500">
-          <Link href="/" className="hover:text-kimchi-red">Home</Link>
+          <Link href="/" className="hover:text-red-900">Home</Link>
           <span className="mx-2">/</span>
-          <Link href="/shop" className="hover:text-kimchi-red">Shop</Link>
+          <Link href="/shop" className="hover:text-red-900">Shop</Link>
           <span className="mx-2">/</span>
           <span className="text-gray-900">{product.title}</span>
         </nav>
@@ -258,7 +258,7 @@ export default async function ProductPage({ params }: Props) {
             <h1 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
               {product.title}
             </h1>
-            <p className="mt-4 text-3xl font-bold text-kimchi-red">
+            <p className="mt-4 text-3xl font-bold text-red-900">
               {formatPrice(product.price)}
             </p>
 
@@ -284,13 +284,13 @@ export default async function ProductPage({ params }: Props) {
                     </svg>
                   ))}
                 </div>
-                <span className="text-[10px] font-semibold text-kimchi-red bg-kimchi-red/10 px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-semibold text-red-900 bg-red-900/10 px-2 py-0.5 rounded-full">
                   BEST ALL-ROUNDER
                 </span>
               </div>
               <p className="text-gray-600 italic text-sm leading-relaxed">
                 &ldquo;Big flavour... hits that sweet spot between funk and freshness.&rdquo;
-                <span className="text-kimchi-red ml-1 not-italic group-hover:underline">Read review →</span>
+                <span className="text-red-900 ml-1 not-italic group-hover:underline">Read review →</span>
               </p>
             </Link>
 

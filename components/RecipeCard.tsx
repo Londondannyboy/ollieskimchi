@@ -301,7 +301,7 @@ export default function RecipeCard({
                 <button
                   onClick={() => setQuickMultiplier(0.5)}
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    servingMultiplier === 0.5 ? 'bg-white text-kimchi-red' : 'bg-white/20 hover:bg-white/30'
+                    servingMultiplier === 0.5 ? 'bg-white text-red-900' : 'bg-white/20 hover:bg-white/30'
                   }`}
                 >
                   Half
@@ -309,7 +309,7 @@ export default function RecipeCard({
                 <button
                   onClick={() => setQuickMultiplier(1)}
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    servingMultiplier === 1 ? 'bg-white text-kimchi-red' : 'bg-white/20 hover:bg-white/30'
+                    servingMultiplier === 1 ? 'bg-white text-red-900' : 'bg-white/20 hover:bg-white/30'
                   }`}
                 >
                   Original
@@ -317,7 +317,7 @@ export default function RecipeCard({
                 <button
                   onClick={() => setQuickMultiplier(2)}
                   className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                    servingMultiplier === 2 ? 'bg-white text-kimchi-red' : 'bg-white/20 hover:bg-white/30'
+                    servingMultiplier === 2 ? 'bg-white text-red-900' : 'bg-white/20 hover:bg-white/30'
                   }`}
                 >
                   Double
@@ -357,12 +357,12 @@ export default function RecipeCard({
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <svg className="w-6 h-6 text-kimchi-red no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-red-900 no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                   Ingredients
                   {servingMultiplier !== 1 && (
-                    <span className="text-sm font-normal text-kimchi-red no-print">
+                    <span className="text-sm font-normal text-red-900 no-print">
                       (adjusted for {currentServings})
                     </span>
                   )}
@@ -371,7 +371,7 @@ export default function RecipeCard({
                 {ingredients.map((section, idx) => (
                   <div key={idx} className="mb-6">
                     {section.section && (
-                      <h4 className="text-sm font-semibold text-kimchi-red uppercase tracking-wide mb-3">
+                      <h4 className="text-sm font-semibold text-red-900 uppercase tracking-wide mb-3">
                         {section.section}
                       </h4>
                     )}
@@ -384,7 +384,7 @@ export default function RecipeCard({
                               type="checkbox"
                               checked={checkedIngredients.has(`${idx}-${i}`)}
                               onChange={() => toggleIngredient(`${idx}-${i}`)}
-                              className="mt-1 w-5 h-5 rounded border-gray-300 text-kimchi-red focus:ring-kimchi-red no-print"
+                              className="mt-1 w-5 h-5 rounded border-gray-300 text-red-900 focus:ring-kimchi-red no-print"
                             />
                             <span className={`text-gray-700 ${checkedIngredients.has(`${idx}-${i}`) ? 'line-through text-gray-400' : ''}`}>
                               {ingredient.amount && (
@@ -409,7 +409,7 @@ export default function RecipeCard({
             {/* Method Column */}
             <div className="lg:col-span-2">
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <svg className="w-6 h-6 text-kimchi-red no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-red-900 no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
                 Method
@@ -429,7 +429,7 @@ export default function RecipeCard({
                     <div className={`flex-shrink-0 w-10 h-10 print:w-6 print:h-6 rounded-full flex items-center justify-center font-bold ${
                       completedSteps.has(step.step)
                         ? 'bg-green-500 text-white'
-                        : 'bg-kimchi-red text-white print:bg-gray-800'
+                        : 'bg-red-900 text-white print:bg-gray-800'
                     }`}>
                       {completedSteps.has(step.step) ? (
                         <svg className="w-6 h-6 no-print" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,7 +443,7 @@ export default function RecipeCard({
                         {step.instruction}
                       </p>
                       {step.tip && (
-                        <p className="mt-2 text-sm text-kimchi-red bg-kimchi-red/10 rounded-lg p-3 print:bg-gray-100 print:text-gray-700">
+                        <p className="mt-2 text-sm text-red-900 bg-red-900/10 rounded-lg p-3 print:bg-gray-100 print:text-gray-700">
                           <strong>Tip:</strong> {step.tip}
                         </p>
                       )}

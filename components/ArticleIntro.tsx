@@ -15,7 +15,7 @@ export default function ArticleIntro({ title, excerpt, author = "Ollie's Kimchi"
     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl overflow-hidden mb-12">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-kimchi-red rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-red-900 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
       </div>
 
@@ -34,7 +34,7 @@ export default function ArticleIntro({ title, excerpt, author = "Ollie's Kimchi"
                 />
               </div>
               {/* "It's Alive" badge */}
-              <div className="absolute -bottom-2 -right-2 bg-kimchi-red text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg wiggle-slow">
+              <div className="absolute -bottom-2 -right-2 bg-red-900 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg wiggle-slow">
                 It&apos;s Alive!
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function ArticleIntro({ title, excerpt, author = "Ollie's Kimchi"
             {/* Meta */}
             <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
               {category && (
-                <span className="px-3 py-1 bg-kimchi-red text-white text-sm font-bold rounded-full">
+                <span className="px-3 py-1 bg-red-900 text-white text-sm font-bold rounded-full">
                   {category}
                 </span>
               )}
@@ -70,7 +70,7 @@ export default function ArticleIntro({ title, excerpt, author = "Ollie's Kimchi"
             <div className="flex items-center justify-center md:justify-start gap-2 text-gray-400">
               <span>By</span>
               <span className="text-white font-medium">{author}</span>
-              <span className="text-kimchi-red">• Kimchi Obsessive</span>
+              <span className="text-red-900">• Kimchi Obsessive</span>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function ArticleIntro({ title, excerpt, author = "Ollie's Kimchi"
               <p className="text-white text-lg italic">
                 &quot;I&apos;ve been obsessing over this stuff for years. Let me share what I&apos;ve learned!&quot;
               </p>
-              <p className="text-kimchi-red font-bold mt-2">— Ollie</p>
+              <p className="text-red-900 font-bold mt-2">— Ollie</p>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ export function OllieQuote({ quote, context }: { quote: string; context?: string
           <p className="text-gray-800 text-lg italic leading-relaxed">
             &quot;{quote}&quot;
           </p>
-          <p className="text-kimchi-red font-bold mt-2">
+          <p className="text-red-900 font-bold mt-2">
             — Ollie {context && <span className="text-gray-500 font-normal">({context})</span>}
           </p>
         </div>

@@ -72,7 +72,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
             {/* Timeline line */}
             <div className="absolute top-8 left-0 right-0 h-1 bg-gray-200">
               <div
-                className="h-full bg-kimchi-red transition-all duration-500"
+                className="h-full bg-red-900 transition-all duration-500"
                 style={{
                   width: activeStage
                     ? `${((stages.findIndex(s => s.id === activeStage) + 1) / stages.length) * 100}%`
@@ -89,7 +89,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
                   ? stages.findIndex(s => s.id === activeStage) >= idx
                   : false
                 const iconKey = stage.icon || 'ferment'
-                const colorClass = stageColors[iconKey] || 'bg-kimchi-red'
+                const colorClass = stageColors[iconKey] || 'bg-red-900'
 
                 return (
                   <div
@@ -113,7 +113,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
 
                     {/* Day label */}
                     <p className={`mt-3 text-sm font-semibold ${
-                      isPast || isActive ? 'text-kimchi-red' : 'text-gray-500'
+                      isPast || isActive ? 'text-red-900' : 'text-gray-500'
                     }`}>
                       {stage.day || stage.date}
                     </p>
@@ -132,7 +132,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
 
                     {/* Active indicator */}
                     {isActive && (
-                      <div className="mt-2 px-3 py-1 bg-kimchi-red text-white text-xs font-medium rounded-full">
+                      <div className="mt-2 px-3 py-1 bg-red-900 text-white text-xs font-medium rounded-full">
                         You are here
                       </div>
                     )}
@@ -157,7 +157,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
                       <ul className="space-y-1">
                         {stage.tips.map((tip, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                            <svg className="w-4 h-4 text-kimchi-red mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4 text-red-900 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             {tip}
@@ -178,7 +178,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
             {/* Vertical line */}
             <div className="absolute top-0 bottom-0 left-8 w-1 bg-gray-200">
               <div
-                className="w-full bg-kimchi-red transition-all duration-500"
+                className="w-full bg-red-900 transition-all duration-500"
                 style={{
                   height: activeStage
                     ? `${((stages.findIndex(s => s.id === activeStage) + 1) / stages.length) * 100}%`
@@ -195,7 +195,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
                   ? stages.findIndex(s => s.id === activeStage) >= idx
                   : false
                 const iconKey = stage.icon || 'ferment'
-                const colorClass = stageColors[iconKey] || 'bg-kimchi-red'
+                const colorClass = stageColors[iconKey] || 'bg-red-900'
 
                 return (
                   <div
@@ -219,14 +219,14 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
                     {/* Content */}
                     <div className={`flex-grow pt-2 pb-4 ${isActive ? 'bg-gray-50 -mx-2 px-4 rounded-xl' : ''}`}>
                       <div className="flex items-center gap-2">
-                        <p className={`text-sm font-semibold ${isPast || isActive ? 'text-kimchi-red' : 'text-gray-500'}`}>
+                        <p className={`text-sm font-semibold ${isPast || isActive ? 'text-red-900' : 'text-gray-500'}`}>
                           {stage.day || stage.date}
                         </p>
                         {stage.temperature && (
                           <span className="text-xs text-gray-500">• {stage.temperature}</span>
                         )}
                         {isActive && (
-                          <span className="ml-auto px-2 py-0.5 bg-kimchi-red text-white text-xs font-medium rounded-full">
+                          <span className="ml-auto px-2 py-0.5 bg-red-900 text-white text-xs font-medium rounded-full">
                             You are here
                           </span>
                         )}
@@ -238,7 +238,7 @@ export default function FermentationTimeline({ data, title = 'Fermentation Timel
                         <div className="mt-3 space-y-1">
                           {stage.tips.map((tip, tipIdx) => (
                             <p key={tipIdx} className="flex items-start gap-2 text-xs text-gray-600">
-                              <svg className="w-3 h-3 text-kimchi-red mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
+                              <svg className="w-3 h-3 text-red-900 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 8 8">
                                 <circle cx="4" cy="4" r="4" />
                               </svg>
                               {tip}

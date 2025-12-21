@@ -50,15 +50,15 @@ export default async function HomePage() {
           {/* Dark overlay for text readability - lighter to show more food */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-gray-900/60" />
           {/* Warm tint overlay to enhance kimchi colors */}
-          <div className="absolute inset-0 bg-kimchi-red/5" />
+          <div className="absolute inset-0 bg-red-900/5" />
         </div>
 
         {/* Animated background elements */}
         <div className="absolute inset-0">
           {/* Electric bolts background */}
-          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-kimchi-red/20 blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-kimchi-red/10 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-kimchi-red/5 blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-red-900/20 blur-3xl animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-red-900/10 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-red-900/5 blur-3xl" />
         </div>
 
         {/* Fermentation bubbles */}
@@ -81,7 +81,7 @@ export default async function HomePage() {
 
             {/* Tagline with personality */}
             <div className="space-y-2">
-              <p className="text-kimchi-red font-semibold text-lg tracking-wider uppercase">
+              <p className="text-red-900 font-semibold text-lg tracking-wider uppercase">
                 Meet Ollie. He makes kimchi.
               </p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
@@ -89,13 +89,13 @@ export default async function HomePage() {
               </h1>
               <p className="text-2xl sm:text-3xl text-gray-300 font-display">
                 Handcrafted, naturally fermented,
-                <span className="text-kimchi-red"> bursting with life.</span>
+                <span className="text-red-900"> bursting with life.</span>
               </p>
             </div>
 
             {/* IT'S ALIVE! - The star of the show */}
             <div className="py-4">
-              <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-kimchi-red electric-alive inline-block italic">
+              <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-red-900 electric-alive inline-block italic">
                 It&apos;s Alive!
               </p>
               <p className="text-gray-300 mt-2 text-lg">
@@ -113,7 +113,7 @@ export default async function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Link
                 href="/shop"
-                className="btn-fun inline-flex items-center justify-center px-10 py-5 bg-kimchi-red text-white font-bold rounded-full text-xl hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg pulse-glow"
+                className="btn-fun inline-flex items-center justify-center px-10 py-5 bg-red-900 text-white font-bold rounded-full text-xl hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg pulse-glow"
               >
                 <span className="mr-2">Shop Now</span>
                 <svg className="w-6 h-6 bounce-alive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +142,7 @@ export default async function HomePage() {
               priority
             />
             {/* Glowing circle behind */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-kimchi-red/30 rounded-full blur-xl pulse-glow -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-red-900/30 rounded-full blur-xl pulse-glow -z-10" />
             {/* Floating badges */}
             <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
               Made in London
@@ -179,7 +179,7 @@ export default async function HomePage() {
       </section>
 
       {/* Trust Bar - Animated */}
-      <section className="bg-kimchi-red py-8 relative overflow-hidden">
+      <section className="bg-red-900 py-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-kimchi-red via-red-500 to-kimchi-red bg-[length:200%_100%] animate-[gradient-shift_3s_ease_infinite]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
@@ -241,10 +241,10 @@ export default async function HomePage() {
 
             {/* Content */}
             <div className="space-y-6">
-              <p className="text-kimchi-red font-bold text-lg">Hey, I&apos;m Ollie!</p>
+              <p className="text-red-900 font-bold text-lg">Hey, I&apos;m Ollie!</p>
               <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
                 I Make Proper Kimchi.<br />
-                <span className="text-kimchi-red">The Real Stuff.</span>
+                <span className="text-red-900">The Real Stuff.</span>
               </h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
@@ -263,7 +263,7 @@ export default async function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   href="/shop"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-kimchi-red text-white font-bold rounded-full hover:bg-red-600 transition-all transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-red-900 text-white font-bold rounded-full hover:bg-red-600 transition-all transform hover:scale-105"
                 >
                   Try My Kimchi
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ export default async function HomePage() {
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 font-bold rounded-full hover:border-kimchi-red hover:text-kimchi-red transition-all"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 font-bold rounded-full hover:border-kimchi-red hover:text-red-900 transition-all"
                 >
                   Read My Story
                 </Link>
@@ -297,7 +297,7 @@ export default async function HomePage() {
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 mb-8 relative overflow-hidden group hover:shadow-2xl transition-shadow">
             {/* Decorative background */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-kimchi-red/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-red-900/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative grid lg:grid-cols-12 gap-8 items-center">
               {/* Left - Publication & Rating */}
@@ -317,7 +317,7 @@ export default async function HomePage() {
                     </svg>
                   ))}
                 </div>
-                <div className="inline-block bg-kimchi-red text-white px-4 py-2 rounded-full font-bold text-sm">
+                <div className="inline-block bg-red-900 text-white px-4 py-2 rounded-full font-bold text-sm">
                   BEST ALL-ROUNDER
                 </div>
               </div>
@@ -325,7 +325,7 @@ export default async function HomePage() {
               {/* Right - Quote */}
               <div className="lg:col-span-8">
                 <blockquote className="relative">
-                  <svg className="absolute -top-4 -left-2 w-12 h-12 text-kimchi-red/20" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="absolute -top-4 -left-2 w-12 h-12 text-red-900/20" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <p className="font-display text-2xl lg:text-3xl text-gray-900 leading-relaxed italic pl-8">
@@ -347,7 +347,7 @@ export default async function HomePage() {
                 href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-kimchi-red font-bold hover:underline"
+                className="inline-flex items-center text-red-900 font-bold hover:underline"
               >
                 Read Full Review
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,7 +390,7 @@ export default async function HomePage() {
                   href="https://www.helloguthealth.org/articles/review-ollies-kimchi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-kimchi-red font-semibold hover:underline text-sm"
+                  className="text-red-900 font-semibold hover:underline text-sm"
                 >
                   Read Review →
                 </Link>
@@ -422,14 +422,14 @@ export default async function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-kimchi-red font-bold text-lg mb-2">Buy Kimchi Online</p>
+            <p className="text-red-900 font-bold text-lg mb-2">Buy Kimchi Online</p>
             <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
               Ollie&apos;s <span className="text-gradient-alive">Kimchi</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
               Buy kimchi online, handcrafted in London using traditional Korean methods.
               Every jar is naturally fermented and packed with billions of live cultures.
-              <span className="text-kimchi-red font-bold"> It&apos;s alive, remember?</span>
+              <span className="text-red-900 font-bold"> It&apos;s alive, remember?</span>
             </p>
           </div>
 
@@ -453,11 +453,11 @@ export default async function HomePage() {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                   Classic Kimchi
                 </h3>
                 <p className="text-gray-600 mt-2">The OG. The one that started it all.</p>
-                <p className="text-2xl font-bold text-kimchi-red mt-4">£8.50</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£8.50</p>
               </div>
             </Link>
 
@@ -483,18 +483,18 @@ export default async function HomePage() {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                   Classic 3 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Perfect for sharing (or not...)</p>
-                <p className="text-2xl font-bold text-kimchi-red mt-4">£22.95</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£22.95</p>
               </div>
             </Link>
 
             {/* 6 Pack */}
             <Link href="/shop/classic-kimchi-6-pack" className="group">
               <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 left-4 bg-kimchi-red text-white text-xs font-bold px-3 py-1 rounded-full pulse-glow z-20">
+                <span className="absolute top-4 left-4 bg-red-900 text-white text-xs font-bold px-3 py-1 rounded-full pulse-glow z-20">
                   BEST VALUE
                 </span>
                 <div className="aspect-square relative mb-6">
@@ -513,11 +513,11 @@ export default async function HomePage() {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                   Classic 6 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">For the true kimchi addict</p>
-                <p className="text-2xl font-bold text-kimchi-red mt-4">£43.35</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£43.35</p>
               </div>
             </Link>
 
@@ -540,11 +540,11 @@ export default async function HomePage() {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                   Classic 2 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Dip your toes in</p>
-                <p className="text-2xl font-bold text-kimchi-red mt-4">£16.15</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£16.15</p>
               </div>
             </Link>
           </div>
@@ -552,7 +552,7 @@ export default async function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/shop"
-              className="inline-flex items-center text-kimchi-red font-bold text-lg underline-animate"
+              className="inline-flex items-center text-red-900 font-bold text-lg underline-animate"
             >
               View All Products
               <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -576,11 +576,11 @@ export default async function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-kimchi-red rounded-full text-sm font-bold mb-4 wiggle">
+            <span className="inline-block px-4 py-2 bg-red-900 rounded-full text-sm font-bold mb-4 wiggle">
               COMING SOON
             </span>
             <h2 className="font-display text-4xl lg:text-5xl font-semibold">
-              New Flavours <span className="text-kimchi-red italic">Brewing</span>
+              New Flavours <span className="text-red-900 italic">Brewing</span>
             </h2>
             <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
               Ollie&apos;s been busy in the kitchen. More delicious options on the way!
@@ -666,7 +666,7 @@ export default async function HomePage() {
               />
               <button
                 type="submit"
-                className="btn-fun px-8 py-4 bg-kimchi-red text-white font-bold rounded-full hover:bg-red-600 transition-colors"
+                className="btn-fun px-8 py-4 bg-red-900 text-white font-bold rounded-full hover:bg-red-600 transition-colors"
               >
                 Notify Me!
               </button>
@@ -708,20 +708,20 @@ export default async function HomePage() {
                 className="rounded-3xl shadow-2xl"
               />
               {/* Fun floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-kimchi-red text-white px-6 py-4 rounded-2xl font-display font-semibold text-lg shadow-xl wiggle-slow">
+              <div className="absolute -bottom-6 -right-6 bg-red-900 text-white px-6 py-4 rounded-2xl font-display font-semibold text-lg shadow-xl wiggle-slow">
                 Mmm... Crunchy!
               </div>
             </div>
             <div>
-              <p className="text-kimchi-red font-bold text-lg mb-2">Why Go With Ollie?</p>
+              <p className="text-red-900 font-bold text-lg mb-2">Why Go With Ollie?</p>
               <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900 mb-8">
-                Because Life&apos;s Too Short for <span className="text-kimchi-red italic">Boring Kimchi</span>
+                Because Life&apos;s Too Short for <span className="text-red-900 italic">Boring Kimchi</span>
               </h2>
 
               <div className="space-y-8">
                 <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-kimchi-red/10 rounded-2xl flex items-center justify-center group-hover:bg-kimchi-red group-hover:scale-110 transition-all">
-                    <svg className="w-7 h-7 text-kimchi-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-14 h-14 bg-red-900/10 rounded-2xl flex items-center justify-center group-hover:bg-red-900 group-hover:scale-110 transition-all">
+                    <svg className="w-7 h-7 text-red-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
@@ -735,8 +735,8 @@ export default async function HomePage() {
                 </div>
 
                 <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-kimchi-red/10 rounded-2xl flex items-center justify-center group-hover:bg-kimchi-red group-hover:scale-110 transition-all">
-                    <svg className="w-7 h-7 text-kimchi-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-14 h-14 bg-red-900/10 rounded-2xl flex items-center justify-center group-hover:bg-red-900 group-hover:scale-110 transition-all">
+                    <svg className="w-7 h-7 text-red-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </div>
@@ -750,8 +750,8 @@ export default async function HomePage() {
                 </div>
 
                 <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-kimchi-red/10 rounded-2xl flex items-center justify-center group-hover:bg-kimchi-red group-hover:scale-110 transition-all">
-                    <svg className="w-7 h-7 text-kimchi-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-14 h-14 bg-red-900/10 rounded-2xl flex items-center justify-center group-hover:bg-red-900 group-hover:scale-110 transition-all">
+                    <svg className="w-7 h-7 text-red-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
@@ -765,8 +765,8 @@ export default async function HomePage() {
                 </div>
 
                 <div className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-kimchi-red/10 rounded-2xl flex items-center justify-center group-hover:bg-kimchi-red group-hover:scale-110 transition-all">
-                    <svg className="w-7 h-7 text-kimchi-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-shrink-0 w-14 h-14 bg-red-900/10 rounded-2xl flex items-center justify-center group-hover:bg-red-900 group-hover:scale-110 transition-all">
+                    <svg className="w-7 h-7 text-red-900 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -795,9 +795,9 @@ export default async function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-kimchi-red font-bold text-lg mb-2">Learn &amp; Cook</p>
+            <p className="text-red-900 font-bold text-lg mb-2">Learn &amp; Cook</p>
             <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
-              From Ollie&apos;s <span className="text-kimchi-red italic">Kitchen</span>
+              From Ollie&apos;s <span className="text-red-900 italic">Kitchen</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600">
               Recipes, tips, and kimchi wisdom from yours truly
@@ -822,10 +822,10 @@ export default async function HomePage() {
                   </div>
                 )}
                 <div className="p-5">
-                  <span className="text-xs font-bold text-kimchi-red uppercase">
+                  <span className="text-xs font-bold text-red-900 uppercase">
                     {article.cluster}
                   </span>
-                  <h3 className="mt-2 font-bold text-gray-900 group-hover:text-kimchi-red transition-colors line-clamp-2">
+                  <h3 className="mt-2 font-bold text-gray-900 group-hover:text-red-900 transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                 </div>
@@ -836,7 +836,7 @@ export default async function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/blog"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-kimchi-red text-kimchi-red font-bold rounded-full text-lg hover:bg-kimchi-red hover:text-white transition-all btn-fun"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-kimchi-red text-red-900 font-bold rounded-full text-lg hover:bg-red-900 hover:text-white transition-all btn-fun"
             >
               View All Articles
             </Link>
@@ -845,7 +845,7 @@ export default async function HomePage() {
       </section>
 
       {/* Big CTA Section */}
-      <section className="relative py-28 lg:py-36 bg-kimchi-red overflow-hidden">
+      <section className="relative py-28 lg:py-36 bg-red-900 overflow-hidden">
         {/* Background bubbles */}
         <FermentationBubbles />
 
@@ -871,7 +871,7 @@ export default async function HomePage() {
           </p>
           <Link
             href="/shop"
-            className="btn-fun inline-flex items-center justify-center px-12 py-5 bg-white text-kimchi-red font-bold rounded-full text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
+            className="btn-fun inline-flex items-center justify-center px-12 py-5 bg-white text-red-900 font-bold rounded-full text-xl hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
           >
             Shop Now
             <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -886,28 +886,28 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
             <div className="flex flex-col items-center group">
-              <svg className="w-8 h-8 mb-2 text-kimchi-red group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 mb-2 text-red-900 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
               </svg>
               <p className="font-bold">Free Delivery</p>
               <p className="text-sm text-gray-400">Orders over £30</p>
             </div>
             <div className="flex flex-col items-center group">
-              <svg className="w-8 h-8 mb-2 text-kimchi-red group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 mb-2 text-red-900 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="font-bold">Fresh Weekly</p>
               <p className="text-sm text-gray-400">Made in small batches</p>
             </div>
             <div className="flex flex-col items-center group">
-              <svg className="w-8 h-8 mb-2 text-kimchi-red group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 mb-2 text-red-900 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <p className="font-bold">Quality Guaranteed</p>
               <p className="text-sm text-gray-400">100% satisfaction</p>
             </div>
             <div className="flex flex-col items-center group">
-              <svg className="w-8 h-8 mb-2 text-kimchi-red group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 mb-2 text-red-900 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
               </svg>
               <p className="font-bold">Secure Checkout</p>

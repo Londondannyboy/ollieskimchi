@@ -146,7 +146,7 @@ export default function TermsPage() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
-          <Link href="/" className="text-kimchi-red hover:underline">
+          <Link href="/" className="text-red-900 hover:underline">
             &larr; Back to Home
           </Link>
         </div>

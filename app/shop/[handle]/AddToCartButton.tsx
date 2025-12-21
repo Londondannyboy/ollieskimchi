@@ -38,7 +38,7 @@ export default function AddToCartButton({ variantId, availableForSale, isDemo }:
         <div className="flex items-center border border-gray-300 rounded-lg">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="px-4 py-2 text-gray-600 hover:text-kimchi-red transition-colors"
+            className="px-4 py-2 text-gray-600 hover:text-red-900 transition-colors"
             aria-label="Decrease quantity"
           >
             -
@@ -46,7 +46,7 @@ export default function AddToCartButton({ variantId, availableForSale, isDemo }:
           <span className="px-4 py-2 font-medium">{quantity}</span>
           <button
             onClick={() => setQuantity(quantity + 1)}
-            className="px-4 py-2 text-gray-600 hover:text-kimchi-red transition-colors"
+            className="px-4 py-2 text-gray-600 hover:text-red-900 transition-colors"
             aria-label="Increase quantity"
           >
             +

@@ -78,7 +78,7 @@ export default function OllieSays({ children, variant = 'tip' }: OllieSaysProps)
 // Simpler inline version for quick tips
 export function OllieTip({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-start gap-3 bg-kimchi-red/5 border border-kimchi-red/20 rounded-xl p-4 my-4">
+    <div className="flex items-start gap-3 bg-red-900/5 border border-kimchi-red/20 rounded-xl p-4 my-4">
       <Image
         src="/Assets/Ollie Photo.png"
         alt="Ollie"
@@ -87,7 +87,7 @@ export function OllieTip({ children }: { children: React.ReactNode }) {
         className="rounded-full border-2 border-kimchi-red flex-shrink-0"
       />
       <p className="text-gray-700">
-        <span className="font-bold text-kimchi-red">Ollie says: </span>
+        <span className="font-bold text-red-900">Ollie says: </span>
         {children}
       </p>
     </div>

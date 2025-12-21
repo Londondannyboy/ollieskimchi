@@ -91,7 +91,7 @@ export default function CartPage() {
                     {line.merchandise.title !== 'Default Title' && (
                       <p className="text-sm text-gray-500">{line.merchandise.title}</p>
                     )}
-                    <p className="text-kimchi-red font-semibold mt-1">
+                    <p className="text-red-900 font-semibold mt-1">
                       {formatPrice(line.merchandise.price.amount, line.merchandise.price.currencyCode)}
                     </p>
 
@@ -100,7 +100,7 @@ export default function CartPage() {
                       <div className="flex items-center border border-gray-200 rounded-lg">
                         <button
                           onClick={() => updateQuantity(line.id, line.quantity - 1)}
-                          className="px-3 py-1 text-gray-600 hover:text-kimchi-red transition-colors"
+                          className="px-3 py-1 text-gray-600 hover:text-red-900 transition-colors"
                           aria-label="Decrease quantity"
                         >
                           -
@@ -108,7 +108,7 @@ export default function CartPage() {
                         <span className="px-3 py-1 font-medium">{line.quantity}</span>
                         <button
                           onClick={() => updateQuantity(line.id, line.quantity + 1)}
-                          className="px-3 py-1 text-gray-600 hover:text-kimchi-red transition-colors"
+                          className="px-3 py-1 text-gray-600 hover:text-red-900 transition-colors"
                           aria-label="Increase quantity"
                         >
                           +
@@ -148,7 +148,7 @@ export default function CartPage() {
                   </div>
                   <div className="border-t border-gray-200 pt-3 flex justify-between">
                     <span className="font-semibold text-gray-900">Total</span>
-                    <span className="font-bold text-lg text-kimchi-red">
+                    <span className="font-bold text-lg text-red-900">
                       {cart ? formatPrice(cart.cost.totalAmount.amount, cart.cost.totalAmount.currencyCode) : '£0.00'}
                     </span>
                   </div>
@@ -172,7 +172,7 @@ export default function CartPage() {
 
                 <Link
                   href="/shop"
-                  className="block text-center text-kimchi-red hover:underline mt-4 text-sm"
+                  className="block text-center text-red-900 hover:underline mt-4 text-sm"
                 >
                   Continue Shopping
                 </Link>

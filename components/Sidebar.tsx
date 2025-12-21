@@ -64,7 +64,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
                 className="w-full h-48 object-cover"
               />
               {featuredProduct.badge && (
-                <span className="absolute top-3 left-3 px-3 py-1 bg-kimchi-red text-white text-xs font-bold rounded-full">
+                <span className="absolute top-3 left-3 px-3 py-1 bg-red-900 text-white text-xs font-bold rounded-full">
                   {featuredProduct.badge}
                 </span>
               )}
@@ -78,7 +78,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
               <h3 className="font-bold text-gray-900 text-lg">{featuredProduct.title}</h3>
               <p className="text-sm text-gray-600 mt-1 line-clamp-2">{featuredProduct.description}</p>
               <div className="flex items-center gap-2 mt-3">
-                <span className="text-2xl font-bold text-kimchi-red">£{featuredProduct.price}</span>
+                <span className="text-2xl font-bold text-red-900">£{featuredProduct.price}</span>
                 {featuredProduct.originalPrice && (
                   <span className="text-sm text-gray-400 line-through">£{featuredProduct.originalPrice}</span>
                 )}
@@ -89,7 +89,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
                 className={`w-full mt-4 py-3 font-bold rounded-full transition-all flex items-center justify-center gap-2 group ${
                   justAdded
                     ? 'bg-green-500 text-white'
-                    : 'bg-kimchi-red text-white hover:bg-red-600'
+                    : 'bg-red-900 text-white hover:bg-red-600'
                 } ${isAdding ? 'opacity-75 cursor-wait' : ''}`}
               >
                 {justAdded ? (
@@ -118,7 +118,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
               </button>
               <Link
                 href="/shop"
-                className="block text-center text-sm text-gray-500 hover:text-kimchi-red mt-2 transition-colors"
+                className="block text-center text-sm text-gray-500 hover:text-red-900 mt-2 transition-colors"
               >
                 View all products →
               </Link>
@@ -155,16 +155,16 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
                     </div>
                   ) : (
                     <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-gradient-to-br from-kimchi-red/20 to-red-100 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-kimchi-red/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 text-red-900/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                       </svg>
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <span className="text-xs text-kimchi-red font-medium capitalize">
+                    <span className="text-xs text-red-900 font-medium capitalize">
                       {related.cluster}
                     </span>
-                    <h4 className="font-semibold text-gray-900 text-sm leading-tight line-clamp-2 group-hover:text-kimchi-red transition-colors">
+                    <h4 className="font-semibold text-gray-900 text-sm leading-tight line-clamp-2 group-hover:text-red-900 transition-colors">
                       {related.title}
                     </h4>
                   </div>
@@ -198,7 +198,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
         {/* Newsletter Signup */}
         <div className="bg-gray-900 rounded-2xl p-5 text-white">
           <h3 className="font-bold flex items-center gap-2 mb-2">
-            <svg className="w-5 h-5 text-kimchi-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-red-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             Get Fermenting Tips
@@ -214,7 +214,7 @@ export default function Sidebar({ relatedArticles = [], showProduct = true, clas
             />
             <button
               type="submit"
-              className="w-full py-2.5 bg-kimchi-red text-white font-bold rounded-full hover:bg-red-600 transition-colors text-sm"
+              className="w-full py-2.5 bg-red-900 text-white font-bold rounded-full hover:bg-red-600 transition-colors text-sm"
             >
               Subscribe
             </button>
