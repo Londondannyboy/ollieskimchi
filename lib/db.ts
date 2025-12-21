@@ -80,6 +80,31 @@ export async function getCategories(): Promise<string[]> {
 // SEO Articles (Content Marketing)
 // ============================================
 
+export interface RecipeData {
+  title: string
+  description: string
+  prepTime?: string
+  cookTime?: string
+  totalTime?: string
+  servings?: string
+  difficulty?: 'Easy' | 'Medium' | 'Advanced'
+  ingredients: {
+    section?: string
+    items: {
+      item: string
+      amount?: string
+      note?: string
+    }[]
+  }[]
+  method: {
+    step: number
+    instruction: string
+    tip?: string
+  }[]
+  chefNotes?: string[]
+  tags?: string[]
+}
+
 export interface SeoArticle {
   id: number
   article_id: string
@@ -102,6 +127,7 @@ export interface SeoArticle {
   status: string
   author: string
   internal_links: string[]
+  recipe_data?: RecipeData
   created_at: Date
   updated_at: Date
   published_at: Date | null

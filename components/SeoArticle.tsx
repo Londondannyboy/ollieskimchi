@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { SeoArticle } from '@/lib/db'
+import RecipeCard from './RecipeCard'
 
 interface SeoArticlePageProps {
   article: SeoArticle
@@ -95,6 +96,23 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
             prose-img:rounded-xl"
           dangerouslySetInnerHTML={{ __html: article.content }}
         />
+
+        {/* Recipe Card - displayed when recipe data is available */}
+        {article.recipe_data && (
+          <RecipeCard
+            title={article.recipe_data.title}
+            description={article.recipe_data.description}
+            prepTime={article.recipe_data.prepTime}
+            cookTime={article.recipe_data.cookTime}
+            totalTime={article.recipe_data.totalTime}
+            servings={article.recipe_data.servings}
+            difficulty={article.recipe_data.difficulty}
+            ingredients={article.recipe_data.ingredients}
+            method={article.recipe_data.method}
+            chefNotes={article.recipe_data.chefNotes}
+            tags={article.recipe_data.tags}
+          />
+        )}
 
         {/* Keywords/Tags */}
         {article.secondary_keywords && article.secondary_keywords.length > 0 && (
