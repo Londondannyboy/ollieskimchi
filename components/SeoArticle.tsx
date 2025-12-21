@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { SeoArticle } from '@/lib/db'
+import { marked } from 'marked'
 import RecipeCard from './RecipeCard'
 import FAQAccordion from './FAQAccordion'
 import ComparisonTable from './ComparisonTable'
@@ -18,7 +19,63 @@ interface SeoArticlePageProps {
   relatedArticles?: SeoArticle[]
 }
 
+// Configure marked for better output
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+})
+
+// Convert markdown to HTML and add IDs to headings
+function parseContent(content: string): string {
+  // Check if content is already HTML (starts with < tag)
+  const isHtml = content.trim().startsWith('<')
+
+  if (isHtml) {
+    return content
+  }
+
+  // Parse markdown to HTML
+  let html = marked.parse(content) as string
+
+  // Add IDs to h2 headings for TOC links
+  html = html.replace(/<h2>(.*?)<\/h2>/g, (match, text) => {
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    return `<h2 id="${id}">${text}</h2>`
+  })
+
+  return html
+}
+
+// Extract headings for TOC (works with both HTML and markdown)
+function extractHeadings(content: string): { id: string; text: string }[] {
+  const headings: { id: string; text: string }[] = []
+
+  // Try HTML h2 tags first
+  const htmlRegex = /<h2[^>]*(?:id="([^"]*)")?[^>]*>([^<]*)<\/h2>/g
+  let match
+
+  while ((match = htmlRegex.exec(content)) !== null) {
+    const id = match[1] || match[2].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    headings.push({ id, text: match[2] })
+  }
+
+  // If no HTML headings, try markdown ## headings
+  if (headings.length === 0) {
+    const mdRegex = /^## (.+)$/gm
+    while ((match = mdRegex.exec(content)) !== null) {
+      const text = match[1].replace(/\*\*/g, '') // Remove bold markers
+      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+      headings.push({ id, text })
+    }
+  }
+
+  return headings
+}
+
 export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArticlePageProps) {
+  const parsedContent = parseContent(article.content)
+  const headings = extractHeadings(article.content)
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
@@ -86,28 +143,7 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           </div>
         </header>
 
-        {/* Table of Contents - auto-generated from H2s */}
-        <TableOfContents content={article.content} />
-
-        {/* Content */}
-        <div
-          className="prose prose-lg prose-gray max-w-none
-            prose-headings:text-gray-900 prose-headings:font-bold
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-20
-            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-            prose-p:text-gray-700 prose-p:leading-relaxed
-            prose-a:text-kimchi-red prose-a:no-underline hover:prose-a:underline
-            prose-strong:text-gray-900
-            prose-ul:my-4 prose-li:text-gray-700
-            prose-ol:my-4
-            prose-table:my-6
-            prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2 prose-th:text-left
-            prose-td:px-4 prose-td:py-2 prose-td:border-t
-            prose-img:rounded-xl"
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
-
-        {/* Recipe Card - displayed when recipe data is available */}
+        {/* Recipe Card - MOVED UP: Display prominently right after header */}
         {article.recipe_data && (
           <RecipeCard
             title={article.recipe_data.title}
@@ -124,6 +160,43 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
             slug={article.slug}
           />
         )}
+
+        {/* Table of Contents - auto-generated from headings */}
+        {headings.length >= 3 && (
+          <nav className="mb-12 p-6 bg-gray-50 rounded-xl">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">In this article</h2>
+            <ul className="space-y-2">
+              {headings.map((heading) => (
+                <li key={heading.id}>
+                  <a
+                    href={`#${heading.id}`}
+                    className="text-gray-600 hover:text-kimchi-red transition-colors"
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        {/* Content - Now properly parses markdown */}
+        <div
+          className="prose prose-lg prose-gray max-w-none
+            prose-headings:text-gray-900 prose-headings:font-bold
+            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-20
+            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+            prose-p:text-gray-700 prose-p:leading-relaxed
+            prose-a:text-kimchi-red prose-a:no-underline hover:prose-a:underline
+            prose-strong:text-gray-900
+            prose-ul:my-4 prose-li:text-gray-700
+            prose-ol:my-4
+            prose-table:my-6
+            prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2 prose-th:text-left
+            prose-td:px-4 prose-td:py-2 prose-td:border-t
+            prose-img:rounded-xl"
+          dangerouslySetInnerHTML={{ __html: parsedContent }}
+        />
 
         {/* Nutrition Facts Card */}
         {article.nutrition_data && (
@@ -274,37 +347,5 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
         </div>
       </section>
     </div>
-  )
-}
-
-// Table of Contents component
-function TableOfContents({ content }: { content: string }) {
-  // Extract H2 headings from content
-  const h2Regex = /<h2[^>]*id="([^"]*)"[^>]*>([^<]*)<\/h2>/g
-  const headings: { id: string; text: string }[] = []
-  let match
-
-  while ((match = h2Regex.exec(content)) !== null) {
-    headings.push({ id: match[1], text: match[2] })
-  }
-
-  if (headings.length < 3) return null
-
-  return (
-    <nav className="mb-12 p-6 bg-gray-50 rounded-xl">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">In this article</h2>
-      <ul className="space-y-2">
-        {headings.map((heading) => (
-          <li key={heading.id}>
-            <a
-              href={`#${heading.id}`}
-              className="text-gray-600 hover:text-kimchi-red transition-colors"
-            >
-              {heading.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
   )
 }

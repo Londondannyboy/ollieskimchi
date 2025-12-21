@@ -29,12 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const articles = await getSeoArticlesByCluster('culture')
-  return articles
+  // Guides can be in 'culture' cluster or have 'guides/' prefix
+  const [cultureArticles, allArticles] = await Promise.all([
+    getSeoArticlesByCluster('culture'),
+    getSeoArticlesByCluster('pillar'), // pillar articles might include guides
+  ])
+
+  const guideArticles = [...cultureArticles, ...allArticles]
     .filter((a) => a.slug.startsWith('guides/'))
-    .map((article) => ({
-      slug: article.slug.replace('guides/', ''),
-    }))
+
+  return guideArticles.map((article) => ({
+    slug: article.slug.replace('guides/', ''),
+  }))
 }
 
 export const revalidate = 3600
