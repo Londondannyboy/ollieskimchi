@@ -5,6 +5,7 @@ import GuardianBanner from '@/components/GuardianBanner'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import EmailPopup from '@/components/EmailPopup'
+import CookieConsent from '@/components/CookieConsent'
 import { CartProvider } from '@/components/CartContext'
 
 const outfit = Outfit({
@@ -49,6 +50,7 @@ export default function RootLayout({
           </main>
           <Footer />
           <EmailPopup />
+          <CookieConsent />
         </CartProvider>
       </body>
     </html>

@@ -73,8 +73,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Ollie&apos;s Kimchi. All rights reserved.</p>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-gray-400 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; {new Date().getFullYear()} Ollie&apos;s Kimchi. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link href="/privacy" className="hover:text-kimchi-red transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-kimchi-red transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
