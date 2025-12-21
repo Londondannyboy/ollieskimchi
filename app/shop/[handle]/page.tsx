@@ -3,6 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AddToCartButton from './AddToCartButton'
+import GuardianBadge from '@/components/GuardianBadge'
+
+// Guardian review quotes from Tom Hunt's article
+const guardianQuotes: Record<string, string> = {
+  'classic-napa-cabbage-kimchi': 'Bold and punchy',
+  'classic-kimchi-2-pack': 'Big flavour',
+  'classic-kimchi-3-pack': 'Well seasoned',
+  'classic-kimchi-6-pack': 'Full and well-rounded',
+}
 
 // Local image overrides by product handle (must match collection page)
 const productOverrides: Record<string, { image?: string; images?: string[] }> = {
@@ -210,6 +219,21 @@ export default async function ProductPage({ params }: Props) {
                 className="object-cover"
                 priority
               />
+              {/* Guardian Badge - Top Right */}
+              <div className="absolute top-4 right-4 z-10">
+                <GuardianBadge size="lg" />
+              </div>
+              {/* Guardian Quote - Bottom Left */}
+              {guardianQuotes[product.handle] && (
+                <div className="absolute bottom-4 left-4 z-10">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg">
+                    <p className="text-sm text-gray-700 font-medium italic">
+                      &ldquo;{guardianQuotes[product.handle]}&rdquo;
+                    </p>
+                    <p className="text-xs text-gray-500 mt-0.5">— The Guardian</p>
+                  </div>
+                </div>
+              )}
             </div>
             {product.images.length > 1 && (
               <div className="grid grid-cols-4 gap-4">

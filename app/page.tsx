@@ -2,6 +2,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getSeoArticlesByCluster } from '@/lib/db'
 import InstagramFeed from '@/components/InstagramFeed'
+import GuardianBadge from '@/components/GuardianBadge'
+
+// Guardian review quotes from Tom Hunt's article
+const guardianQuotes: Record<string, string> = {
+  'classic-napa-cabbage-kimchi': 'Bold and punchy',
+  'classic-kimchi-3-pack': 'Big flavour',
+  'classic-kimchi-6-pack': 'Full and well-rounded',
+  'classic-kimchi-2-pack': 'Well seasoned',
+}
 
 // Fermentation bubbles component
 function FermentationBubbles() {
@@ -353,6 +362,14 @@ export default async function HomePage() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-2 right-2 z-10">
+                    <GuardianBadge size="sm" />
+                  </div>
+                  <div className="absolute bottom-2 left-2 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
+                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Bold and punchy&rdquo;</p>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
                   Classic Kimchi
@@ -365,7 +382,7 @@ export default async function HomePage() {
             {/* 3 Pack */}
             <Link href="/shop/classic-kimchi-3-pack" className="group">
               <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full wiggle">
+                <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full wiggle z-20">
                   SAVE 10%
                 </span>
                 <div className="aspect-square relative mb-6">
@@ -375,6 +392,14 @@ export default async function HomePage() {
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-2 right-2 z-10">
+                    <GuardianBadge size="sm" />
+                  </div>
+                  <div className="absolute bottom-2 left-2 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
+                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Big flavour&rdquo;</p>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
                   Classic 3 Pack
@@ -387,7 +412,7 @@ export default async function HomePage() {
             {/* 6 Pack */}
             <Link href="/shop/classic-kimchi-6-pack" className="group">
               <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 right-4 bg-kimchi-red text-white text-xs font-bold px-3 py-1 rounded-full pulse-glow">
+                <span className="absolute top-4 left-4 bg-kimchi-red text-white text-xs font-bold px-3 py-1 rounded-full pulse-glow z-20">
                   BEST VALUE
                 </span>
                 <div className="aspect-square relative mb-6">
@@ -397,6 +422,14 @@ export default async function HomePage() {
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-2 right-2 z-10">
+                    <GuardianBadge size="sm" />
+                  </div>
+                  <div className="absolute bottom-2 left-2 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
+                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Full and well-rounded&rdquo;</p>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
                   Classic 6 Pack
@@ -416,6 +449,14 @@ export default async function HomePage() {
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-2 right-2 z-10">
+                    <GuardianBadge size="sm" />
+                  </div>
+                  <div className="absolute bottom-2 left-2 z-10">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
+                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Well seasoned&rdquo;</p>
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-kimchi-red transition-colors">
                   Classic 2 Pack
