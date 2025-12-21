@@ -309,3 +309,4 @@ export async function getAllSeoArticleSlugs(): Promise<string[]> {
   `
   return result.map((r) => r.slug as string)
 }
+// Trigger rebuild Sun 21 Dec 2025 18:33:30 GMT
