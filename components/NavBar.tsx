@@ -28,34 +28,22 @@ export default function NavBar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             <Link
-              href="/"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
-            >
-              Home
-            </Link>
-            <Link
               href="/shop"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
             >
-              Shop
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
-            >
-              Articles
+              My Shop
             </Link>
             <Link
               href="/about"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
             >
-              Olli&apos;s Story
+              About Me
             </Link>
             <Link
-              href="/contact"
+              href="/blog"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
             >
-              Contact
+              Stuff I&apos;ve Written
             </Link>
           </div>
 
@@ -209,39 +197,25 @@ export default function NavBar() {
             </div>
 
             <Link
-              href="/"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
               href="/shop"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Shop
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Articles
+              My Shop
             </Link>
             <Link
               href="/about"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Olli&apos;s Story
+              About Me
             </Link>
             <Link
-              href="/contact"
+              href="/blog"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Stuff I&apos;ve Written
             </Link>
 
             {/* Mobile Shop CTA */}
@@ -250,7 +224,7 @@ export default function NavBar() {
               className="mx-4 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Shop Now
+              Grab Some Kimchi
             </Link>
           </div>
         </div>
