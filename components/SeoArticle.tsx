@@ -2,6 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { SeoArticle } from '@/lib/db'
 import RecipeCard from './RecipeCard'
+import FAQAccordion from './FAQAccordion'
+import ComparisonTable from './ComparisonTable'
+import ProductCards from './ProductCards'
+import NutritionCard from './NutritionCard'
+import FermentationTimeline from './FermentationTimeline'
+import HistoryTimeline from './HistoryTimeline'
+import StorageGuide from './StorageGuide'
+import PairingSuggestions from './PairingSuggestions'
+import FactCard from './FactCard'
+import KimchiMap from './KimchiMap'
 
 interface SeoArticlePageProps {
   article: SeoArticle
@@ -111,7 +121,51 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
             method={article.recipe_data.method}
             chefNotes={article.recipe_data.chefNotes}
             tags={article.recipe_data.tags}
+            slug={article.slug}
           />
+        )}
+
+        {/* Nutrition Facts Card */}
+        {article.nutrition_data && (
+          <NutritionCard nutrition={article.nutrition_data} />
+        )}
+
+        {/* FAQ Accordion */}
+        {article.faq_data && article.faq_data.length > 0 && (
+          <FAQAccordion faqs={article.faq_data} />
+        )}
+
+        {/* Comparison Table */}
+        {article.comparison_data && (
+          <ComparisonTable data={article.comparison_data} />
+        )}
+
+        {/* Timeline - Fermentation or History */}
+        {article.timeline_data && article.timeline_data.type === 'fermentation' && (
+          <FermentationTimeline data={article.timeline_data} />
+        )}
+        {article.timeline_data && article.timeline_data.type === 'history' && (
+          <HistoryTimeline data={article.timeline_data} />
+        )}
+
+        {/* Product Cards */}
+        {article.products_data && article.products_data.length > 0 && (
+          <ProductCards products={article.products_data} />
+        )}
+
+        {/* Storage Guide */}
+        {article.storage_data && (
+          <StorageGuide storage={article.storage_data} />
+        )}
+
+        {/* Pairing Suggestions */}
+        {article.pairings_data && article.pairings_data.length > 0 && (
+          <PairingSuggestions pairings={article.pairings_data} />
+        )}
+
+        {/* Did You Know Facts */}
+        {article.facts_data && article.facts_data.length > 0 && (
+          <FactCard facts={article.facts_data} />
         )}
 
         {/* Keywords/Tags */}

@@ -80,6 +80,120 @@ export async function getCategories(): Promise<string[]> {
 // SEO Articles (Content Marketing)
 // ============================================
 
+// ============================================
+// Component Data Types
+// ============================================
+
+// Nutrition Facts Card
+export interface NutritionData {
+  servingSize: string
+  servingsPerContainer?: number
+  calories: number
+  totalFat: number
+  saturatedFat?: number
+  transFat?: number
+  cholesterol?: number
+  sodium: number
+  totalCarbs: number
+  dietaryFiber: number
+  sugars?: number
+  protein: number
+  vitaminD?: number
+  calcium?: number
+  iron?: number
+  potassium?: number
+  probioticCFU?: string // e.g., "1 billion CFU"
+}
+
+// FAQ Accordion
+export interface FAQItem {
+  question: string
+  answer: string
+}
+
+export type FAQData = FAQItem[]
+
+// Comparison Table
+export interface ComparisonItem {
+  name: string
+  image?: string
+  isWinner?: boolean
+  values: Record<string, string | number | boolean>
+}
+
+export interface ComparisonData {
+  title?: string
+  categories: string[]
+  items: ComparisonItem[]
+}
+
+// Timeline (Fermentation or History)
+export interface TimelineStage {
+  id: string
+  day?: string // e.g., "Day 1", "Week 2"
+  date?: string // For history timelines, e.g., "37 BCE"
+  era?: string // e.g., "Ancient", "Medieval", "Modern"
+  title: string
+  description: string
+  icon?: string
+  color?: string
+  temperature?: string
+  image?: string
+  tips?: string[]
+}
+
+export interface TimelineData {
+  type: 'fermentation' | 'history'
+  stages: TimelineStage[]
+}
+
+// Product Cards
+export interface Product {
+  name: string
+  image?: string
+  description: string
+  priceRange?: string // e.g., "£4-6"
+  rating?: number // 1-5
+  bestFor?: string[] // e.g., ["beginners", "authentic taste"]
+  pros?: string[]
+  cons?: string[]
+  buyUrl?: string
+  isOlliesPick?: boolean
+}
+
+export type ProductsData = Product[]
+
+// Did You Know Facts
+export type FactsData = string[]
+
+// Storage Guide
+export interface StorageLocation {
+  location: 'fridge' | 'freezer' | 'pantry' | 'room-temp'
+  duration: string
+  temperature?: string
+  tips?: string[]
+}
+
+export interface StorageData {
+  locations: StorageLocation[]
+  warningSigns?: string[]
+  shelfLifeTips?: string[]
+}
+
+// Pairing Suggestions
+export interface Pairing {
+  name: string
+  category: 'drink' | 'side' | 'main' | 'condiment' | 'other'
+  icon?: string
+  description?: string
+  recipeLink?: string
+  isPerfectMatch?: boolean
+}
+
+export type PairingsData = Pairing[]
+
+// ============================================
+
 export interface RecipeData {
   title: string
   description: string
@@ -128,6 +242,14 @@ export interface SeoArticle {
   author: string
   internal_links: string[]
   recipe_data?: RecipeData
+  nutrition_data?: NutritionData
+  faq_data?: FAQData
+  comparison_data?: ComparisonData
+  timeline_data?: TimelineData
+  products_data?: ProductsData
+  facts_data?: FactsData
+  storage_data?: StorageData
+  pairings_data?: PairingsData
   created_at: Date
   updated_at: Date
   published_at: Date | null
