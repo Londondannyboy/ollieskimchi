@@ -14,7 +14,7 @@ interface InstagramFeedProps {
   posts?: InstagramPost[]
   // For third-party embeds (Behold, Elfsight, etc.)
   embedId?: string
-  embedProvider?: 'behold' | 'elfsight' | 'curator'
+  embedProvider?: 'behold' | 'elfsight' | 'curator' | 'mirror'
 }
 
 // Default posts using existing product images as placeholders
@@ -57,6 +57,19 @@ export default function InstagramFeed({
       script.src = `https://cdn.curator.io/published/${embedId}.js`
       script.async = true
       document.body.appendChild(script)
+    } else if (embedProvider === 'mirror') {
+      // Mirror App embed
+      script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/@mirrorapp/iframe-bridge@latest/dist/index.umd.js'
+      script.async = true
+      document.body.appendChild(script)
+
+      // Setup iframe resize function
+      ;(window as unknown as Record<string, unknown>).iFrameSetup = (iframe: HTMLIFrameElement) => {
+        if ((window as unknown as Record<string, { setup?: (el: HTMLIFrameElement) => void }>).iframeBridge?.setup) {
+          (window as unknown as Record<string, { setup: (el: HTMLIFrameElement) => void }>).iframeBridge.setup(iframe)
+        }
+      }
     }
 
     return () => {
@@ -108,6 +121,20 @@ export default function InstagramFeed({
                 <div id={`curator-feed-${embedId}`}>
                   <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">Powered by Curator.io</a>
                 </div>
+              )}
+              {embedProvider === 'mirror' && (
+                <iframe
+                  src={`https://app.mirror-app.com/feed-instagram/${embedId}/preview`}
+                  style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '400px' }}
+                  scrolling="no"
+                  title="Instagram Feed"
+                  onLoad={(e) => {
+                    const iframe = e.target as HTMLIFrameElement
+                    if ((window as unknown as Record<string, { setup?: (el: HTMLIFrameElement) => void }>).iframeBridge?.setup) {
+                      (window as unknown as Record<string, { setup: (el: HTMLIFrameElement) => void }>).iframeBridge.setup(iframe)
+                    }
+                  }}
+                />
               )}
             </div>
           ) : (

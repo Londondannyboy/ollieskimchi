@@ -523,7 +523,10 @@ export default async function HomePage() {
       </section>
 
       {/* Instagram Section */}
-      <InstagramFeed />
+      <InstagramFeed
+        embedId="5ad9f64e-e5c7-4d90-9294-7282240b7247"
+        embedProvider="mirror"
+      />
 
       {/* Big CTA Section */}
       <section className="relative py-28 lg:py-36 bg-kimchi-red overflow-hidden">
