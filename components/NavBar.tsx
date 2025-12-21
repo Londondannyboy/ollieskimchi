@@ -62,10 +62,77 @@ export default function NavBar() {
           {/* CTA + Cart */}
           <div className="flex items-center space-x-4">
             {/* It's Alive Badge - Desktop only */}
-            <span className="hidden lg:inline-flex items-center px-3 py-1 bg-kimchi-red/10 text-kimchi-red text-sm font-bold rounded-full heartbeat">
-              <span className="w-2 h-2 bg-kimchi-red rounded-full mr-2 animate-pulse"></span>
-              It&apos;s Alive!
-            </span>
+            <div className="hidden lg:flex items-center gap-1 group cursor-default">
+              {/* Animated Kimchi Jar with bubbles */}
+              <div className="relative">
+                <svg
+                  className="w-10 h-10 group-hover:wiggle"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                >
+                  {/* Jar body */}
+                  <path
+                    d="M10 14 L10 32 Q10 36 14 36 L26 36 Q30 36 30 32 L30 14"
+                    fill="#FEE2E2"
+                    stroke="#DC2626"
+                    strokeWidth="2"
+                    className="group-hover:fill-red-200 transition-colors"
+                  />
+                  {/* Jar lid */}
+                  <rect x="8" y="10" width="24" height="5" rx="2" fill="#DC2626" />
+                  {/* Kimchi inside */}
+                  <path
+                    d="M12 20 Q20 18 28 20 L28 32 Q28 34 26 34 L14 34 Q12 34 12 32 Z"
+                    fill="#DC2626"
+                    className="opacity-80"
+                  />
+                  {/* Animated bubbles */}
+                  <circle cx="16" cy="26" r="2" fill="white" className="opacity-60 animate-ping" style={{ animationDuration: '2s' }} />
+                  <circle cx="22" cy="28" r="1.5" fill="white" className="opacity-50 animate-ping" style={{ animationDuration: '1.5s', animationDelay: '0.3s' }} />
+                  <circle cx="25" cy="24" r="1" fill="white" className="opacity-40 animate-ping" style={{ animationDuration: '1.8s', animationDelay: '0.6s' }} />
+                </svg>
+
+                {/* Rising bubbles outside jar */}
+                <div className="absolute -top-1 left-3 w-1.5 h-1.5 bg-kimchi-red/40 rounded-full animate-bounce" style={{ animationDuration: '1.2s' }} />
+                <div className="absolute -top-2 right-3 w-1 h-1 bg-kimchi-red/30 rounded-full animate-bounce" style={{ animationDuration: '1.5s', animationDelay: '0.2s' }} />
+              </div>
+
+              {/* Lightning bolts */}
+              <div className="relative flex flex-col items-center">
+                {/* Mini lightning */}
+                <svg className="w-3 h-4 text-yellow-400 -mb-1 animate-pulse" viewBox="0 0 12 16" fill="currentColor">
+                  <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
+                </svg>
+
+                {/* The text */}
+                <span
+                  className="text-sm font-black tracking-tight electric-text"
+                  style={{
+                    background: 'linear-gradient(180deg, #DC2626 0%, #991B1B 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 0 20px rgba(220, 38, 38, 0.3)'
+                  }}
+                >
+                  IT&apos;S
+                </span>
+                <span
+                  className="text-base font-black tracking-tight -mt-1 electric-text group-hover:scale-110 transition-transform"
+                  style={{
+                    background: 'linear-gradient(180deg, #DC2626 0%, #7F1D1D 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                  }}
+                >
+                  ALIVE!
+                </span>
+
+                {/* Mini lightning right */}
+                <svg className="absolute -right-2 top-1 w-2 h-3 text-yellow-400 animate-pulse" style={{ animationDelay: '0.5s' }} viewBox="0 0 12 16" fill="currentColor">
+                  <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
+                </svg>
+              </div>
+            </div>
 
             {/* Cart */}
             <Link
@@ -120,10 +187,26 @@ export default function NavBar() {
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'}`}>
           <div className="flex flex-col space-y-4 pt-4 border-t border-gray-100">
             {/* It's Alive Badge - Mobile */}
-            <span className="inline-flex items-center justify-center px-3 py-2 bg-kimchi-red/10 text-kimchi-red text-sm font-bold rounded-full mx-auto">
-              <span className="w-2 h-2 bg-kimchi-red rounded-full mr-2 animate-pulse"></span>
-              It&apos;s Alive!
-            </span>
+            <div className="flex items-center justify-center gap-2 mx-auto py-2">
+              {/* Animated Kimchi Jar */}
+              <svg className="w-8 h-8 wiggle" viewBox="0 0 40 40" fill="none">
+                <path d="M10 14 L10 32 Q10 36 14 36 L26 36 Q30 36 30 32 L30 14" fill="#FEE2E2" stroke="#DC2626" strokeWidth="2" />
+                <rect x="8" y="10" width="24" height="5" rx="2" fill="#DC2626" />
+                <path d="M12 20 Q20 18 28 20 L28 32 Q28 34 26 34 L14 34 Q12 34 12 32 Z" fill="#DC2626" className="opacity-80" />
+                <circle cx="16" cy="26" r="2" fill="white" className="opacity-60 animate-ping" style={{ animationDuration: '2s' }} />
+                <circle cx="22" cy="28" r="1.5" fill="white" className="opacity-50 animate-ping" style={{ animationDuration: '1.5s' }} />
+              </svg>
+              {/* Lightning + Text */}
+              <div className="flex items-center gap-1">
+                <svg className="w-3 h-4 text-yellow-400 animate-pulse" viewBox="0 0 12 16" fill="currentColor">
+                  <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
+                </svg>
+                <span className="font-black text-kimchi-red">IT&apos;S ALIVE!</span>
+                <svg className="w-3 h-4 text-yellow-400 animate-pulse" style={{ animationDelay: '0.3s' }} viewBox="0 0 12 16" fill="currentColor">
+                  <path d="M7 0 L3 7 L6 7 L5 16 L9 8 L6 8 Z" />
+                </svg>
+              </div>
+            </div>
 
             <Link
               href="/"
