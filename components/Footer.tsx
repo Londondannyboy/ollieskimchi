@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -8,19 +7,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <Image
-              src="/Assets/OK 1.jpg"
-              alt="OK"
-              width={80}
-              height={80}
-              className="h-16 w-auto mb-4 brightness-0 invert"
-            />
+            <h2 className="text-3xl font-bold mb-2">
+              Ollie&apos;s <span className="text-kimchi-red">Kimchi</span>
+            </h2>
+            <p className="text-kimchi-red font-bold text-xl mb-4 electric-alive inline-block">
+              It&apos;s Alive!
+            </p>
             <p className="text-gray-400 max-w-md">
               Handcrafted, naturally fermented kimchi made in London.
-              Bursting with probiotics, flavour, and life.
-            </p>
-            <p className="text-kimchi-red font-semibold mt-4 text-lg">
-              It&apos;s Alive!
+              Bursting with probiotics, flavour, and life. Your gut&apos;s new best friend.
             </p>
           </div>
 
