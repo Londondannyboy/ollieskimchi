@@ -9,9 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         kimchi: {
-          red: '#991B1B',
-          'red-dark': '#7F1D1D',
-          'red-light': '#B91C1C',
+          red: '#7F1D1D',
+          'red-dark': '#450A0A',
+          'red-light': '#991B1B',
         },
       },
       fontFamily: {
