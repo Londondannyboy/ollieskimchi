@@ -6,6 +6,8 @@
   --kimchi-red: #E52A2A;
   --kimchi-red-dark: #C41E1E;
   --kimchi-red-light: #FF4040;
+  --kimchi-orange: #FF6B35;
+  --kimchi-green: #2D5A27;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -36,7 +38,254 @@ body {
   border-color: var(--kimchi-red);
 }
 
-/* Button Styles */
+/* ===============================================
+   IT'S ALIVE! - Fun Animations
+   =============================================== */
+
+/* Electric "It's Alive!" Text Animation */
+@keyframes electric-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px var(--kimchi-red),
+      0 0 10px var(--kimchi-red),
+      0 0 20px var(--kimchi-red),
+      0 0 40px var(--kimchi-red);
+    transform: scale(1);
+  }
+  25% {
+    text-shadow:
+      0 0 10px var(--kimchi-red),
+      0 0 20px var(--kimchi-red),
+      0 0 30px var(--kimchi-red-light),
+      0 0 50px var(--kimchi-red-light);
+    transform: scale(1.02);
+  }
+  50% {
+    text-shadow:
+      0 0 5px var(--kimchi-red-light),
+      0 0 15px var(--kimchi-red),
+      0 0 25px var(--kimchi-red),
+      0 0 45px var(--kimchi-red);
+    transform: scale(1);
+  }
+  75% {
+    text-shadow:
+      0 0 15px var(--kimchi-red),
+      0 0 25px var(--kimchi-red-light),
+      0 0 35px var(--kimchi-red),
+      0 0 55px var(--kimchi-red);
+    transform: scale(1.01);
+  }
+}
+
+.electric-alive {
+  animation: electric-glow 2s ease-in-out infinite;
+}
+
+/* Wiggle Animation (like fermentation bubbling) */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
+}
+
+.wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+.wiggle-slow {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce-alive {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce-alive {
+  animation: bounce-alive 1s ease-in-out infinite;
+}
+
+/* Shake Animation (like Frankenstein coming alive!) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.shake-hover:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Fermentation Bubbles Rising */
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+.bubble-rise {
+  animation: bubble-rise 4s ease-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Glow (like something alive) */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--kimchi-red), 0 0 10px rgba(229, 42, 42, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--kimchi-red), 0 0 40px rgba(229, 42, 42, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Spin Animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Pop In Animation */
+@keyframes pop-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-in {
+  animation: pop-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Slide Up Fade In */
+@keyframes slide-up-fade {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up-fade {
+  animation: slide-up-fade 0.6s ease-out forwards;
+}
+
+/* Heartbeat (for alive feeling) */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Lightning flash */
+@keyframes lightning {
+  0%, 9%, 11%, 29%, 31%, 100% {
+    opacity: 1;
+  }
+  10%, 30% {
+    opacity: 0;
+  }
+}
+
+.lightning-flash:hover {
+  animation: lightning 0.3s ease-in-out;
+}
+
+/* Fermentation Bubbles Container */
+.bubbles-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -20px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(229, 42, 42, 0.3));
+  border-radius: 50%;
+  animation: bubble-rise 4s ease-out infinite;
+}
+
+/* Stagger delays for multiple bubbles */
+.bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-delay: 0s; animation-duration: 4s; }
+.bubble:nth-child(2) { left: 20%; width: 15px; height: 15px; animation-delay: 1s; animation-duration: 5s; }
+.bubble:nth-child(3) { left: 35%; width: 25px; height: 25px; animation-delay: 2s; animation-duration: 4.5s; }
+.bubble:nth-child(4) { left: 50%; width: 18px; height: 18px; animation-delay: 0.5s; animation-duration: 5.5s; }
+.bubble:nth-child(5) { left: 65%; width: 22px; height: 22px; animation-delay: 1.5s; animation-duration: 4s; }
+.bubble:nth-child(6) { left: 80%; width: 16px; height: 16px; animation-delay: 2.5s; animation-duration: 5s; }
+.bubble:nth-child(7) { left: 90%; width: 20px; height: 20px; animation-delay: 3s; animation-duration: 4.5s; }
+
+/* ===============================================
+   Button Styles
+   =============================================== */
+
 .btn-primary {
   @apply inline-flex items-center justify-center px-6 py-3 font-semibold text-white transition-all duration-200;
   background-color: var(--kimchi-red);
@@ -44,7 +293,8 @@ body {
 
 .btn-primary:hover {
   background-color: var(--kimchi-red-dark);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(229, 42, 42, 0.4);
 }
 
 .btn-secondary {
@@ -57,6 +307,31 @@ body {
 .btn-secondary:hover {
   background-color: var(--kimchi-red);
   color: white;
+  transform: translateY(-2px);
+}
+
+/* Fun Button with Wiggle */
+.btn-fun {
+  @apply inline-flex items-center justify-center font-bold transition-all duration-200;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-fun:hover {
+  animation: wiggle 0.3s ease-in-out;
+}
+
+.btn-fun::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.btn-fun:hover::after {
+  transform: translateX(100%);
 }
 
 /* Product Card Hover */
@@ -65,58 +340,52 @@ body {
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(229, 42, 42, 0.15);
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: 0 20px 50px rgba(229, 42, 42, 0.2);
 }
 
-/* Hero Animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* ===============================================
+   Text Effects
+   =============================================== */
+
+/* Gradient Text */
+.text-gradient-alive {
+  background: linear-gradient(135deg, var(--kimchi-red), var(--kimchi-orange), var(--kimchi-red));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
 }
 
-.float-animation {
-  animation: float 3s ease-in-out infinite;
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* Fermentation Bubbles */
-@keyframes bubble {
-  0% {
-    transform: translateY(100%) scale(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-100vh) scale(1);
-    opacity: 0;
-  }
+/* Underline Animation */
+.underline-animate {
+  position: relative;
 }
 
-.bubble {
-  animation: bubble 4s ease-in infinite;
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--kimchi-red);
+  transition: width 0.3s ease;
 }
 
-/* "It's Alive!" Pulse */
-@keyframes pulse-alive {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.02);
-  }
+.underline-animate:hover::after {
+  width: 100%;
 }
 
-.pulse-alive {
-  animation: pulse-alive 2s ease-in-out infinite;
-}
+/* ===============================================
+   Utility Classes
+   =============================================== */
 
 /* Smooth scroll */
 html {
@@ -133,4 +402,15 @@ html {
 ::selection {
   background-color: var(--kimchi-red);
   color: white;
+}
+
+/* Responsive animation disable for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
