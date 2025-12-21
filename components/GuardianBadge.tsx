@@ -8,21 +8,21 @@ interface GuardianBadgeProps {
 export default function GuardianBadge({ size = 'md', className = '' }: GuardianBadgeProps) {
   const sizes = {
     sm: {
-      logoWidth: 80,
-      logoHeight: 24,
-      stars: 'w-4 h-4',
-      gap: 'gap-0.5',
-    },
-    md: {
       logoWidth: 100,
       logoHeight: 30,
       stars: 'w-5 h-5',
       gap: 'gap-0.5',
     },
-    lg: {
-      logoWidth: 130,
-      logoHeight: 40,
+    md: {
+      logoWidth: 140,
+      logoHeight: 42,
       stars: 'w-6 h-6',
+      gap: 'gap-1',
+    },
+    lg: {
+      logoWidth: 180,
+      logoHeight: 54,
+      stars: 'w-7 h-7',
       gap: 'gap-1',
     },
   }
@@ -30,7 +30,7 @@ export default function GuardianBadge({ size = 'md', className = '' }: GuardianB
   const s = sizes[size]
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`}>
       {/* Guardian Logo - Blue version with drop shadow */}
       <Image
         src="/Assets/guardian-logo-blue.png"
@@ -41,12 +41,12 @@ export default function GuardianBadge({ size = 'md', className = '' }: GuardianB
         style={{ height: s.logoHeight, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}
       />
 
-      {/* 5 Stars underneath */}
-      <div className={`flex ${s.gap} mt-1.5`}>
+      {/* 5 Stars inline */}
+      <div className={`flex ${s.gap}`}>
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
-            className={`${s.stars} text-yellow-400 fill-current drop-shadow-md`}
+            className={`${s.stars} text-yellow-400 fill-current`}
             viewBox="0 0 20 20"
             style={{ filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.3))' }}
           >
