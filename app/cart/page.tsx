@@ -5,6 +5,22 @@ import { formatPrice } from '@/lib/shopify'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// Local image overrides by product handle
+const productImageOverrides: Record<string, string> = {
+  'classic-napa-cabbage-kimchi': '/Assets/Kimchi_B004_23-04-25.jpg',
+  'classic-kimchi-2-pack': '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
+  'classic-kimchi-3-pack': '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
+  'classic-kimchi-6-pack': '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+  'spicy-kimchi': "/Product Images/Ollie's Kimchi Spicy Kimchi Product.png",
+  'mild-kimchi': "/Product Images/Ollie's Kimchi Mild Kimchi Product.png",
+  'vegan-kimchi': "/Product Images/Ollie's Kimchi Vegan Kimchi Product.png",
+}
+
+// Get the correct image for a product
+function getProductImage(handle: string, shopifyImageUrl?: string): string {
+  return productImageOverrides[handle] || shopifyImageUrl || '/Assets/Kimchi_B004_23-04-25.jpg'
+}
+
 export default function CartPage() {
   const { cart, isLoading, isShopifyEnabled, updateQuantity, removeItem, checkoutUrl } = useCart()
 
@@ -57,20 +73,15 @@ export default function CartPage() {
                   className="bg-white rounded-xl shadow-sm p-4 flex gap-4"
                 >
                   <div className="w-24 h-24 relative rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
-                    {line.merchandise.product.featuredImage?.url ? (
-                      <Image
-                        src={line.merchandise.product.featuredImage.url}
-                        alt={line.merchandise.product.title}
-                        fill
-                        className="object-cover"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-400">
-                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                    )}
+                    <Image
+                      src={getProductImage(
+                        line.merchandise.product.handle,
+                        line.merchandise.product.featuredImage?.url
+                      )}
+                      alt={line.merchandise.product.title}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
 
                   <div className="flex-grow">

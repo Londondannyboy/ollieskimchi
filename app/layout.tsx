@@ -4,6 +4,7 @@ import './globals.css'
 import GuardianBanner from '@/components/GuardianBanner'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
+import EmailPopup from '@/components/EmailPopup'
 import { CartProvider } from '@/components/CartContext'
 
 const outfit = Outfit({
@@ -47,6 +48,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <EmailPopup />
         </CartProvider>
       </body>
     </html>

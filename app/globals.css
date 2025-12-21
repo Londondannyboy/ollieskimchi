@@ -234,6 +234,18 @@ body {
   animation: pop-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+/* Scale In Animation for Modals */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* Slide Up Fade In */
 @keyframes slide-up-fade {
   from {
