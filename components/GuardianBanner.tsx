@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function GuardianBanner() {
@@ -9,10 +10,14 @@ export default function GuardianBanner() {
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-[length:200%_100%] animate-[gradient-shift_8s_ease_infinite]" />
 
       <div className="relative max-w-7xl mx-auto flex items-center justify-center gap-3 text-sm md:text-base">
-        {/* Guardian Logo/Text */}
-        <span className="font-semibold tracking-wide text-gray-400">
-          THE GUARDIAN
-        </span>
+        {/* Guardian Logo */}
+        <Image
+          src="/Assets/The_Guardian_logo.png"
+          alt="The Guardian"
+          width={120}
+          height={24}
+          className="h-5 w-auto brightness-0 invert opacity-80"
+        />
 
         {/* Divider */}
         <span className="text-gray-600">|</span>

@@ -211,9 +211,13 @@ export default async function HomePage() {
             <div className="relative grid lg:grid-cols-12 gap-8 items-center">
               {/* Left - Publication & Rating */}
               <div className="lg:col-span-4 text-center lg:text-left">
-                <p className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight mb-3">
-                  THE GUARDIAN
-                </p>
+                <Image
+                  src="/Assets/The_Guardian_logo.png"
+                  alt="The Guardian"
+                  width={200}
+                  height={40}
+                  className="h-8 lg:h-10 w-auto mb-4 mx-auto lg:mx-0"
+                />
                 {/* 5 Stars */}
                 <div className="flex items-center justify-center lg:justify-start gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
