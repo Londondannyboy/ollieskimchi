@@ -21,6 +21,8 @@ export default async function BlogPage() {
     published_at: article.published_at,
     word_count: article.word_count,
     primary_keyword: article.primary_keyword,
+    hero_image_url: article.hero_image_url,
+    hero_image_alt: article.hero_image_alt,
   }))
 
   // Get unique categories

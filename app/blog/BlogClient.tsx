@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface Article {
   id: number
@@ -12,6 +13,8 @@ interface Article {
   published_at: Date | null
   word_count: number
   primary_keyword: string
+  hero_image_url?: string | null
+  hero_image_alt?: string | null
 }
 
 interface BlogClientProps {
@@ -174,6 +177,17 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
                 href={`/${article.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
               >
+                {article.hero_image_url && (
+                  <div className="aspect-video relative overflow-hidden bg-gray-100">
+                    <Image
+                      src={article.hero_image_url}
+                      alt={article.hero_image_alt || article.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${categoryColors[article.category] || 'bg-gray-100 text-gray-700'}`}>
