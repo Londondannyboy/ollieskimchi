@@ -288,6 +288,41 @@ export default async function ProductPage({ params }: Props) {
                 </div>
               </div>
             </div>
+
+            {/* Guardian Review Quote */}
+            <Link
+              href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 block bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors group"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <Image
+                  src="/Assets/The_Guardian_logo.png"
+                  alt="The Guardian"
+                  width={100}
+                  height={20}
+                  className="h-4 w-auto opacity-70"
+                />
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-xs font-semibold text-kimchi-red bg-kimchi-red/10 px-2 py-0.5 rounded-full">
+                  BEST ALL-ROUNDER
+                </span>
+              </div>
+              <p className="text-gray-700 italic text-sm leading-relaxed">
+                &ldquo;This is well seasoned, has big flavour and hits that sweet spot between funk and freshness. Bold and punchy... A big, full-flavoured jar that delivers.&rdquo;
+              </p>
+              <p className="mt-2 text-xs text-gray-500">
+                — Tom Hunt, The Guardian
+                <span className="text-kimchi-red ml-2 group-hover:underline">Read full review →</span>
+              </p>
+            </Link>
           </div>
         </div>
       </div>
