@@ -55,97 +55,94 @@ export default async function HomePage() {
         {/* Fermentation bubbles */}
         <FermentationBubbles />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh]">
-            {/* Left - Content */}
-            <div className="text-center lg:text-left space-y-6">
-              {/* Logo */}
-              <div className="flex justify-center lg:justify-start">
-                <Image
-                  src="/Assets/OLLIE_S KIMCHI LOGO with WEB.jpg"
-                  alt="Ollie's Kimchi"
-                  width={280}
-                  height={100}
-                  className="h-20 lg:h-24 w-auto rounded-lg"
-                  priority
-                />
-              </div>
-
-              {/* Tagline with personality */}
-              <div className="space-y-2">
-                <p className="text-kimchi-red font-semibold text-lg tracking-wider uppercase">
-                  Meet Ollie. He makes kimchi.
-                </p>
-                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
-                  Handcrafted, naturally fermented,
-                  <span className="block text-kimchi-red">bursting with flavour & life.</span>
-                </h1>
-              </div>
-
-              {/* IT'S ALIVE! - The star of the show */}
-              <div className="py-4">
-                <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-kimchi-red electric-alive inline-block italic">
-                  It&apos;s Alive!
-                </p>
-                <p className="text-gray-300 mt-2 text-lg">
-                  Billions of live probiotics in every jar. Your gut&apos;s new best friend.
-                </p>
-              </div>
-
-              {/* Fun personality text */}
-              <p className="text-xl text-gray-300 max-w-xl">
-                No shortcuts. No pasteurisation. Just time, love, and a whole lot of cabbage.
-                Made fresh in London by Ollie (that&apos;s me!).
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                <Link
-                  href="/shop"
-                  className="btn-fun inline-flex items-center justify-center px-10 py-5 bg-kimchi-red text-white font-bold rounded-full text-xl hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg pulse-glow"
-                >
-                  <span className="mr-2">Shop Now</span>
-                  <svg className="w-6 h-6 bounce-alive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center justify-center px-10 py-5 border-2 border-white/30 text-white font-bold rounded-full text-xl hover:bg-white hover:text-gray-900 transition-all"
-                >
-                  Meet Ollie
-                </Link>
-              </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 min-h-[85vh] flex items-center">
+          {/* Content - takes up left/center */}
+          <div className="text-center lg:text-left space-y-6 max-w-2xl">
+            {/* Logo */}
+            <div className="flex justify-center lg:justify-start">
+              <Image
+                src="/Assets/OLLIE_S KIMCHI LOGO with WEB.jpg"
+                alt="Ollie's Kimchi"
+                width={280}
+                height={100}
+                className="h-20 lg:h-24 w-auto rounded-lg"
+                priority
+              />
             </div>
 
-            {/* Right - Hero Image with Animation */}
-            <div className="relative flex items-center justify-center">
-              <div className="relative z-10 float">
-                <Image
-                  src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
-                  alt="Ollie's Kimchi 3 Pack"
-                  width={450}
-                  height={450}
-                  className="mx-auto drop-shadow-2xl"
-                  priority
-                />
-              </div>
-              {/* Glowing circle behind - smaller to match */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[380px] lg:h-[380px] bg-kimchi-red/30 rounded-full blur-xl pulse-glow -z-0" />
+            {/* Tagline with personality */}
+            <div className="space-y-2">
+              <p className="text-kimchi-red font-semibold text-lg tracking-wider uppercase">
+                Meet Ollie. He makes kimchi.
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+                Handcrafted, naturally fermented,
+                <span className="block text-kimchi-red">bursting with flavour & life.</span>
+              </h1>
+            </div>
 
-              {/* Floating badges */}
-              <div className="absolute top-4 right-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
-                Made in London
-              </div>
-              <div className="absolute bottom-12 left-4 bg-green-600 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
-                100% Natural
-              </div>
+            {/* IT'S ALIVE! - The star of the show */}
+            <div className="py-4">
+              <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-kimchi-red electric-alive inline-block italic">
+                It&apos;s Alive!
+              </p>
+              <p className="text-gray-300 mt-2 text-lg">
+                Billions of live probiotics in every jar. Your gut&apos;s new best friend.
+              </p>
+            </div>
+
+            {/* Fun personality text */}
+            <p className="text-xl text-gray-300 max-w-xl">
+              No shortcuts. No pasteurisation. Just time, love, and a whole lot of cabbage.
+              Made fresh in London by Ollie (that&apos;s me!).
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              <Link
+                href="/shop"
+                className="btn-fun inline-flex items-center justify-center px-10 py-5 bg-kimchi-red text-white font-bold rounded-full text-xl hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg pulse-glow"
+              >
+                <span className="mr-2">Shop Now</span>
+                <svg className="w-6 h-6 bounce-alive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex items-center justify-center px-10 py-5 border-2 border-white/30 text-white font-bold rounded-full text-xl hover:bg-white hover:text-gray-900 transition-all"
+              >
+                Olli&apos;s Story
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Product Image - Bottom Right, Overlapping */}
+        <div className="absolute bottom-0 right-0 lg:right-[5%] translate-y-1/3 z-20 hidden md:block">
+          <div className="relative float">
+            <Image
+              src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
+              alt="Ollie's Kimchi 3 Pack"
+              width={380}
+              height={380}
+              className="drop-shadow-2xl"
+              priority
+            />
+            {/* Glowing circle behind */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-kimchi-red/30 rounded-full blur-xl pulse-glow -z-10" />
+            {/* Floating badges */}
+            <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
+              Made in London
+            </div>
+            <div className="absolute bottom-16 -left-8 bg-green-600 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
+              100% Natural
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 bounce-alive">
+        <div className="absolute bottom-8 left-8 text-white/50 bounce-alive hidden lg:block">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>

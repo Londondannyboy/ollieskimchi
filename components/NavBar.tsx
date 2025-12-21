@@ -49,7 +49,7 @@ export default function NavBar() {
               href="/about"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
             >
-              About Ollie
+              Olli&apos;s Story
             </Link>
             <Link
               href="/contact"
@@ -234,7 +234,7 @@ export default function NavBar() {
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About Ollie
+              Olli&apos;s Story
             </Link>
             <Link
               href="/contact"

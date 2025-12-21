@@ -30,7 +30,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-kimchi-red transition-colors">
-                  About Us
+                  Olli&apos;s Story
                 </Link>
               </li>
               <li>
