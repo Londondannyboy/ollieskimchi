@@ -30,18 +30,46 @@ function parseContent(content: string): string {
   // Check if content is already HTML (starts with < tag)
   const isHtml = content.trim().startsWith('<')
 
-  if (isHtml) {
-    return content
+  let processedContent = content
+
+  if (!isHtml) {
+    // Pre-process: Convert patterns like "Day 1: Title" at start of line to h3
+    processedContent = processedContent.replace(/^(Day \d+:?\s*.+)$/gm, '### $1')
+
+    // Pre-process: Convert patterns like "Step 1:" to h4
+    processedContent = processedContent.replace(/^(Step \d+:?\s*.+)$/gm, '#### $1')
+
+    // Pre-process: Convert patterns like "Tip:" or "Note:" to blockquotes
+    processedContent = processedContent.replace(/^(Tip|Note|Warning|Important|Pro Tip):\s*(.+)$/gm, '> **$1:** $2')
+
+    // Pre-process: Convert standalone titles (short lines ending with no period, followed by longer content)
+    processedContent = processedContent.replace(/^([A-Z][A-Za-z\s]{2,30})$/gm, (match, title) => {
+      // Only convert if it looks like a title (starts with capital, no period, reasonable length)
+      if (!title.includes('.') && title.length < 40) {
+        return `### ${title}`
+      }
+      return match
+    })
   }
 
   // Parse markdown to HTML
-  let html = marked.parse(content) as string
+  let html = isHtml ? processedContent : marked.parse(processedContent) as string
 
   // Add IDs to h2 headings for TOC links
   html = html.replace(/<h2>(.*?)<\/h2>/g, (match, text) => {
     const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
     return `<h2 id="${id}">${text}</h2>`
   })
+
+  // Add IDs to h3 headings
+  html = html.replace(/<h3>(.*?)<\/h3>/g, (match, text) => {
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    return `<h3 id="${id}">${text}</h3>`
+  })
+
+  // Wrap tip/note blockquotes in special styling
+  html = html.replace(/<blockquote>\s*<p><strong>(Tip|Note|Warning|Important|Pro Tip):<\/strong>/g,
+    '<blockquote class="callout callout-$1"><p><strong>$1:</strong>')
 
   return html
 }
@@ -112,13 +140,16 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
         </nav>
 
         {/* Header */}
-        <header className="mb-8">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-kimchi-red/10 text-kimchi-red text-sm font-medium rounded-full capitalize">
+        <header className="mb-10">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="px-4 py-1.5 bg-kimchi-red text-white text-sm font-bold rounded-full capitalize">
               {article.cluster}
             </span>
             {article.published_at && (
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm flex items-center gap-1">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
                 {new Date(article.published_at).toLocaleDateString('en-GB', {
                   day: 'numeric',
                   month: 'long',
@@ -126,20 +157,25 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
                 })}
               </span>
             )}
-            <span className="text-gray-400 text-sm">
-              {article.word_count?.toLocaleString()} words
-            </span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
             {article.title}
           </h1>
           {article.excerpt && (
-            <p className="mt-4 text-xl text-gray-600 leading-relaxed">
+            <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed border-l-4 border-kimchi-red pl-6">
               {article.excerpt}
             </p>
           )}
-          <div className="mt-4 text-sm text-gray-500">
-            By <span className="text-gray-900 font-medium">{article.author}</span>
+          <div className="mt-6 flex items-center gap-4">
+            <div className="flex items-center gap-2 text-sm text-gray-500">
+              <div className="w-10 h-10 bg-kimchi-red rounded-full flex items-center justify-center text-white font-bold">
+                O
+              </div>
+              <div>
+                <p className="font-medium text-gray-900">{article.author}</p>
+                <p className="text-xs">Kimchi Expert</p>
+              </div>
+            </div>
           </div>
         </header>
 
@@ -180,21 +216,30 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           </nav>
         )}
 
-        {/* Content - Now properly parses markdown */}
+        {/* Content - Rich styling with visual hierarchy */}
         <div
-          className="prose prose-lg prose-gray max-w-none
-            prose-headings:text-gray-900 prose-headings:font-bold
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4 prose-h2:scroll-mt-20
-            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-            prose-p:text-gray-700 prose-p:leading-relaxed
-            prose-a:text-kimchi-red prose-a:no-underline hover:prose-a:underline
-            prose-strong:text-gray-900
-            prose-ul:my-4 prose-li:text-gray-700
-            prose-ol:my-4
-            prose-table:my-6
-            prose-th:bg-gray-50 prose-th:px-4 prose-th:py-2 prose-th:text-left
-            prose-td:px-4 prose-td:py-2 prose-td:border-t
-            prose-img:rounded-xl"
+          className="article-content prose prose-xl prose-gray max-w-none
+            prose-headings:text-gray-900 prose-headings:font-bold prose-headings:tracking-tight
+            prose-h1:text-4xl prose-h1:mt-16 prose-h1:mb-6 prose-h1:pb-4 prose-h1:border-b-2 prose-h1:border-kimchi-red
+            prose-h2:text-3xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:scroll-mt-20 prose-h2:text-kimchi-red
+            prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-gray-800
+            prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:font-semibold
+            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-6
+            prose-a:text-kimchi-red prose-a:font-semibold prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-red-700
+            prose-strong:text-gray-900 prose-strong:font-bold
+            prose-em:text-gray-800 prose-em:italic
+            prose-ul:my-6 prose-ul:pl-6
+            prose-ol:my-6 prose-ol:pl-6
+            prose-li:text-gray-700 prose-li:text-lg prose-li:mb-3 prose-li:leading-relaxed
+            prose-blockquote:border-l-4 prose-blockquote:border-kimchi-red prose-blockquote:bg-red-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-xl prose-blockquote:italic prose-blockquote:text-gray-700
+            prose-table:my-8 prose-table:rounded-xl prose-table:overflow-hidden
+            prose-th:bg-kimchi-red prose-th:text-white prose-th:px-6 prose-th:py-4 prose-th:text-left prose-th:font-bold
+            prose-td:px-6 prose-td:py-4 prose-td:border-t prose-td:border-gray-200
+            prose-tr:even:bg-gray-50
+            prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8
+            prose-hr:my-12 prose-hr:border-gray-200
+            prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-kimchi-red prose-code:font-mono
+            prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:p-6"
           dangerouslySetInnerHTML={{ __html: parsedContent }}
         />
 

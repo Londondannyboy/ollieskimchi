@@ -404,6 +404,234 @@ html {
   color: white;
 }
 
+/* ===============================================
+   Article Content Enhancements
+   =============================================== */
+
+/* Rich article styling */
+.article-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.article-content h2 {
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin-top: 3rem;
+}
+
+.article-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--kimchi-red);
+  border-radius: 2px;
+}
+
+.article-content h3 {
+  color: var(--kimchi-red);
+}
+
+/* Callout boxes for tips, notes, warnings */
+.article-content p:has(strong:first-child) {
+  background: linear-gradient(135deg, #fef3f2 0%, #fff1f0 100%);
+  border-left: 4px solid var(--kimchi-red);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  margin: 1.5rem 0;
+}
+
+/* Style paragraphs starting with specific keywords */
+.article-content p strong:first-child {
+  color: var(--kimchi-red);
+  font-weight: 700;
+}
+
+/* Better list styling */
+.article-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background: var(--kimchi-red);
+  border-radius: 50%;
+}
+
+.article-content ol {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+}
+
+.article-content ol li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  counter-increment: item;
+}
+
+.article-content ol li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--kimchi-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+/* Highlight important text */
+.article-content mark,
+.article-content strong em {
+  background: linear-gradient(180deg, transparent 60%, rgba(229, 42, 42, 0.2) 60%);
+  padding: 0 0.25rem;
+}
+
+/* First paragraph drop cap */
+.article-content > p:first-of-type::first-letter {
+  float: left;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--kimchi-red);
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Blockquote enhancement */
+.article-content blockquote {
+  position: relative;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.article-content blockquote::before {
+  content: '"';
+  position: absolute;
+  left: -0.5rem;
+  top: -1rem;
+  font-size: 4rem;
+  color: var(--kimchi-red);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+/* Tables with better styling */
+.article-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal rules as section dividers */
+.article-content hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--kimchi-red), transparent);
+  margin: 3rem 0;
+}
+
+/* Image captions */
+.article-content figure {
+  margin: 2rem 0;
+}
+
+.article-content figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Links with hover effect */
+.article-content a {
+  position: relative;
+  text-decoration: none;
+  background-image: linear-gradient(var(--kimchi-red), var(--kimchi-red));
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.article-content a:hover {
+  background-size: 100% 100%;
+  color: white;
+}
+
+/* Callout boxes */
+.article-content .callout {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 4rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.article-content .callout::before {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.article-content .callout-Tip,
+.article-content .callout-Pro {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left: 4px solid #10b981;
+}
+
+.article-content .callout-Tip::before,
+.article-content .callout-Pro::before {
+  content: '💡';
+}
+
+.article-content .callout-Note {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-left: 4px solid #3b82f6;
+}
+
+.article-content .callout-Note::before {
+  content: '📝';
+}
+
+.article-content .callout-Warning,
+.article-content .callout-Important {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 4px solid #f59e0b;
+}
+
+.article-content .callout-Warning::before,
+.article-content .callout-Important::before {
+  content: '⚠️';
+}
+
 /* Responsive animation disable for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
