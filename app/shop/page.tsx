@@ -11,6 +11,7 @@ const demoProducts = [
     description: 'Our signature kimchi made with crisp napa cabbage, gochugaru, garlic, and ginger.',
     price: '8.50',
     image: '/Assets/Kimchi_B004_23-04-25.jpg',
+    comingSoon: false,
   },
   {
     id: '2',
@@ -18,7 +19,8 @@ const demoProducts = [
     handle: 'classic-kimchi-2-pack',
     description: 'Save 5%! Two jars of our signature Classic Napa Cabbage Kimchi.',
     price: '16.15',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
+    comingSoon: false,
   },
   {
     id: '3',
@@ -26,7 +28,8 @@ const demoProducts = [
     handle: 'classic-kimchi-3-pack',
     description: 'Save 10%! Three jars of our signature Classic Napa Cabbage Kimchi.',
     price: '22.95',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
+    comingSoon: false,
   },
   {
     id: '4',
@@ -34,7 +37,8 @@ const demoProducts = [
     handle: 'classic-kimchi-6-pack',
     description: 'Save 15%! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
     price: '43.35',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+    comingSoon: false,
   },
   {
     id: '5',
@@ -42,7 +46,8 @@ const demoProducts = [
     handle: 'spicy-kimchi',
     description: 'Extra kick for those who like it hot. Same great fermentation, more heat.',
     price: '9.00',
-    image: '/Assets/Kimchi_B006_30-11-20.jpg',
+    image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
+    comingSoon: true,
   },
   {
     id: '6',
@@ -50,7 +55,8 @@ const demoProducts = [
     handle: 'mild-kimchi',
     description: 'All the probiotic benefits with a gentler spice level. Perfect for beginners.',
     price: '8.50',
-    image: '/Assets/Kimchi_B012_24-04-21.jpg',
+    image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
+    comingSoon: true,
   },
   {
     id: '7',
@@ -58,7 +64,8 @@ const demoProducts = [
     handle: 'vegan-kimchi',
     description: 'Traditional flavour without fish sauce. 100% plant-based fermentation.',
     price: '9.00',
-    image: '/Assets/Kimchi_B014_02-04-21.jpg',
+    image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
+    comingSoon: true,
   },
 ]
 
@@ -77,6 +84,7 @@ export default async function ShopPage() {
           description: p.description,
           price: p.variants.edges[0]?.node.price.amount || '0',
           image: p.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
+          comingSoon: false,
         }))
         isDemo = false
       }
@@ -114,31 +122,63 @@ export default async function ShopPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {products.map((product) => (
-            <Link
-              key={product.id}
-              href={`/shop/${product.handle}`}
-              className="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl"
-            >
-              <div className="aspect-square relative overflow-hidden bg-gray-100">
-                <Image
-                  src={product.image}
-                  alt={product.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+            product.comingSoon ? (
+              <div
+                key={product.id}
+                className="product-card bg-white rounded-2xl overflow-hidden shadow-sm opacity-90"
+              >
+                <div className="aspect-square relative overflow-hidden bg-gray-100">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover grayscale-[30%]"
+                  />
+                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                    <span className="bg-kimchi-red text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg">
+                      Coming Soon
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-gray-900">
+                    {product.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                    {product.description}
+                  </p>
+                  <p className="mt-4 text-lg font-bold text-gray-400">
+                    {formatPrice(product.price)}
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors">
-                  {product.title}
-                </h3>
-                <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                  {product.description}
-                </p>
-                <p className="mt-4 text-lg font-bold text-kimchi-red">
-                  {formatPrice(product.price)}
-                </p>
-              </div>
-            </Link>
+            ) : (
+              <Link
+                key={product.id}
+                href={`/shop/${product.handle}`}
+                className="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl"
+              >
+                <div className="aspect-square relative overflow-hidden bg-gray-100">
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors">
+                    {product.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">
+                    {product.description}
+                  </p>
+                  <p className="mt-4 text-lg font-bold text-kimchi-red">
+                    {formatPrice(product.price)}
+                  </p>
+                </div>
+              </Link>
+            )
           ))}
         </div>
       </div>
