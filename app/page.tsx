@@ -147,7 +147,7 @@ export default async function HomePage() {
             <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
               Made in London
             </div>
-            <div className="absolute bottom-16 -left-8 bg-green-600 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute bottom-16 -left-8 bg-green-800 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
               100% Natural
             </div>
             {/* Guardian Badge */}
