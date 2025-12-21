@@ -12,6 +12,17 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Ensure subscribers table exists
+    await sql`
+      CREATE TABLE IF NOT EXISTS subscribers (
+        id SERIAL PRIMARY KEY,
+        email VARCHAR(255) UNIQUE NOT NULL,
+        source VARCHAR(50) DEFAULT 'popup',
+        discount_code VARCHAR(50),
+        created_at TIMESTAMP DEFAULT NOW()
+      )
+    `
+
     // Check if email already exists
     const existing = await sql`
       SELECT id FROM subscribers WHERE email = ${email.toLowerCase()}
@@ -28,6 +39,7 @@ export async function POST(request: NextRequest) {
       VALUES (${email.toLowerCase()}, 'popup', 'OLLIE15', NOW())
     `
 
+    console.log('[Subscribe] New subscriber:', email)
     return NextResponse.json({ success: true, message: 'Subscribed successfully' })
   } catch (error) {
     console.error('Subscribe error:', error)

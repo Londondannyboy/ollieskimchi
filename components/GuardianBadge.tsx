@@ -2,32 +2,28 @@ import Image from 'next/image'
 
 interface GuardianBadgeProps {
   size?: 'sm' | 'md' | 'lg'
-  showQuote?: boolean
   className?: string
 }
 
-export default function GuardianBadge({ size = 'md', showQuote = false, className = '' }: GuardianBadgeProps) {
+export default function GuardianBadge({ size = 'md', className = '' }: GuardianBadgeProps) {
   const sizes = {
     sm: {
-      container: 'w-14 h-14',
-      logo: 'h-3',
-      stars: 'w-2 h-2',
-      quote: 'text-[6px]',
-      padding: 'p-1.5',
-    },
-    md: {
-      container: 'w-20 h-20',
-      logo: 'h-4',
-      stars: 'w-2.5 h-2.5',
-      quote: 'text-[7px]',
-      padding: 'p-2',
-    },
-    lg: {
-      container: 'w-28 h-28',
       logo: 'h-5',
       stars: 'w-3 h-3',
-      quote: 'text-[8px]',
-      padding: 'p-3',
+      gap: 'gap-0.5',
+      padding: 'px-2 py-1.5',
+    },
+    md: {
+      logo: 'h-6',
+      stars: 'w-4 h-4',
+      gap: 'gap-0.5',
+      padding: 'px-3 py-2',
+    },
+    lg: {
+      logo: 'h-8',
+      stars: 'w-5 h-5',
+      gap: 'gap-1',
+      padding: 'px-4 py-3',
     },
   }
 
@@ -35,19 +31,19 @@ export default function GuardianBadge({ size = 'md', showQuote = false, classNam
 
   return (
     <div
-      className={`${s.container} rounded-full bg-white shadow-lg flex flex-col items-center justify-center ${s.padding} ${className}`}
+      className={`bg-white/90 backdrop-blur-sm rounded-xl shadow-lg flex flex-col items-center ${s.padding} ${className}`}
     >
       {/* Guardian Logo */}
       <Image
         src="/Assets/guardian-logo-blue.png"
         alt="The Guardian"
-        width={80}
-        height={16}
+        width={100}
+        height={20}
         className={`${s.logo} w-auto`}
       />
 
-      {/* 5 Stars */}
-      <div className="flex gap-0.5 mt-1">
+      {/* 5 Stars underneath */}
+      <div className={`flex ${s.gap} mt-1`}>
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
@@ -58,13 +54,6 @@ export default function GuardianBadge({ size = 'md', showQuote = false, classNam
           </svg>
         ))}
       </div>
-
-      {/* Optional Quote */}
-      {showQuote && (
-        <p className={`${s.quote} text-gray-600 font-medium mt-0.5 text-center leading-tight`}>
-          &ldquo;Big flavour&rdquo;
-        </p>
-      )}
     </div>
   )
 }

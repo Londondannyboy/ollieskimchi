@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AddToCartButton from './AddToCartButton'
 import GuardianBadge from '@/components/GuardianBadge'
+import OllisPromise from '@/components/OllisPromise'
 
 // Guardian review quotes from Tom Hunt's article
 const guardianQuotes: Record<string, string> = {
@@ -340,10 +341,13 @@ export default async function ProductPage({ params }: Props) {
             {/* Product Details HTML */}
             <div className="mt-8 pt-8 border-t border-gray-200">
               <div
-                className="prose prose-gray max-w-none [&_p]:mb-4 [&_h3]:mt-6 [&_h3]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold"
+                className="prose prose-gray max-w-none [&_p]:mb-4 [&_p]:leading-relaxed [&_h3]:mt-8 [&_h3]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-gray-900 prose-headings:font-display"
                 dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
               />
             </div>
+
+            {/* Olli's Promise */}
+            <OllisPromise />
           </div>
         </div>
       </div>
