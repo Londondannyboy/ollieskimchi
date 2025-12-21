@@ -118,8 +118,8 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* Product Image - Bottom Right, Overlapping */}
-        <div className="absolute bottom-0 right-0 lg:right-[5%] translate-y-1/3 z-20 hidden md:block">
+        {/* Product Image - Bottom Right, Overlapping into red banner */}
+        <div className="absolute bottom-0 right-0 lg:right-[5%] translate-y-1/4 z-20 hidden md:block">
           <div className="relative float">
             <Image
               src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
@@ -175,11 +175,29 @@ export default async function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+        {/* Subtle background product image */}
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-[0.03] pointer-events-none hidden lg:block">
+          <Image
+            src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="absolute -left-32 bottom-0 w-[400px] h-[400px] opacity-[0.02] pointer-events-none rotate-12 hidden lg:block">
+          <Image
+            src="/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png"
+            alt=""
+            fill
+            className="object-contain"
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-kimchi-red font-bold text-lg mb-2">Grab Yourself Some</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
               Ollie&apos;s <span className="text-gradient-alive">Kimchi</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
@@ -287,6 +305,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Curved section divider */}
+      <div className="relative h-16 bg-white">
+        <svg className="absolute bottom-0 w-full h-16 text-gray-900 fill-current" viewBox="0 0 1440 64" preserveAspectRatio="none">
+          <path d="M0,64 C480,0 960,0 1440,64 L1440,64 L0,64 Z" />
+        </svg>
+      </div>
+
       {/* Coming Soon Section */}
       <section className="py-20 lg:py-28 bg-gray-900 text-white relative overflow-hidden">
         <FermentationBubbles />
@@ -296,8 +321,8 @@ export default async function HomePage() {
             <span className="inline-block px-4 py-2 bg-kimchi-red rounded-full text-sm font-bold mb-4 wiggle">
               COMING SOON
             </span>
-            <h2 className="text-4xl lg:text-5xl font-bold">
-              New Flavours <span className="text-kimchi-red">Brewing</span>
+            <h2 className="font-display text-4xl lg:text-5xl font-semibold">
+              New Flavours <span className="text-kimchi-red italic">Brewing</span>
             </h2>
             <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
               Ollie&apos;s been busy in the kitchen. More delicious options on the way!
@@ -392,9 +417,29 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Curved section divider */}
+      <div className="relative h-16 bg-gray-900">
+        <svg className="absolute bottom-0 w-full h-16 text-white fill-current" viewBox="0 0 1440 64" preserveAspectRatio="none">
+          <path d="M0,0 C480,64 960,64 1440,0 L1440,64 L0,64 Z" />
+        </svg>
+      </div>
+
       {/* Why Ollie's Section */}
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+        {/* Subtle background jar image */}
+        <div className="absolute -left-20 top-20 w-[450px] h-[450px] opacity-[0.03] pointer-events-none hidden lg:block">
+          <Image
+            src="/Assets/Kimchi_B004_23-04-25.jpg"
+            alt=""
+            fill
+            className="object-cover rounded-full"
+          />
+        </div>
+        {/* Decorative circles */}
+        <div className="absolute right-10 bottom-20 w-64 h-64 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
+        <div className="absolute right-24 bottom-32 w-48 h-48 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <Image
@@ -405,14 +450,14 @@ export default async function HomePage() {
                 className="rounded-3xl shadow-2xl"
               />
               {/* Fun floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-kimchi-red text-white px-6 py-4 rounded-2xl font-bold text-lg shadow-xl wiggle-slow">
+              <div className="absolute -bottom-6 -right-6 bg-kimchi-red text-white px-6 py-4 rounded-2xl font-display font-semibold text-lg shadow-xl wiggle-slow">
                 Mmm... Crunchy!
               </div>
             </div>
             <div>
               <p className="text-kimchi-red font-bold text-lg mb-2">Why Go With Ollie?</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-                Because Life&apos;s Too Short for <span className="text-kimchi-red">Boring Kimchi</span>
+              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900 mb-8">
+                Because Life&apos;s Too Short for <span className="text-kimchi-red italic">Boring Kimchi</span>
               </h2>
 
               <div className="space-y-8">
@@ -481,13 +526,20 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Subtle divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+
       {/* Blog/Recipes Section */}
-      <section className="py-20 lg:py-28 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute top-10 right-10 w-32 h-32 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
+        <div className="absolute bottom-20 left-20 w-24 h-24 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-kimchi-red font-bold text-lg mb-2">Learn &amp; Cook</p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
-              From Ollie&apos;s <span className="text-kimchi-red">Kitchen</span>
+            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
+              From Ollie&apos;s <span className="text-kimchi-red italic">Kitchen</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600">
               Recipes, tips, and kimchi wisdom from yours truly
@@ -534,6 +586,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Curved section divider before Instagram */}
+      <div className="relative h-12 bg-gray-50">
+        <svg className="absolute bottom-0 w-full h-12 text-white fill-current" viewBox="0 0 1440 48" preserveAspectRatio="none">
+          <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" />
+        </svg>
+      </div>
+
       {/* Instagram Section */}
       <InstagramFeed
         embedId="5ad9f64e-e5c7-4d90-9294-7282240b7247"
@@ -553,9 +612,9 @@ export default async function HomePage() {
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/80 text-xl mb-4">Your Gut Is Calling</p>
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="font-display text-4xl lg:text-6xl font-semibold text-white mb-6">
             Ready to Get Some<br />
-            <span className="electric-alive inline-block">Living Kimchi</span>
+            <span className="electric-alive inline-block italic">Living Kimchi</span>
             <br />in Your Life?
           </h2>
           <p className="text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
