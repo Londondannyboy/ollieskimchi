@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getSeoArticlesByCluster } from '@/lib/db'
-import InstagramFeed from '@/components/InstagramFeed'
 import GuardianBadge from '@/components/GuardianBadge'
 
 // Guardian review quotes from Tom Hunt's article
@@ -844,19 +843,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Curved section divider before Instagram */}
-      <div className="relative h-12 bg-gray-50">
-        <svg className="absolute bottom-0 w-full h-12 text-white fill-current" viewBox="0 0 1440 48" preserveAspectRatio="none">
-          <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" />
-        </svg>
-      </div>
-
-      {/* Instagram Section */}
-      <InstagramFeed
-        embedId="5ad9f64e-e5c7-4d90-9294-7282240b7247"
-        embedProvider="mirror"
-      />
 
       {/* Big CTA Section */}
       <section className="relative py-28 lg:py-36 bg-kimchi-red overflow-hidden">
