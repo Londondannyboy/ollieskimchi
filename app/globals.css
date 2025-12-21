@@ -431,7 +431,28 @@ html {
 /* Rich article styling */
 .article-content {
   font-size: 1.125rem;
-  line-height: 1.8;
+  line-height: 1.9;
+}
+
+.article-content p {
+  margin-bottom: 1.75rem;
+}
+
+.article-content p + p {
+  margin-top: 1.75rem;
+}
+
+.article-content h2 + p,
+.article-content h3 + p {
+  margin-top: 1rem;
+}
+
+.article-content p + h2 {
+  margin-top: 3rem;
+}
+
+.article-content p + h3 {
+  margin-top: 2.5rem;
 }
 
 .article-content h2 {
