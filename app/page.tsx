@@ -580,7 +580,7 @@ export default async function HomePage() {
               COMING SOON
             </span>
             <h2 className="font-display text-4xl lg:text-5xl font-semibold">
-              New Flavours <span className="text-red-900 italic">Brewing</span>
+              New Flavours <span className="text-red-400 italic">Brewing</span>
             </h2>
             <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
               Ollie&apos;s been busy in the kitchen. More delicious options on the way!

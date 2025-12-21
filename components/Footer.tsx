@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h2 className="text-3xl font-bold mb-2">
-              Ollie&apos;s <span className="text-red-900">Kimchi</span>
+              Ollie&apos;s <span className="text-red-400">Kimchi</span>
             </h2>
             <p className="text-red-400 font-bold text-xl mb-4 electric-alive inline-block">
               It&apos;s Alive!
