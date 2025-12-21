@@ -26,7 +26,7 @@ export default function NavBar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
@@ -43,7 +43,7 @@ export default function NavBar() {
               href="/blog"
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
             >
-              Blog
+              Articles
             </Link>
             <Link
               href="/about"
@@ -52,10 +52,13 @@ export default function NavBar() {
               About Ollie
             </Link>
             <Link
-              href="/contact"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate"
+              href="/talk-to-vic"
+              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors underline-animate flex items-center gap-1"
             >
-              Contact
+              <span>Talk to Vic</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
             </Link>
           </div>
 
@@ -133,6 +136,17 @@ export default function NavBar() {
                 </svg>
               </div>
             </div>
+
+            {/* Account/Login */}
+            <Link
+              href="/account"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-gray-700 hover:text-kimchi-red font-medium transition-colors rounded-full hover:bg-gray-100"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <span className="text-sm">Sign In</span>
+            </Link>
 
             {/* Cart */}
             <Link
@@ -227,7 +241,7 @@ export default function NavBar() {
               className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Blog
+              Articles
             </Link>
             <Link
               href="/about"
@@ -237,21 +251,36 @@ export default function NavBar() {
               About Ollie
             </Link>
             <Link
-              href="/contact"
-              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2"
+              href="/talk-to-vic"
+              className="text-gray-700 hover:text-kimchi-red font-medium transition-colors text-center py-2 flex items-center justify-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Talk to Vic
             </Link>
 
-            {/* Mobile Shop CTA */}
-            <Link
-              href="/shop"
-              className="mx-4 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Shop Now
-            </Link>
+            {/* Mobile Sign In + Shop CTAs */}
+            <div className="flex gap-3 mx-4 pt-2">
+              <Link
+                href="/account"
+                className="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-full text-center hover:border-kimchi-red hover:text-kimchi-red transition-colors flex items-center justify-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                Sign In
+              </Link>
+              <Link
+                href="/shop"
+                className="flex-1 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Shop Now
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
