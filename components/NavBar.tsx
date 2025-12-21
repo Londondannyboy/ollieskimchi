@@ -137,17 +137,6 @@ export default function NavBar() {
               </div>
             </div>
 
-            {/* Account/Login */}
-            <Link
-              href="/account"
-              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-gray-700 hover:text-kimchi-red font-medium transition-colors rounded-full hover:bg-gray-100"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              <span className="text-sm">Sign In</span>
-            </Link>
-
             {/* Cart */}
             <Link
               href="/cart"
@@ -261,26 +250,14 @@ export default function NavBar() {
               Talk to Vic
             </Link>
 
-            {/* Mobile Sign In + Shop CTAs */}
-            <div className="flex gap-3 mx-4 pt-2">
-              <Link
-                href="/account"
-                className="flex-1 py-3 border-2 border-gray-200 text-gray-700 font-bold rounded-full text-center hover:border-kimchi-red hover:text-kimchi-red transition-colors flex items-center justify-center gap-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                Sign In
-              </Link>
-              <Link
-                href="/shop"
-                className="flex-1 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Shop Now
-              </Link>
-            </div>
+            {/* Mobile Shop CTA */}
+            <Link
+              href="/shop"
+              className="mx-4 py-3 bg-kimchi-red text-white font-bold rounded-full text-center hover:bg-red-600 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Shop Now
+            </Link>
           </div>
         </div>
       </nav>
