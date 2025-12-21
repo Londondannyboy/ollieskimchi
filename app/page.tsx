@@ -203,6 +203,85 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Meet Ollie - Personal Introduction */}
+      <section className="py-16 lg:py-20 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative">
+              <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Assets/Kimchi_B006_30-11-20.jpg"
+                  alt="Ollie making kimchi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Floating quote card */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 max-w-xs hidden md:block">
+                <div className="flex items-center gap-2 mb-2">
+                  <Image
+                    src="/Assets/The_Guardian_logo.png"
+                    alt="The Guardian"
+                    width={80}
+                    height={20}
+                    className="h-4 w-auto opacity-70"
+                  />
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm italic">&ldquo;Best All-Rounder&rdquo;</p>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-6">
+              <p className="text-kimchi-red font-bold text-lg">Hey, I&apos;m Ollie!</p>
+              <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
+                I Make Proper Kimchi.<br />
+                <span className="text-kimchi-red">The Real Stuff.</span>
+              </h2>
+              <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+                <p>
+                  I started making kimchi in my tiny London kitchen because I couldn&apos;t find the real thing anywhere.
+                  You know, the kind that&apos;s actually alive with probiotics, not the pasteurised stuff sitting on supermarket shelves.
+                </p>
+                <p>
+                  I&apos;m pretty chuffed that The Guardian called my kimchi the <span className="font-semibold text-gray-900">&ldquo;Best All-Rounder&rdquo;</span> with
+                  5 stars - but honestly, the best feeling is when someone tells me it&apos;s the tastiest kimchi they&apos;ve ever had.
+                </p>
+                <p>
+                  Every batch is made by hand with love, patience, and proper Korean methods.
+                  No shortcuts. No weird additives. Just real ingredients and time doing its thing.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Link
+                  href="/shop"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-kimchi-red text-white font-bold rounded-full hover:bg-red-600 transition-all transform hover:scale-105"
+                >
+                  Try My Kimchi
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 font-bold rounded-full hover:border-kimchi-red hover:text-kimchi-red transition-all"
+                >
+                  Read My Story
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* As Featured In - Press Section */}
       <section className="py-16 lg:py-20 bg-gray-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
