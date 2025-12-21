@@ -30,7 +30,7 @@ export default function GuardianBadge({ size = 'md', className = '' }: GuardianB
   const s = sizes[size]
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex flex-col items-center ${className}`}>
       {/* Guardian Logo - Blue version with drop shadow */}
       <Image
         src="/Assets/guardian-logo-blue.png"
@@ -41,8 +41,8 @@ export default function GuardianBadge({ size = 'md', className = '' }: GuardianB
         style={{ height: s.logoHeight, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}
       />
 
-      {/* 5 Stars inline */}
-      <div className={`flex ${s.gap}`}>
+      {/* 5 Stars underneath, horizontally aligned */}
+      <div className={`flex ${s.gap} mt-1`}>
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
