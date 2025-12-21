@@ -31,11 +31,11 @@ export default function CookieConsent() {
           <div className="flex-grow">
             <p className="text-sm md:text-base">
               We use cookies to improve your experience on our site. By continuing to browse, you agree to our{' '}
-              <Link href="/privacy" className="text-kimchi-red hover:underline">
+              <Link href="/privacy" className="text-red-400 hover:underline">
                 Privacy Policy
               </Link>{' '}
               and{' '}
-              <Link href="/terms" className="text-kimchi-red hover:underline">
+              <Link href="/terms" className="text-red-400 hover:underline">
                 Terms of Service
               </Link>.
             </p>

@@ -464,7 +464,7 @@ export default async function HomePage() {
             {/* 3 Pack */}
             <Link href="/shop/classic-kimchi-3-pack" className="group">
               <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full wiggle z-20">
+                <span className="absolute top-4 left-4 bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full wiggle z-20">
                   SAVE 10%
                 </span>
                 <div className="aspect-square relative mb-6">
@@ -590,7 +590,7 @@ export default async function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Vegan */}
             <div className="bg-gray-800 rounded-3xl p-8 text-center relative overflow-hidden group hover:bg-gray-750 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-green-700/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
               <div className="relative z-10">
                 <div className="aspect-square relative mb-6 max-w-[200px] mx-auto float">
                   <Image
@@ -600,7 +600,7 @@ export default async function HomePage() {
                     className="object-contain"
                   />
                 </div>
-                <span className="inline-block px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full mb-4">
+                <span className="inline-block px-3 py-1 bg-green-700 text-white text-xs font-bold rounded-full mb-4">
                   VEGAN
                 </span>
                 <h3 className="text-2xl font-bold mb-3">Vegan Kimchi</h3>
@@ -612,7 +612,7 @@ export default async function HomePage() {
 
             {/* Mild */}
             <div className="bg-gray-800 rounded-3xl p-8 text-center relative overflow-hidden group hover:bg-gray-750 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-700/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
               <div className="relative z-10">
                 <div className="aspect-square relative mb-6 max-w-[200px] mx-auto float" style={{ animationDelay: '0.5s' }}>
                   <Image
@@ -622,7 +622,7 @@ export default async function HomePage() {
                     className="object-contain"
                   />
                 </div>
-                <span className="inline-block px-3 py-1 bg-orange-500 text-white text-xs font-bold rounded-full mb-4">
+                <span className="inline-block px-3 py-1 bg-orange-700 text-white text-xs font-bold rounded-full mb-4">
                   MILD
                 </span>
                 <h3 className="text-2xl font-bold mb-3">Mild Kimchi</h3>

@@ -147,7 +147,7 @@ export default function EmailPopup() {
                 </button>
               </form>
 
-              <p className="mt-4 text-xs text-gray-400 text-center">
+              <p className="mt-4 text-xs text-gray-500 text-center">
                 Unsubscribe anytime. We respect your inbox.
               </p>
             </div>

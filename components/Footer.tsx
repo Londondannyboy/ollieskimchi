@@ -10,10 +10,10 @@ export default function Footer() {
             <h2 className="text-3xl font-bold mb-2">
               Ollie&apos;s <span className="text-kimchi-red">Kimchi</span>
             </h2>
-            <p className="text-kimchi-red font-bold text-xl mb-4 electric-alive inline-block">
+            <p className="text-red-400 font-bold text-xl mb-4 electric-alive inline-block">
               It&apos;s Alive!
             </p>
-            <p className="text-gray-400 max-w-md">
+            <p className="text-gray-300 max-w-md">
               Hey, I&apos;m Ollie! I make proper kimchi in London - the real stuff with billions of live probiotics.
               No shortcuts, no pasteurisation, just time and love. Thanks for stopping by!
             </p>
@@ -24,27 +24,27 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Explore</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/shop" className="text-gray-400 hover:text-kimchi-red transition-colors">
+                <Link href="/shop" className="text-gray-300 hover:text-kimchi-red transition-colors">
                   My Shop
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-kimchi-red transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-kimchi-red transition-colors">
                   About Me
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-kimchi-red transition-colors">
+                <Link href="/blog" className="text-gray-300 hover:text-kimchi-red transition-colors">
                   Stuff I&apos;ve Written
                 </Link>
               </li>
               <li>
-                <Link href="/recipes" className="text-gray-400 hover:text-kimchi-red transition-colors">
+                <Link href="/recipes" className="text-gray-300 hover:text-kimchi-red transition-colors">
                   Recipes
                 </Link>
               </li>
               <li>
-                <Link href="/health" className="text-gray-400 hover:text-kimchi-red transition-colors">
+                <Link href="/health" className="text-gray-300 hover:text-kimchi-red transition-colors">
                   Health Benefits
                 </Link>
               </li>
@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Say Hello */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Say Hello</h3>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2 text-gray-300">
               <li>
                 <a
                   href="mailto:hello@ollieskimchi.co.uk"
@@ -72,7 +72,7 @@ export default function Footer() {
                 href="https://instagram.com/ollieskimchi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-kimchi-red transition-colors"
+                className="text-gray-300 hover:text-kimchi-red transition-colors"
                 aria-label="Follow me on Instagram"
               >
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export default function Footer() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-flex items-center text-kimchi-red hover:text-red-400 transition-colors font-medium"
+                className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors font-medium"
               >
                 Drop me a message
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-gray-400 text-sm">
+        <div className="border-t border-gray-800 mt-8 pt-8 text-gray-300 text-sm">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p>&copy; {new Date().getFullYear()} Ollie&apos;s Kimchi. Made by me, Ollie!</p>
             <div className="flex gap-6">
