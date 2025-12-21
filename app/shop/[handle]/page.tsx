@@ -4,6 +4,38 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AddToCartButton from './AddToCartButton'
 
+// Local image overrides by product handle (must match collection page)
+const productOverrides: Record<string, { image?: string; images?: string[] }> = {
+  'classic-napa-cabbage-kimchi': {
+    image: '/Assets/Kimchi_B004_23-04-25.jpg',
+    images: ['/Assets/Kimchi_B004_23-04-25.jpg', '/Assets/Kimchi_B006_30-11-20.jpg']
+  },
+  'classic-kimchi-2-pack': {
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png']
+  },
+  'classic-kimchi-3-pack': {
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png']
+  },
+  'classic-kimchi-6-pack': {
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png']
+  },
+  'spicy-kimchi': {
+    image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png']
+  },
+  'mild-kimchi': {
+    image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png']
+  },
+  'vegan-kimchi': {
+    image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png']
+  },
+}
+
 // Demo products for when Shopify isn't configured
 const demoProducts: Record<string, {
   id: string
@@ -35,8 +67,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p><strong>Save 5%!</strong> Two jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>2 x 400g jars of Classic Napa Cabbage Kimchi</p>',
     price: '16.15',
     variantId: 'gid://shopify/ProductVariant/53034599252301',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
-    images: ['/Assets/Kimchi_B004_23-04-25.jpg'],
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png'],
   },
   'classic-kimchi-3-pack': {
     id: '3',
@@ -46,8 +78,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p><strong>Save 10%!</strong> Three jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>3 x 400g jars of Classic Napa Cabbage Kimchi</p>',
     price: '22.95',
     variantId: 'gid://shopify/ProductVariant/53034599285069',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
-    images: ['/Assets/Kimchi_B004_23-04-25.jpg'],
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png'],
   },
   'classic-kimchi-6-pack': {
     id: '4',
@@ -57,8 +89,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p><strong>Save 15%!</strong> Six jars of our signature Classic Napa Cabbage Kimchi - best value!</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>6 x 400g jars of Classic Napa Cabbage Kimchi</p>',
     price: '43.35',
     variantId: 'gid://shopify/ProductVariant/53034599317837',
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
-    images: ['/Assets/Kimchi_B004_23-04-25.jpg'],
+    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+    images: ['/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png'],
   },
   'spicy-kimchi': {
     id: '5',
@@ -68,8 +100,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p>Extra kick for those who like it hot. Same great fermentation, more heat.</p><p>Made with additional gochugaru and fresh chillies for those who crave the burn.</p><h3>Ingredients</h3><p>Napa cabbage, extra Korean red pepper flakes, fresh red chillies, garlic, ginger, spring onions, fish sauce, salt.</p><h3>Storage</h3><p>Keep refrigerated. Best consumed within 4 weeks of opening.</p><p><strong>Size:</strong> 400g</p>',
     price: '9.00',
     variantId: 'gid://shopify/ProductVariant/53034599350605',
-    image: '/Assets/Kimchi_B006_30-11-20.jpg',
-    images: ['/Assets/Kimchi_B006_30-11-20.jpg'],
+    image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png'],
   },
   'mild-kimchi': {
     id: '6',
@@ -79,8 +111,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p>All the probiotic benefits with a gentler spice level.</p><p>Perfect for beginners or those who prefer less heat but still want authentic kimchi flavour.</p><h3>Ingredients</h3><p>Napa cabbage, mild Korean red pepper flakes, garlic, ginger, spring onions, fish sauce, salt.</p><h3>Storage</h3><p>Keep refrigerated. Best consumed within 4 weeks of opening.</p><p><strong>Size:</strong> 400g</p>',
     price: '8.50',
     variantId: 'gid://shopify/ProductVariant/53034599383373',
-    image: '/Assets/Kimchi_B012_24-04-21.jpg',
-    images: ['/Assets/Kimchi_B012_24-04-21.jpg'],
+    image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png'],
   },
   'vegan-kimchi': {
     id: '7',
@@ -90,8 +122,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p>Traditional flavour without fish sauce.</p><p>100% plant-based fermentation using kelp and miso for umami depth. All the probiotics, completely vegan.</p><h3>Ingredients</h3><p>Napa cabbage, Korean red pepper flakes, garlic, ginger, spring onions, kelp, miso paste, salt.</p><h3>Storage</h3><p>Keep refrigerated. Best consumed within 4 weeks of opening.</p><p><strong>Size:</strong> 400g</p>',
     price: '9.00',
     variantId: 'gid://shopify/ProductVariant/53034599448909',
-    image: '/Assets/Kimchi_B014_02-04-21.jpg',
-    images: ['/Assets/Kimchi_B014_02-04-21.jpg'],
+    image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
+    images: ['/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png'],
   },
 }
 
@@ -108,6 +140,8 @@ export default async function ProductPage({ params }: Props) {
     try {
       const shopifyProduct = await getProductByHandle(handle)
       if (shopifyProduct) {
+        // Apply local image overrides (same as collection page)
+        const override = productOverrides[shopifyProduct.handle] || {}
         product = {
           id: shopifyProduct.id,
           title: shopifyProduct.title,
@@ -116,8 +150,8 @@ export default async function ProductPage({ params }: Props) {
           descriptionHtml: shopifyProduct.descriptionHtml,
           price: shopifyProduct.variants.edges[0]?.node.price.amount || '0',
           variantId: shopifyProduct.variants.edges[0]?.node.id || '',
-          image: shopifyProduct.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
-          images: shopifyProduct.images.edges.map(e => e.node.url),
+          image: override.image || shopifyProduct.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
+          images: override.images || shopifyProduct.images.edges.map(e => e.node.url),
           availableForSale: shopifyProduct.variants.edges[0]?.node.availableForSale ?? true,
         }
         isDemo = false
