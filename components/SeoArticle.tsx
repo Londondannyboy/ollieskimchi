@@ -13,7 +13,6 @@ import HistoryTimeline from './HistoryTimeline'
 import StorageGuide from './StorageGuide'
 import PairingSuggestions from './PairingSuggestions'
 import FactCard from './FactCard'
-import KimchiMap from './KimchiMap'
 
 interface SeoArticlePageProps {
   article: SeoArticle
