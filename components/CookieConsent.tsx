@@ -45,7 +45,7 @@ export default function CookieConsent() {
               href="/privacy"
               className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
-              Learn More
+              Read Privacy Policy
             </Link>
             <button
               onClick={handleAccept}

@@ -118,11 +118,36 @@ export default async function ShopPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Promo Banner */}
+      <div className="bg-gradient-to-r from-green-600 to-green-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center sm:text-left">
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center justify-center w-6 h-6 bg-white/20 rounded-full">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span className="font-semibold">Fresh Batch Just Made!</span>
+            </div>
+            <span className="hidden sm:inline text-white/60">|</span>
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center justify-center w-6 h-6 bg-white/20 rounded-full">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                </svg>
+              </span>
+              <span className="font-semibold">Free Shipping Over £30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="font-display text-4xl font-semibold text-gray-900 text-center">
-            Shop <span className="text-kimchi-red">Kimchi</span>
+            My <span className="text-kimchi-red">Kimchi</span> Shop
           </h1>
           <p className="mt-4 text-lg text-gray-600 text-center max-w-2xl mx-auto">
             Handcrafted, naturally fermented kimchi delivered fresh to your door.

@@ -126,6 +126,7 @@ export default function NavBar() {
             <Link
               href="/cart"
               className="relative p-2 text-gray-700 hover:text-kimchi-red transition-colors group"
+              aria-label="Shopping cart"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -42,10 +42,11 @@ export default async function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/Assets/Kimchi_B006_30-11-20.jpg"
-            alt=""
+            alt="Fresh kimchi close-up"
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
           />
           {/* Dark overlay for text readability - lighter to show more food */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-gray-900/60" />
@@ -224,7 +225,7 @@ export default async function HomePage() {
                     src="/Assets/The_Guardian_logo.png"
                     alt="The Guardian"
                     width={80}
-                    height={20}
+                    height={26}
                     className="h-4 w-auto opacity-70"
                   />
                   <div className="flex gap-0.5">
