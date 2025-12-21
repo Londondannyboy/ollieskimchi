@@ -138,6 +138,23 @@ export default async function HomePage() {
             <div className="absolute bottom-16 -left-8 bg-green-600 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
               100% Natural
             </div>
+            {/* Guardian Badge */}
+            <Link
+              href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute -bottom-2 right-0 bg-gray-900 text-white pl-3 pr-4 py-2 rounded-full font-semibold text-xs shadow-xl flex items-center gap-2 hover:bg-gray-800 transition-colors wiggle-slow"
+              style={{ animationDelay: '1s' }}
+            >
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              THE GUARDIAN
+            </Link>
           </div>
         </div>
 
@@ -169,6 +186,120 @@ export default async function HomePage() {
             <div className="group cursor-default">
               <p className="text-4xl lg:text-5xl font-black group-hover:scale-110 transition-transform">Small</p>
               <p className="text-sm lg:text-base opacity-90">Batch Crafted</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* As Featured In - Press Section */}
+      <section className="py-16 lg:py-20 bg-gray-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="text-gray-500 font-semibold text-sm tracking-wider uppercase mb-2">As Featured In</p>
+            <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
+              What The Critics Say
+            </h2>
+          </div>
+
+          {/* Featured Guardian Review - Hero Treatment */}
+          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 mb-8 relative overflow-hidden group hover:shadow-2xl transition-shadow">
+            {/* Decorative background */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-kimchi-red/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative grid lg:grid-cols-12 gap-8 items-center">
+              {/* Left - Publication & Rating */}
+              <div className="lg:col-span-4 text-center lg:text-left">
+                <p className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight mb-3">
+                  THE GUARDIAN
+                </p>
+                {/* 5 Stars */}
+                <div className="flex items-center justify-center lg:justify-start gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-8 h-8 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <div className="inline-block bg-kimchi-red text-white px-4 py-2 rounded-full font-bold text-sm">
+                  BEST ALL-ROUNDER
+                </div>
+              </div>
+
+              {/* Right - Quote */}
+              <div className="lg:col-span-8">
+                <blockquote className="relative">
+                  <svg className="absolute -top-4 -left-2 w-12 h-12 text-kimchi-red/20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                  <p className="font-display text-2xl lg:text-3xl text-gray-900 leading-relaxed italic pl-8">
+                    This is well seasoned, has big flavour and hits that sweet spot between funk and freshness.
+                    <span className="block mt-4 text-lg lg:text-xl text-gray-600 not-italic">
+                      Bold and punchy... A big, full-flavoured jar that delivers.
+                    </span>
+                  </p>
+                  <footer className="mt-6 pl-8">
+                    <p className="text-gray-500">— <span className="font-semibold text-gray-700">Tom Hunt</span>, Food Columnist</p>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+
+            {/* Read Full Review Link */}
+            <div className="mt-8 text-center lg:text-right">
+              <Link
+                href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-kimchi-red font-bold hover:underline"
+              >
+                Read Full Review
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Secondary Review - Hello Gut Health */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 lg:p-8 hover:shadow-xl transition-shadow">
+            <div className="flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex-shrink-0 text-center md:text-left">
+                <p className="font-bold text-gray-900 text-lg mb-2">Hello Gut Health</p>
+                <div className="flex items-center justify-center md:justify-start gap-0.5">
+                  {[...Array(4)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                  <svg className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                    <defs>
+                      <linearGradient id="half-star">
+                        <stop offset="50%" stopColor="currentColor" />
+                        <stop offset="50%" stopColor="#D1D5DB" />
+                      </linearGradient>
+                    </defs>
+                    <path fill="url(#half-star)" d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-500 mt-1">4.5/5 Stars</p>
+              </div>
+              <div className="flex-grow">
+                <p className="text-gray-700 italic">
+                  &ldquo;The taste is very good, deep and satisfying... You get a lot of rich umami flavour with a warming heat.&rdquo;
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <Link
+                  href="https://www.helloguthealth.org/articles/review-ollies-kimchi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-kimchi-red font-semibold hover:underline text-sm"
+                >
+                  Read Review →
+                </Link>
+              </div>
             </div>
           </div>
         </div>

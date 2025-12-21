@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Outfit, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
+import GuardianBanner from '@/components/GuardianBanner'
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/components/CartContext'
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${sourceSerif.variable}`}>
       <body className="min-h-screen flex flex-col">
         <CartProvider>
+          <GuardianBanner />
           <NavBar />
           <main className="flex-grow">
             {children}
