@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { SeoArticle } from '@/lib/db'
 import { marked } from 'marked'
 import RecipeCard from './RecipeCard'
+import OllieSays from './OllieSays'
 import FAQAccordion from './FAQAccordion'
 import ComparisonTable from './ComparisonTable'
 import ProductCards from './ProductCards'
@@ -167,17 +168,29 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
             </p>
           )}
           <div className="mt-6 flex items-center gap-4">
-            <div className="flex items-center gap-2 text-sm text-gray-500">
-              <div className="w-10 h-10 bg-kimchi-red rounded-full flex items-center justify-center text-white font-bold">
-                O
-              </div>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/Assets/Ollie Photo.png"
+                alt="Ollie"
+                width={48}
+                height={48}
+                className="rounded-full border-2 border-kimchi-red"
+              />
               <div>
                 <p className="font-medium text-gray-900">{article.author}</p>
-                <p className="text-xs">Kimchi Expert</p>
+                <p className="text-xs text-kimchi-red font-medium">Kimchi Obsessive</p>
               </div>
             </div>
           </div>
         </header>
+
+        {/* Ollie's Welcome */}
+        <OllieSays variant="story">
+          <p>
+            Welcome to another deep dive into the world of kimchi! I&apos;ve spent years experimenting,
+            tasting, and perfecting my craft. Let me share what I&apos;ve learned with you.
+          </p>
+        </OllieSays>
 
         {/* Recipe Card - MOVED UP: Display prominently right after header */}
         {article.recipe_data && (

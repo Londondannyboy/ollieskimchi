@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getSeoArticlesByCluster } from '@/lib/db'
+import InstagramFeed from '@/components/InstagramFeed'
 
 // Fermentation bubbles component
 function FermentationBubbles() {
@@ -520,6 +521,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Instagram Section */}
+      <InstagramFeed />
 
       {/* Big CTA Section */}
       <section className="relative py-28 lg:py-36 bg-kimchi-red overflow-hidden">
