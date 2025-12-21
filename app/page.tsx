@@ -38,10 +38,10 @@ export default async function HomePage() {
             className="object-cover"
             priority
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/75 to-gray-900/85" />
-          {/* Subtle red tint overlay to enhance kimchi colors */}
-          <div className="absolute inset-0 bg-kimchi-red/10" />
+          {/* Dark overlay for text readability - lighter to show more food */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-gray-900/60" />
+          {/* Warm tint overlay to enhance kimchi colors */}
+          <div className="absolute inset-0 bg-kimchi-red/5" />
         </div>
 
         {/* Animated background elements */}
@@ -73,21 +73,21 @@ export default async function HomePage() {
 
               {/* Tagline with personality */}
               <div className="space-y-2">
-                <p className="text-kimchi-red font-bold text-lg tracking-wider uppercase">
+                <p className="text-kimchi-red font-semibold text-lg tracking-wider uppercase">
                   Meet Ollie. He makes kimchi.
                 </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
                   Handcrafted, naturally fermented,
-                  <span className="block text-kimchi-red">bursting with probiotics, flavour, and life.</span>
+                  <span className="block text-kimchi-red">bursting with flavour & life.</span>
                 </h1>
               </div>
 
               {/* IT'S ALIVE! - The star of the show */}
               <div className="py-4">
-                <p className="text-5xl sm:text-6xl lg:text-7xl font-black text-kimchi-red electric-alive inline-block">
+                <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-kimchi-red electric-alive inline-block italic">
                   It&apos;s Alive!
                 </p>
-                <p className="text-gray-400 mt-2 text-lg">
+                <p className="text-gray-300 mt-2 text-lg">
                   Billions of live probiotics in every jar. Your gut&apos;s new best friend.
                 </p>
               </div>
@@ -119,25 +119,25 @@ export default async function HomePage() {
             </div>
 
             {/* Right - Hero Image with Animation */}
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <div className="relative z-10 float">
                 <Image
                   src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
                   alt="Ollie's Kimchi 3 Pack"
-                  width={700}
-                  height={700}
+                  width={450}
+                  height={450}
                   className="mx-auto drop-shadow-2xl"
                   priority
                 />
               </div>
-              {/* Glowing circle behind */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] bg-kimchi-red/20 rounded-full blur-xl pulse-glow -z-0" />
+              {/* Glowing circle behind - smaller to match */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[380px] lg:h-[380px] bg-kimchi-red/30 rounded-full blur-xl pulse-glow -z-0" />
 
-              {/* Fun floating badges */}
-              <div className="absolute top-10 right-10 bg-white text-gray-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl wiggle-slow">
+              {/* Floating badges */}
+              <div className="absolute top-4 right-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
                 Made in London
               </div>
-              <div className="absolute bottom-20 left-0 bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
+              <div className="absolute bottom-12 left-4 bg-green-600 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
                 100% Natural
               </div>
             </div>
