@@ -11,7 +11,6 @@ interface Article {
   excerpt: string
   category: string
   published_at: Date | null
-  word_count: number
   primary_keyword: string
   hero_image_url?: string | null
   hero_image_alt?: string | null
@@ -189,12 +188,9 @@ export default function BlogClient({ articles, categories }: BlogClientProps) {
                   </div>
                 )}
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="mb-3">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${categoryColors[article.category] || 'bg-gray-100 text-gray-700'}`}>
                       {categoryLabels[article.category] || article.category}
-                    </span>
-                    <span className="text-xs text-gray-500">
-                      {article.word_count?.toLocaleString()} words
                     </span>
                   </div>
                   <h2 className="text-xl font-semibold text-gray-900 group-hover:text-kimchi-red transition-colors line-clamp-2">

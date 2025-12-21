@@ -302,23 +302,6 @@ export default function SeoArticlePage({ article, relatedArticles = [] }: SeoArt
           <FactCard facts={article.facts_data} />
         )}
 
-        {/* Keywords/Tags */}
-        {article.secondary_keywords && article.secondary_keywords.length > 0 && (
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <p className="text-sm text-gray-500 mb-3">Related topics:</p>
-            <div className="flex flex-wrap gap-2">
-              {article.secondary_keywords.map((keyword) => (
-                <span
-                  key={keyword}
-                  className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >
-                  {keyword}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Share */}
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-gray-700 font-medium mb-4">Share this article:</p>

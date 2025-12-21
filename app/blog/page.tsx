@@ -19,7 +19,6 @@ export default async function BlogPage() {
     excerpt: article.excerpt || article.meta_description,
     category: article.cluster,
     published_at: article.published_at,
-    word_count: article.word_count,
     primary_keyword: article.primary_keyword,
     hero_image_url: article.hero_image_url,
     hero_image_alt: article.hero_image_alt,
