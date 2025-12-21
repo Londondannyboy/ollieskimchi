@@ -21,12 +21,12 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: "Ollie's Kimchi | Handcrafted Fermented Foods",
-  description: "Handcrafted, naturally fermented kimchi made in London. Bursting with probiotics, flavour, and life. It's Alive!",
-  keywords: ['kimchi', 'fermented foods', 'probiotics', 'London', 'artisan', 'handcrafted'],
+  title: "Buy Kimchi Online | Ollie's Kimchi - London",
+  description: "Buy kimchi online from Ollie's Kimchi. Handcrafted, naturally fermented kimchi made fresh in London. Packed with live probiotics. Free UK delivery over £30.",
+  keywords: ['buy kimchi online', 'kimchi', 'fermented foods', 'probiotics', 'London', 'artisan', 'handcrafted', 'kimchi UK', 'buy kimchi UK'],
   openGraph: {
-    title: "Ollie's Kimchi",
-    description: "Handcrafted, naturally fermented kimchi made in London. It's Alive!",
+    title: "Buy Kimchi Online | Ollie's Kimchi",
+    description: "Buy kimchi online - handcrafted, naturally fermented kimchi made fresh in London. Packed with live probiotics.",
     url: 'https://ollieskimchi.co.uk',
     siteName: "Ollie's Kimchi",
     locale: 'en_GB',

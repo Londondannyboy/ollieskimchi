@@ -85,9 +85,12 @@ export default async function HomePage() {
                 Meet Ollie. He makes kimchi.
               </p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
-                Handcrafted, naturally fermented,
-                <span className="block text-kimchi-red">bursting with flavour & life.</span>
+                Fresh Kimchi, Made in London
               </h1>
+              <p className="text-2xl sm:text-3xl text-gray-300 font-display">
+                Handcrafted, naturally fermented,
+                <span className="text-kimchi-red"> bursting with life.</span>
+              </p>
             </div>
 
             {/* IT'S ALIVE! - The star of the show */}
@@ -340,12 +343,12 @@ export default async function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-kimchi-red font-bold text-lg mb-2">Grab Yourself Some</p>
+            <p className="text-kimchi-red font-bold text-lg mb-2">Buy Kimchi Online</p>
             <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
               Ollie&apos;s <span className="text-gradient-alive">Kimchi</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-              Handcrafted in London using traditional Korean methods.
+              Buy kimchi online, handcrafted in London using traditional Korean methods.
               Every jar is naturally fermented and packed with billions of live cultures.
               <span className="text-kimchi-red font-bold"> It&apos;s alive, remember?</span>
             </p>
@@ -358,7 +361,7 @@ export default async function HomePage() {
                 <div className="aspect-square relative mb-6 overflow-hidden rounded-2xl">
                   <Image
                     src="/Assets/Kimchi_B004_23-04-25.jpg"
-                    alt="Classic Kimchi"
+                    alt="Buy kimchi online - Classic Napa Cabbage Kimchi"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -789,13 +792,16 @@ export default async function HomePage() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/80 text-xl mb-4">Your Gut Is Calling</p>
           <h2 className="font-display text-4xl lg:text-6xl font-semibold text-white mb-6">
-            Ready to Get Some<br />
-            <span className="electric-alive inline-block italic">Living Kimchi</span>
-            <br />in Your Life?
+            Ready to Buy Kimchi Online?
           </h2>
-          <p className="text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Fresh, naturally fermented, delivered straight to your door.
+          <p className="text-xl lg:text-2xl text-white/90 mb-6 max-w-2xl mx-auto">
+            Fresh, naturally fermented kimchi delivered straight to your door.
             Your taste buds and your gut bacteria will both be doing a happy dance.
+          </p>
+          <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
+            When you buy kimchi online from Ollie&apos;s, you&apos;re getting the real deal -
+            live probiotics, authentic Korean flavours, and small-batch quality you can taste.
+            Free UK delivery on orders over £30.
           </p>
           <Link
             href="/shop"
