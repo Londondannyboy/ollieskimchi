@@ -28,7 +28,22 @@ export default async function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - IT'S ALIVE! */}
-      <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Kimchi background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/Assets/Kimchi_B006_30-11-20.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/75 to-gray-900/85" />
+          {/* Subtle red tint overlay to enhance kimchi colors */}
+          <div className="absolute inset-0 bg-kimchi-red/10" />
+        </div>
+
         {/* Animated background elements */}
         <div className="absolute inset-0">
           {/* Electric bolts background */}
