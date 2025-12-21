@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: 'Explore the rich history, traditions, and cultural significance of kimchi in Korean cuisine and beyond.',
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function CulturePage() {
   const articles = await getSeoArticlesByCluster('culture')

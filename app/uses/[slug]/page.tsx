@@ -29,13 +29,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const articles = await getSeoArticlesByCluster('uses')
-  return articles.map((article) => ({
-    slug: article.slug.replace('uses/', ''),
-  }))
+  try {
+    const articles = await getSeoArticlesByCluster('uses')
+    return articles.map((article) => ({
+      slug: article.slug.replace('uses/', ''),
+    }))
+  } catch (error) {
+    console.error('Error generating static params for uses:', error)
+    return []
+  }
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function UsesPage({ params }: Props) {
   const { slug } = await params

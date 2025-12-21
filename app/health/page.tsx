@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: 'Discover the science-backed health benefits of kimchi, from probiotics and gut health to nutrition facts.',
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function HealthPage() {
   const articles = await getSeoArticlesByCluster('health')

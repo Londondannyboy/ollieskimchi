@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: 'Step-by-step guides to making, storing, and enjoying kimchi. From beginner basics to advanced techniques.',
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function GuidesPage() {
   // Guides might be in 'culture' cluster with guides/ prefix, or their own cluster

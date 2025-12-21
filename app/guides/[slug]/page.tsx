@@ -29,21 +29,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  // Guides can be in 'culture' cluster or have 'guides/' prefix
-  const [cultureArticles, allArticles] = await Promise.all([
-    getSeoArticlesByCluster('culture'),
-    getSeoArticlesByCluster('pillar'), // pillar articles might include guides
-  ])
+  try {
+    const [cultureArticles, allArticles] = await Promise.all([
+      getSeoArticlesByCluster('culture'),
+      getSeoArticlesByCluster('pillar'),
+    ])
 
-  const guideArticles = [...cultureArticles, ...allArticles]
-    .filter((a) => a.slug.startsWith('guides/'))
+    const guideArticles = [...cultureArticles, ...allArticles]
+      .filter((a) => a.slug.startsWith('guides/'))
 
-  return guideArticles.map((article) => ({
-    slug: article.slug.replace('guides/', ''),
-  }))
+    return guideArticles.map((article) => ({
+      slug: article.slug.replace('guides/', ''),
+    }))
+  } catch (error) {
+    console.error('Error generating static params for guides:', error)
+    return []
+  }
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function GuidePage({ params }: Props) {
   const { slug } = await params

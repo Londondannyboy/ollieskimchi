@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: 'Delicious kimchi recipes from traditional Korean classics to modern fusion dishes. Make your own or cook with kimchi.',
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function RecipesPage() {
   const articles = await getSeoArticlesByCluster('recipes')

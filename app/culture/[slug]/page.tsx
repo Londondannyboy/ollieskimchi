@@ -29,15 +29,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const articles = await getSeoArticlesByCluster('culture')
-  return articles
-    .filter((a) => a.slug.startsWith('culture/'))
-    .map((article) => ({
-      slug: article.slug.replace('culture/', ''),
-    }))
+  try {
+    const articles = await getSeoArticlesByCluster('culture')
+    return articles
+      .filter((a) => a.slug.startsWith('culture/'))
+      .map((article) => ({
+        slug: article.slug.replace('culture/', ''),
+      }))
+  } catch (error) {
+    console.error('Error generating static params for culture:', error)
+    return []
+  }
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function CulturePage({ params }: Props) {
   const { slug } = await params

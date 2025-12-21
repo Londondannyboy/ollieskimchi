@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   description: 'Find the best kimchi and Korean ingredients in the UK. Reviews, guides, and recommendations.',
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function BuyPage() {
   const articles = await getSeoArticlesByCluster('commercial')

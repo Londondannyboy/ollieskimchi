@@ -23,7 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export const revalidate = 3600 // Revalidate every hour
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function KimchiPage() {
   const [article, relatedArticles] = await Promise.all([

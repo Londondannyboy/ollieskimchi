@@ -29,13 +29,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const articles = await getSeoArticlesByCluster('recipes')
-  return articles.map((article) => ({
-    slug: article.slug.replace('recipes/', ''),
-  }))
+  try {
+    const articles = await getSeoArticlesByCluster('recipes')
+    return articles.map((article) => ({
+      slug: article.slug.replace('recipes/', ''),
+    }))
+  } catch (error) {
+    console.error('Error generating static params for recipes:', error)
+    return []
+  }
 }
 
-export const revalidate = 3600
+// Use dynamic rendering to avoid build-time database timeouts
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function RecipePage({ params }: Props) {
   const { slug } = await params

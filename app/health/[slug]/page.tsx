@@ -29,13 +29,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const articles = await getSeoArticlesByCluster('health')
-  return articles.map((article) => ({
-    slug: article.slug.replace('health/', ''),
-  }))
+  try {
+    const articles = await getSeoArticlesByCluster('health')
+    return articles.map((article) => ({
+      slug: article.slug.replace('health/', ''),
+    }))
+  } catch (error) {
+    console.error('Error generating static params for health:', error)
+    return []
+  }
 }
 
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 export default async function HealthPage({ params }: Props) {
   const { slug } = await params
