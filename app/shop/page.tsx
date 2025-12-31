@@ -17,9 +17,6 @@ const productStatus: Record<string, { comingSoon?: boolean }> = {
   'classic-kimchi-2-pack': { comingSoon: false },
   'classic-kimchi-3-pack': { comingSoon: false },
   'classic-kimchi-6-pack': { comingSoon: false },
-  'spicy-kimchi': { comingSoon: true },
-  'mild-kimchi': { comingSoon: true },
-  'vegan-kimchi': { comingSoon: true },
 }
 
 // Demo products when Shopify isn't configured
@@ -59,33 +56,6 @@ const demoProducts = [
     price: '44.94',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
     comingSoon: false,
-  },
-  {
-    id: '5',
-    title: "Ollie's Kimchi Green",
-    handle: 'spicy-kimchi',
-    description: "Made with green chillies and extra ginger, less spicy than our original, but still punching above it's weight.",
-    price: '7.99',
-    image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
-    comingSoon: true,
-  },
-  {
-    id: '6',
-    title: "Ollie's Kimchi Mild",
-    handle: 'mild-kimchi',
-    description: 'All the funk and freshness of the OG, but with a milder hit of Korean chilli.',
-    price: '7.99',
-    image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
-    comingSoon: true,
-  },
-  {
-    id: '7',
-    title: 'Vegan Kimchi',
-    handle: 'vegan-kimchi',
-    description: 'Traditional flavour without fish sauce. 100% plant-based fermentation.',
-    price: '7.99',
-    image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
-    comingSoon: true,
   },
 ]
 

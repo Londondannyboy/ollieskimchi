@@ -74,7 +74,7 @@ export default function HomePage() {
             {/* Ollie's Kimchi – IT'S ALIVE! */}
             <div className="py-4">
               <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white inline-block">
-                Ollie&apos;s Kimchi <span className="text-red-900 electric-alive italic">– It&apos;s Alive!</span>
+                Ollie&apos;s Kimchi <span className="text-white electric-alive italic">– It&apos;s Alive!</span>
               </p>
               <p className="text-gray-300 mt-2 text-lg">
                 Naturally fermented with live cultures in every jar.
@@ -539,125 +539,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Curved section divider */}
-      <div className="relative h-16 bg-white">
-        <svg className="absolute bottom-0 w-full h-16 text-gray-900 fill-current" viewBox="0 0 1440 64" preserveAspectRatio="none">
-          <path d="M0,64 C480,0 960,0 1440,64 L1440,64 L0,64 Z" />
-        </svg>
-      </div>
-
-      {/* Coming Soon Section */}
-      <section className="py-20 lg:py-28 bg-gray-900 text-white relative overflow-hidden">
-        <FermentationBubbles />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-red-900 rounded-full text-sm font-bold mb-4 wiggle">
-              COMING SOON
-            </span>
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold">
-              New Flavours <span className="text-white font-bold italic">Brewing</span>
-            </h2>
-            <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
-              Ollie&apos;s been busy in the kitchen. More delicious options on the way!
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Vegan */}
-            <div className="bg-gray-800 rounded-3xl p-8 text-center relative overflow-hidden group hover:bg-gray-750 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-green-700/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
-              <div className="relative z-10">
-                <div className="aspect-square relative mb-6 max-w-[200px] mx-auto float">
-                  <Image
-                    src="/Product Images/Ollie's Kimchi Vegan Kimchi Product.png"
-                    alt="Vegan Kimchi"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <span className="inline-block px-3 py-1 bg-green-700 text-white text-xs font-bold rounded-full mb-4">
-                  VEGAN
-                </span>
-                <h3 className="text-2xl font-bold mb-3">Vegan Kimchi</h3>
-                <p className="text-gray-400">
-                  All the funk, none of the fish. 100% plant-based umami goodness.
-                </p>
-              </div>
-            </div>
-
-            {/* Mild */}
-            <div className="bg-gray-800 rounded-3xl p-8 text-center relative overflow-hidden group hover:bg-gray-750 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-700/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
-              <div className="relative z-10">
-                <div className="aspect-square relative mb-6 max-w-[200px] mx-auto float" style={{ animationDelay: '0.5s' }}>
-                  <Image
-                    src="/Product Images/Ollie's Kimchi Mild Kimchi Product.png"
-                    alt="Mild Kimchi"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <span className="inline-block px-3 py-1 bg-orange-700 text-white text-xs font-bold rounded-full mb-4">
-                  MILD
-                </span>
-                <h3 className="text-2xl font-bold mb-3">Mild Kimchi</h3>
-                <p className="text-gray-400">
-                  For those who like flavour without the fire. Still alive, just gentler.
-                </p>
-              </div>
-            </div>
-
-            {/* Spicy */}
-            <div className="bg-gray-800 rounded-3xl p-8 text-center relative overflow-hidden group hover:bg-gray-750 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform" />
-              <div className="relative z-10">
-                <div className="aspect-square relative mb-6 max-w-[200px] mx-auto float" style={{ animationDelay: '1s' }}>
-                  <Image
-                    src="/Product Images/Ollie's Kimchi Spicy Kimchi Product.png"
-                    alt="Spicy Kimchi"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-full mb-4">
-                  EXTRA SPICY
-                </span>
-                <h3 className="text-2xl font-bold mb-3">Spicy Kimchi</h3>
-                <p className="text-gray-400">
-                  For heat seekers only. Don&apos;t say I didn&apos;t warn you!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Notify Me Form */}
-          <div className="mt-16 max-w-xl mx-auto text-center">
-            <p className="text-gray-400 mb-4">Want to be first to try? Drop your email:</p>
-            <form className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-grow px-6 py-4 rounded-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-kimchi-red focus:ring-2 focus:ring-kimchi-red/50"
-              />
-              <button
-                type="submit"
-                className="btn-fun px-8 py-4 bg-red-900 text-white font-bold rounded-full hover:bg-red-600 transition-colors"
-              >
-                Notify Me!
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* Curved section divider */}
-      <div className="relative h-16 bg-gray-900">
-        <svg className="absolute bottom-0 w-full h-16 text-white fill-current" viewBox="0 0 1440 64" preserveAspectRatio="none">
-          <path d="M0,0 C480,64 960,64 1440,0 L1440,64 L0,64 Z" />
-        </svg>
-      </div>
 
       {/* Why Ollie's Section */}
       <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
