@@ -15,37 +15,7 @@ const guardianQuotes: Record<string, string> = {
   'classic-kimchi-6-pack': 'Full and well-rounded',
 }
 
-// Local image overrides by product handle (must match collection page)
-const productOverrides: Record<string, { image?: string; images?: string[] }> = {
-  'classic-napa-cabbage-kimchi': {
-    image: '/Assets/Kimchi_B004_23-04-25.jpg',
-    images: ['/Assets/Kimchi_B004_23-04-25.jpg', '/Assets/Kimchi_B006_30-11-20.jpg']
-  },
-  'classic-kimchi-2-pack': {
-    image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
-    images: ['/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png']
-  },
-  'classic-kimchi-3-pack': {
-    image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
-    images: ['/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png']
-  },
-  'classic-kimchi-6-pack': {
-    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
-    images: ['/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png']
-  },
-  'spicy-kimchi': {
-    image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
-    images: ['/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png']
-  },
-  'mild-kimchi': {
-    image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
-    images: ['/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png']
-  },
-  'vegan-kimchi': {
-    image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
-    images: ['/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png']
-  },
-}
+// Images now come from Shopify directly
 
 // Demo products for when Shopify isn't configured
 const demoProducts: Record<string, {
@@ -151,8 +121,7 @@ export default async function ProductPage({ params }: Props) {
     try {
       const shopifyProduct = await getProductByHandle(handle)
       if (shopifyProduct) {
-        // Apply local image overrides (same as collection page)
-        const override = productOverrides[shopifyProduct.handle] || {}
+        // Use Shopify images directly
         product = {
           id: shopifyProduct.id,
           title: shopifyProduct.title,
@@ -161,8 +130,8 @@ export default async function ProductPage({ params }: Props) {
           descriptionHtml: shopifyProduct.descriptionHtml,
           price: shopifyProduct.variants.edges[0]?.node.price.amount || '0',
           variantId: shopifyProduct.variants.edges[0]?.node.id || '',
-          image: override.image || shopifyProduct.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
-          images: override.images || shopifyProduct.images.edges.map(e => e.node.url),
+          image: shopifyProduct.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
+          images: shopifyProduct.images.edges.map(e => e.node.url),
           availableForSale: shopifyProduct.variants.edges[0]?.node.availableForSale ?? true,
         }
         isDemo = false

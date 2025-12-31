@@ -11,15 +11,15 @@ const guardianQuotes: Record<string, string> = {
   'classic-kimchi-6-pack': 'Full and well-rounded',
 }
 
-// Local image overrides and coming soon status by product handle
-const productOverrides: Record<string, { image?: string; comingSoon?: boolean }> = {
-  'classic-napa-cabbage-kimchi': { image: '/Assets/Kimchi_B004_23-04-25.jpg', comingSoon: false },
-  'classic-kimchi-2-pack': { image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png', comingSoon: false },
-  'classic-kimchi-3-pack': { image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png', comingSoon: false },
-  'classic-kimchi-6-pack': { image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png', comingSoon: false },
-  'spicy-kimchi': { image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png', comingSoon: true },
-  'mild-kimchi': { image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png', comingSoon: true },
-  'vegan-kimchi': { image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png', comingSoon: true },
+// Coming soon status by product handle (images now come from Shopify)
+const productStatus: Record<string, { comingSoon?: boolean }> = {
+  'classic-napa-cabbage-kimchi': { comingSoon: false },
+  'classic-kimchi-2-pack': { comingSoon: false },
+  'classic-kimchi-3-pack': { comingSoon: false },
+  'classic-kimchi-6-pack': { comingSoon: false },
+  'spicy-kimchi': { comingSoon: true },
+  'mild-kimchi': { comingSoon: true },
+  'vegan-kimchi': { comingSoon: true },
 }
 
 // Demo products when Shopify isn't configured
@@ -98,15 +98,15 @@ export default async function ShopPage() {
       const shopifyProducts = await getAllProducts()
       if (shopifyProducts.length > 0) {
         products = shopifyProducts.map(p => {
-          const override = productOverrides[p.handle] || {}
+          const status = productStatus[p.handle] || {}
           return {
             id: p.id,
             title: p.title,
             handle: p.handle,
             description: p.description,
             price: p.variants.edges[0]?.node.price.amount || '0',
-            image: override.image || p.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
-            comingSoon: override.comingSoon ?? false,
+            image: p.featuredImage?.url || '/Assets/Kimchi_B004_23-04-25.jpg',
+            comingSoon: status.comingSoon ?? false,
           }
         })
         isDemo = false
