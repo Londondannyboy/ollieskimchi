@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { getSeoArticlesByCluster } from '@/lib/db'
 import GuardianBadge from '@/components/GuardianBadge'
 
 // Guardian review quotes from Tom Hunt's article
@@ -26,13 +25,7 @@ function FermentationBubbles() {
   )
 }
 
-export default async function HomePage() {
-  const [recipes, health] = await Promise.all([
-    getSeoArticlesByCluster('recipes'),
-    getSeoArticlesByCluster('health'),
-  ])
-  const featuredArticles = [...recipes.slice(0, 2), ...health.slice(0, 2)]
-
+export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section - IT'S ALIVE! */}
@@ -764,66 +757,6 @@ export default async function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Subtle divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-
-      {/* Blog/Recipes Section */}
-      <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
-        {/* Subtle decorative elements */}
-        <div className="absolute top-10 right-10 w-32 h-32 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
-        <div className="absolute bottom-20 left-20 w-24 h-24 border-[3px] border-kimchi-red/5 rounded-full hidden lg:block" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-red-900 font-bold text-lg mb-2">Learn &amp; Cook</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-semibold text-gray-900">
-              From Ollie&apos;s <span className="text-red-900 italic">Kitchen</span>
-            </h2>
-            <p className="mt-4 text-xl text-gray-600">
-              Recipes, tips, and kimchi wisdom from yours truly
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredArticles.map((article) => (
-              <Link
-                key={article.id}
-                href={`/${article.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-2"
-              >
-                {article.hero_image_url && (
-                  <div className="aspect-video relative overflow-hidden">
-                    <Image
-                      src={article.hero_image_url}
-                      alt={article.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                )}
-                <div className="p-5">
-                  <span className="text-xs font-bold text-red-900 uppercase">
-                    {article.cluster}
-                  </span>
-                  <h3 className="mt-2 font-bold text-gray-900 group-hover:text-red-900 transition-colors line-clamp-2">
-                    {article.title}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/blog"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-kimchi-red text-red-900 font-bold rounded-full text-lg hover:bg-red-900 hover:text-white transition-all btn-fun"
-            >
-              View All Articles
-            </Link>
           </div>
         </div>
       </section>

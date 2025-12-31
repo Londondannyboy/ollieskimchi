@@ -42,12 +42,6 @@ export default function NavBar() {
             >
               About Me
             </Link>
-            <Link
-              href="/blog"
-              className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
-            >
-              Stuff I&apos;ve Written
-            </Link>
           </div>
 
           {/* CTA + Cart */}
@@ -213,13 +207,6 @@ export default function NavBar() {
               onClick={() => setIsMenuOpen(false)}
             >
               About Me
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Stuff I&apos;ve Written
             </Link>
 
             {/* Mobile Shop CTA */}

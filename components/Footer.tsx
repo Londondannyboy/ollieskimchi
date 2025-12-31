@@ -33,21 +33,6 @@ export default function Footer() {
                   About Me
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-red-900 transition-colors">
-                  Stuff I&apos;ve Written
-                </Link>
-              </li>
-              <li>
-                <Link href="/recipes" className="text-gray-300 hover:text-red-900 transition-colors">
-                  Recipes
-                </Link>
-              </li>
-              <li>
-                <Link href="/health" className="text-gray-300 hover:text-red-900 transition-colors">
-                  Health Benefits
-                </Link>
-              </li>
             </ul>
           </div>
 
