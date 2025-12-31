@@ -13,16 +13,19 @@ export default function NavBar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo - Made bigger */}
-          <Link href="/" className="flex-shrink-0 group">
+          {/* Logo - OK Logo */}
+          <Link href="/" className="flex-shrink-0 group flex items-center gap-2">
             <Image
-              src="/Assets/OLLIE_S KIMCHI LOGO with WEB.jpg"
+              src="/Assets/OK 1.jpg"
               alt="Ollie's Kimchi"
-              width={240}
-              height={80}
-              className="h-14 md:h-16 w-auto rounded group-hover:scale-105 transition-transform"
+              width={50}
+              height={50}
+              className="h-12 md:h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
               priority
             />
+            <span className="hidden sm:block font-display text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
+              Ollie&apos;s Kimchi
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

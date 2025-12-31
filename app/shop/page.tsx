@@ -26,10 +26,10 @@ const productOverrides: Record<string, { image?: string; comingSoon?: boolean }>
 const demoProducts = [
   {
     id: '1',
-    title: 'Classic Napa Cabbage Kimchi',
+    title: "Ollie's Kimchi Original",
     handle: 'classic-napa-cabbage-kimchi',
-    description: 'Our signature kimchi made with crisp napa cabbage, gochugaru, garlic, and ginger.',
-    price: '8.50',
+    description: 'Spicy, funky, crisp, and fresh. Traditional and vegan, with plenty of sauce.',
+    price: '7.99',
     image: '/Assets/Kimchi_B004_23-04-25.jpg',
     comingSoon: false,
   },
@@ -37,8 +37,8 @@ const demoProducts = [
     id: '2',
     title: 'Classic Kimchi - 2 Pack',
     handle: 'classic-kimchi-2-pack',
-    description: 'Save 5%! Two jars of our signature Classic Napa Cabbage Kimchi.',
-    price: '16.15',
+    description: 'Two jars of our signature Classic Napa Cabbage Kimchi.',
+    price: '15.98',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
     comingSoon: false,
   },
@@ -46,8 +46,8 @@ const demoProducts = [
     id: '3',
     title: 'Classic Kimchi - 3 Pack',
     handle: 'classic-kimchi-3-pack',
-    description: 'Save 10%! Three jars of our signature Classic Napa Cabbage Kimchi.',
-    price: '22.95',
+    description: 'Save! Three jars of our signature Classic Napa Cabbage Kimchi at £7.49 each.',
+    price: '22.47',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
     comingSoon: false,
   },
@@ -55,26 +55,26 @@ const demoProducts = [
     id: '4',
     title: 'Classic Kimchi - 6 Pack',
     handle: 'classic-kimchi-6-pack',
-    description: 'Save 15%! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
-    price: '43.35',
+    description: 'Best value! Six jars of our signature Classic Napa Cabbage Kimchi at £7.49 each.',
+    price: '44.94',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
     comingSoon: false,
   },
   {
     id: '5',
-    title: 'Spicy Kimchi',
+    title: "Ollie's Kimchi Green",
     handle: 'spicy-kimchi',
-    description: 'Extra kick for those who like it hot. Same great fermentation, more heat.',
-    price: '9.00',
+    description: "Made with green chillies and extra ginger, less spicy than our original, but still punching above it's weight.",
+    price: '7.99',
     image: '/Product Images/Ollie\'s Kimchi Spicy Kimchi Product.png',
     comingSoon: true,
   },
   {
     id: '6',
-    title: 'Mild Kimchi',
+    title: "Ollie's Kimchi Mild",
     handle: 'mild-kimchi',
-    description: 'All the probiotic benefits with a gentler spice level. Perfect for beginners.',
-    price: '8.50',
+    description: 'All the funk and freshness of the OG, but with a milder hit of Korean chilli.',
+    price: '7.99',
     image: '/Product Images/Ollie\'s Kimchi Mild Kimchi Product.png',
     comingSoon: true,
   },
@@ -83,7 +83,7 @@ const demoProducts = [
     title: 'Vegan Kimchi',
     handle: 'vegan-kimchi',
     description: 'Traditional flavour without fish sauce. 100% plant-based fermentation.',
-    price: '9.00',
+    price: '7.99',
     image: '/Product Images/Ollie\'s Kimchi Vegan Kimchi Product.png',
     comingSoon: true,
   },
@@ -137,7 +137,7 @@ export default async function ShopPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                 </svg>
               </span>
-              <span className="font-semibold">Free Shipping Over £30</span>
+              <span className="font-semibold">Free Shipping Over £35</span>
             </div>
           </div>
         </div>
@@ -283,7 +283,7 @@ export default async function ShopPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900">Free Delivery</h3>
-              <p className="mt-2 text-sm text-gray-600">On orders over £30</p>
+              <p className="mt-2 text-sm text-gray-600">On orders over £35</p>
             </div>
             <div>
               <div className="w-12 h-12 bg-red-900/10 rounded-full flex items-center justify-center mx-auto mb-4">

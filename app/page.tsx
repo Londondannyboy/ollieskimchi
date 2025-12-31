@@ -48,7 +48,7 @@ export default async function HomePage() {
             fetchPriority="high"
           />
           {/* Dark overlay for text readability - lighter to show more food */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/70 via-gray-900/50 to-gray-900/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-900/35 to-gray-900/45" />
           {/* Warm tint overlay to enhance kimchi colors */}
           <div className="absolute inset-0 bg-red-900/5" />
         </div>
@@ -67,23 +67,8 @@ export default async function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 min-h-[85vh] flex items-center">
           {/* Content - takes up left/center */}
           <div className="text-center lg:text-left space-y-6 max-w-2xl">
-            {/* Logo */}
-            <div className="flex justify-center lg:justify-start">
-              <Image
-                src="/Assets/OLLIE_S KIMCHI LOGO with WEB.jpg"
-                alt="Ollie's Kimchi"
-                width={280}
-                height={100}
-                className="h-20 lg:h-24 w-auto rounded-lg"
-                priority
-              />
-            </div>
-
             {/* Tagline with personality */}
             <div className="space-y-2">
-              <p className="text-red-900 font-semibold text-lg tracking-wider uppercase">
-                Meet Ollie. He makes kimchi.
-              </p>
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
                 Fresh Kimchi, Made in London
               </h1>
@@ -93,13 +78,13 @@ export default async function HomePage() {
               </p>
             </div>
 
-            {/* IT'S ALIVE! - The star of the show */}
+            {/* Ollie's Kimchi – IT'S ALIVE! */}
             <div className="py-4">
-              <p className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-red-900 electric-alive inline-block italic">
-                It&apos;s Alive!
+              <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white inline-block">
+                Ollie&apos;s Kimchi <span className="text-red-900 electric-alive italic">– It&apos;s Alive!</span>
               </p>
               <p className="text-gray-300 mt-2 text-lg">
-                Billions of live probiotics in every jar. Your gut&apos;s new best friend.
+                Naturally fermented with live cultures in every jar.
               </p>
             </div>
 
@@ -241,23 +226,22 @@ export default async function HomePage() {
 
             {/* Content */}
             <div className="space-y-6">
-              <p className="text-red-900 font-bold text-lg">Hey, I&apos;m Ollie!</p>
               <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
-                I Make Proper Kimchi.<br />
-                <span className="text-red-900">The Real Stuff.</span>
+                We Make Fantastic Kimchi.
               </h2>
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
-                  I started making kimchi in my tiny London kitchen because I couldn&apos;t find the real thing anywhere.
-                  You know, the kind that&apos;s actually alive with probiotics, not the pasteurised stuff sitting on supermarket shelves.
+                  I started making kimchi as a side project back in 2019 – I&apos;m a chef, I thought it would be fun.
+                  I loved how the flavour evolves with natural bacteria and the passing of time, and it was really delicious,
+                  so I kept on making it.
                 </p>
                 <p>
-                  I&apos;m pretty chuffed that The Guardian called my kimchi the <span className="font-semibold text-gray-900">&ldquo;Best All-Rounder&rdquo;</span> with
+                  Naturally, I&apos;m pretty chuffed that The Guardian called my kimchi the <span className="font-semibold text-gray-900">&ldquo;Best All-Rounder&rdquo;</span> with
                   5 stars - but honestly, the best feeling is when someone tells me it&apos;s the tastiest kimchi they&apos;ve ever had.
                 </p>
                 <p>
-                  Every batch is made by hand with love, patience, and proper Korean methods.
-                  No shortcuts. No weird additives. Just real ingredients and time doing its thing.
+                  We make every batch by hand, using traditional methods, a liberal dash of love, and a great deal of patience.
+                  No shortcuts. No added cultures. Just real ingredients and time doing its thing.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -457,7 +441,7 @@ export default async function HomePage() {
                   Classic Kimchi
                 </h3>
                 <p className="text-gray-600 mt-2">The OG. The one that started it all.</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£8.50</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£7.99</p>
               </div>
             </Link>
 
@@ -487,7 +471,7 @@ export default async function HomePage() {
                   Classic 3 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Perfect for sharing (or not...)</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£22.95</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£22.47</p>
               </div>
             </Link>
 
@@ -517,7 +501,7 @@ export default async function HomePage() {
                   Classic 6 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">For the true kimchi addict</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£43.35</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£44.94</p>
               </div>
             </Link>
 
@@ -544,7 +528,7 @@ export default async function HomePage() {
                   Classic 2 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Dip your toes in</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£16.15</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£15.98</p>
               </div>
             </Link>
           </div>
@@ -728,8 +712,8 @@ export default async function HomePage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">It&apos;s Actually Alive</h3>
                     <p className="text-gray-600">
-                      No vinegar shortcuts, no pasteurisation killing the good stuff.
-                      Just proper lacto-fermentation like nature intended. Billions of probiotics, living their best life.
+                      No vinegar shortcuts, no pasteurisation.
+                      Just proper lacto-fermentation like nature intended. The flavour keeps evolving in the jar.
                     </p>
                   </div>
                 </div>
@@ -771,10 +755,10 @@ export default async function HomePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Your Gut Will Thank You</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Tastes Incredible</h3>
                     <p className="text-gray-600">
-                      Seriously. Live probiotics are basically tiny superheroes for your digestive system.
-                      Plus it tastes absolutely incredible. Win-win.
+                      Spicy, funky, crisp and fresh. That&apos;s what good kimchi should be.
+                      The kind of flavour you can&apos;t stop thinking about.
                     </p>
                   </div>
                 </div>
@@ -867,7 +851,7 @@ export default async function HomePage() {
           <p className="text-lg text-white/70 mb-10 max-w-2xl mx-auto">
             When you buy kimchi online from Ollie&apos;s, you&apos;re getting the real deal -
             live probiotics, authentic Korean flavours, and small-batch quality you can taste.
-            Free UK delivery on orders over £30.
+            Free UK delivery on orders over £35.
           </p>
           <Link
             href="/shop"
@@ -890,7 +874,7 @@ export default async function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
               </svg>
               <p className="font-bold">Free Delivery</p>
-              <p className="text-sm text-gray-400">Orders over £30</p>
+              <p className="text-sm text-gray-400">Orders over £35</p>
             </div>
             <div className="flex flex-col items-center group">
               <svg className="w-8 h-8 mb-2 text-red-900 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

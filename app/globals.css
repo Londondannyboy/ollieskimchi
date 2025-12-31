@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --kimchi-red: #E52A2A;
-  --kimchi-red-dark: #C41E1E;
-  --kimchi-red-light: #FF4040;
+  --kimchi-red: #e41d24;
+  --kimchi-red-dark: #b42625;
+  --kimchi-red-light: #ff3333;
   --kimchi-orange: #FF6B35;
   --kimchi-green: #2D5A27;
   --background: #ffffff;

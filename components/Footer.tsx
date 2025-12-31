@@ -63,7 +63,16 @@ export default function Footer() {
                   hello@ollieskimchi.co.uk
                 </a>
               </li>
-              <li>Made with love in London</li>
+              <li className="text-sm">
+                <span className="font-semibold text-gray-200">Kitchen:</span><br />
+                Unit 4j, 56 Dace Road<br />
+                London E3 2NQ
+              </li>
+              <li className="text-sm">
+                <span className="font-semibold text-gray-200">Business Address:</span><br />
+                34 Driffield Road<br />
+                London E3 5NF
+              </li>
             </ul>
 
             {/* Social Links */}
