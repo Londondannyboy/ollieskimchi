@@ -88,12 +88,6 @@ export default function AddToCartButton({ variantId, availableForSale, isDemo }:
         )}
       </button>
 
-      {/* Demo/Shopify Status */}
-      {isDemo && !isShopifyEnabled && (
-        <p className="text-sm text-gray-500 text-center">
-          Demo mode - cart functionality is limited
-        </p>
-      )}
     </div>
   )
 }

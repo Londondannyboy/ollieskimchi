@@ -40,14 +40,6 @@ export default function CartPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Your Cart</h1>
 
-        {!isShopifyEnabled && (
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
-            <p className="text-sm text-yellow-800">
-              Demo Mode: Connect your Shopify store to enable full cart functionality.
-            </p>
-          </div>
-        )}
-
         {isEmpty ? (
           <div className="bg-white rounded-2xl shadow-sm p-12 text-center">
             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">

@@ -31,11 +31,11 @@ const demoProducts: Record<string, {
 }> = {
   'classic-napa-cabbage-kimchi': {
     id: '1',
-    title: 'Classic Napa Cabbage Kimchi',
+    title: "Ollie's Kimchi",
     handle: 'classic-napa-cabbage-kimchi',
     description: 'Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce. Fermented to perfection for that perfect balance of spicy, tangy, and umami flavours.',
-    descriptionHtml: '<p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><p>Fermented to perfection for that perfect balance of spicy, tangy, and umami flavours.</p><h3>Ingredients</h3><p>Napa cabbage, Korean red pepper flakes, garlic, ginger, spring onions, fish sauce, salt.</p><h3>Storage</h3><p>Keep refrigerated. Best consumed within 4 weeks of opening.</p><p><strong>Size:</strong> 400g</p>',
-    price: '8.50',
+    descriptionHtml: '<p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><p>Fermented to perfection for that perfect balance of spicy, tangy, and umami flavours.</p><h3>Ingredients</h3><p>Napa cabbage, Korean red pepper flakes, garlic, ginger, spring onions, fish sauce, salt.</p><h3>Storage</h3><p>Keep refrigerated. Best consumed within 4 weeks of opening.</p><p><strong>Size:</strong> 350g</p>',
+    price: '6.99',
     variantId: 'gid://shopify/ProductVariant/53034599219533',
     image: '/Assets/Kimchi_B004_23-04-25.jpg',
     images: ['/Assets/Kimchi_B004_23-04-25.jpg', '/Assets/Kimchi_B006_30-11-20.jpg'],
@@ -44,9 +44,9 @@ const demoProducts: Record<string, {
     id: '2',
     title: 'Classic Kimchi - 2 Pack',
     handle: 'classic-kimchi-2-pack',
-    description: 'Save 5%! Two jars of our signature Classic Napa Cabbage Kimchi.',
-    descriptionHtml: '<p><strong>Save 5%!</strong> Two jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>2 x 400g jars of Classic Napa Cabbage Kimchi</p>',
-    price: '16.15',
+    description: 'Save £1! Two jars of our signature Classic Napa Cabbage Kimchi.',
+    descriptionHtml: '<p><strong>Save £1!</strong> Two jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>2 x 350g jars of Classic Napa Cabbage Kimchi</p>',
+    price: '12.98',
     variantId: 'gid://shopify/ProductVariant/53034599252301',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
     images: ['/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png'],
@@ -55,9 +55,9 @@ const demoProducts: Record<string, {
     id: '3',
     title: 'Classic Kimchi - 3 Pack',
     handle: 'classic-kimchi-3-pack',
-    description: 'Save 10%! Three jars of our signature Classic Napa Cabbage Kimchi.',
-    descriptionHtml: '<p><strong>Save 10%!</strong> Three jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>3 x 400g jars of Classic Napa Cabbage Kimchi</p>',
-    price: '22.95',
+    description: 'Save £3! Three jars of our signature Classic Napa Cabbage Kimchi.',
+    descriptionHtml: '<p><strong>Save £3!</strong> Three jars of our signature Classic Napa Cabbage Kimchi.</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>3 x 350g jars of Classic Napa Cabbage Kimchi</p>',
+    price: '17.97',
     variantId: 'gid://shopify/ProductVariant/53034599285069',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
     images: ['/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png'],
@@ -66,12 +66,23 @@ const demoProducts: Record<string, {
     id: '4',
     title: 'Classic Kimchi - 6 Pack',
     handle: 'classic-kimchi-6-pack',
-    description: 'Save 15%! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
-    descriptionHtml: '<p><strong>Save 15%!</strong> Six jars of our signature Classic Napa Cabbage Kimchi - best value!</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>6 x 400g jars of Classic Napa Cabbage Kimchi</p>',
-    price: '43.35',
+    description: 'Save £6! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
+    descriptionHtml: '<p><strong>Save £6!</strong> Six jars of our signature Classic Napa Cabbage Kimchi - best value!</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>6 x 350g jars of Classic Napa Cabbage Kimchi</p>',
+    price: '35.94',
     variantId: 'gid://shopify/ProductVariant/53034599317837',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
     images: ['/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png'],
+  },
+  'ok-cap': {
+    id: '8',
+    title: 'OK Cap',
+    handle: 'ok-cap',
+    description: "Ollie's Kimchi cap with OK embroidered in red on a high quality, black cap. One size.",
+    descriptionHtml: "<p>Ollie's Kimchi cap with OK embroidered in red on a high quality, black cap. One size.</p>",
+    price: '19.99',
+    variantId: 'gid://shopify/ProductVariant/53164639846733',
+    image: 'https://cdn.shopify.com/s/files/1/0939/1403/8605/files/Cap3GreenBGcopy.jpg',
+    images: ['https://cdn.shopify.com/s/files/1/0939/1403/8605/files/Cap3GreenBGcopy.jpg'],
   },
   'spicy-kimchi': {
     id: '5',
@@ -165,17 +176,6 @@ export default async function ProductPage({ params }: Props) {
           <span className="text-gray-900">{product.title}</span>
         </nav>
       </div>
-
-      {/* Demo Mode Banner */}
-      {isDemo && (
-        <div className="bg-yellow-50 border-b border-yellow-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <p className="text-sm text-yellow-800 text-center">
-              Demo Mode: Connect your Shopify store for real checkout.
-            </p>
-          </div>
-        </div>
-      )}
 
       {/* Product Details */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
