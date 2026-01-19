@@ -31,6 +31,8 @@ export default function TermsPage() {
             We strive to display our products as accurately as possible. However, colours and
             appearance may vary slightly from the images shown. All product descriptions,
             including ingredients and nutritional information, are provided in good faith.
+            As a naturally fermented product, each batch may have slight variations in taste
+            and appearance - this is normal and part of what makes artisan kimchi special.
           </p>
 
           <h3>Pricing</h3>
@@ -61,50 +63,119 @@ export default function TermsPage() {
             due to circumstances beyond our control.
           </p>
           <p>
-            Free delivery is available on orders over £35. Standard delivery typically
+            <strong>Free delivery</strong> is available on orders over £35. Standard delivery typically
             takes 2-3 working days.
           </p>
-
-          <h2>5. Perishable Goods</h2>
           <p>
-            Our kimchi is a fresh, perishable product. Please note:
+            Please ensure someone is available to receive your order, as our products are
+            perishable and should be refrigerated promptly upon arrival.
+          </p>
+
+          <h2>5. Perishable Goods - Important Information</h2>
+          <p>
+            Our kimchi is a fresh, naturally fermented, <strong>unpasteurised</strong> product
+            containing live cultures. Please note:
           </p>
           <ul>
-            <li>Products should be refrigerated immediately upon receipt</li>
+            <li><strong>Refrigerate immediately</strong> upon receipt - do not leave at room temperature</li>
             <li>Check the best before date on packaging</li>
             <li>Once opened, consume within 4 weeks for best quality</li>
-            <li>Our kimchi is raw and unpasteurised - this is intentional and beneficial!</li>
+            <li>Store at 0-5°C at all times</li>
+            <li>Our kimchi is raw and unpasteurised - this is intentional for maximum probiotic benefit</li>
+            <li>Some gas release and bubbling is normal - this indicates active, healthy fermentation</li>
+            <li>The flavour will continue to develop over time - this is the nature of live fermented foods</li>
           </ul>
 
-          <h2>6. Returns and Refunds</h2>
+          <h2>6. Allergen Information</h2>
           <p>
-            Due to the perishable nature of our products, we cannot accept returns. However:
+            <strong>Important:</strong> Our products may contain the following allergens:
           </p>
           <ul>
-            <li>If your order arrives damaged or incorrect, please contact us within 48 hours with photos</li>
-            <li>We will arrange a replacement or refund for damaged/incorrect items</li>
-            <li>If you are unsatisfied with the quality, please contact us to discuss</li>
+            <li><strong>Soya</strong> (soy sauce, miso)</li>
+            <li><strong>Wheat/Gluten</strong> (soy sauce)</li>
+            <li><strong>Barley</strong> (miso)</li>
           </ul>
-
-          <h2>7. Discount Codes</h2>
           <p>
-            Discount codes are subject to the following conditions:
+            Our products are prepared in a kitchen that handles various allergens. While we take
+            precautions to prevent cross-contamination, we cannot guarantee an allergen-free environment.
+          </p>
+          <p>
+            Please check product labels carefully before consumption. If you have specific dietary
+            requirements, severe allergies, or are pregnant or immunocompromised, please contact
+            us before ordering.
+          </p>
+
+          <h2>7. Returns and Refunds Policy</h2>
+          <h3>Perishable Food Products (Kimchi)</h3>
+          <p>
+            Due to the perishable nature of our food products and food safety regulations, we
+            <strong> cannot accept returns</strong> of kimchi once dispatched. However:
           </p>
           <ul>
-            <li>One code per order unless otherwise stated</li>
-            <li>Cannot be combined with other offers</li>
-            <li>OLLIE15 (15% off first order) is valid for one-time use per customer</li>
-            <li>We reserve the right to modify or cancel promotions at any time</li>
+            <li>If your order arrives <strong>damaged, leaking, or spoiled</strong>, please contact us within
+            48 hours of delivery with photographs. We will arrange a full refund or replacement.</li>
+            <li>If you receive an <strong>incorrect item</strong>, please contact us within 48 hours.
+            We will arrange collection and send the correct item or provide a refund.</li>
+            <li>If you believe there is a <strong>quality issue</strong>, please contact us with details
+            and photographs. We take all feedback seriously and will investigate promptly.</li>
           </ul>
 
-          <h2>8. Intellectual Property</h2>
+          <h3>Non-Perishable Products (Merchandise)</h3>
+          <p>
+            For non-food items (such as caps and merchandise), you have <strong>30 days</strong> from
+            the date of delivery to return items for a refund, provided:
+          </p>
+          <ul>
+            <li>Items are unused, unworn, and in original condition</li>
+            <li>Items are returned in original packaging</li>
+            <li>You contact us first to arrange the return</li>
+          </ul>
+          <p>
+            Return shipping costs are the responsibility of the customer unless the item is
+            faulty or we made an error. Refunds will be processed within 14 days of receiving
+            the returned item.
+          </p>
+
+          <h3>Cancellations</h3>
+          <p>
+            Orders can be cancelled for a full refund if you contact us <strong>before dispatch</strong>.
+            Once your order has been dispatched, it cannot be cancelled.
+          </p>
+
+          <h3>How to Request a Refund</h3>
+          <p>
+            To request a refund or report an issue, please email us at{' '}
+            <a href="mailto:hello@ollieskimchi.co.uk">hello@ollieskimchi.co.uk</a> with:
+          </p>
+          <ul>
+            <li>Your order number</li>
+            <li>Description of the issue</li>
+            <li>Photographs (if applicable)</li>
+          </ul>
+          <p>
+            We aim to respond to all refund requests within 2 working days.
+          </p>
+
+          <h2>8. Food Safety and Storage</h2>
+          <p>
+            We are committed to food safety and follow all relevant UK food hygiene regulations.
+            Our products are made in a kitchen registered with the local authority and we maintain
+            appropriate food safety certifications.
+          </p>
+          <p>
+            <strong>Your responsibility:</strong> Once products are delivered, you are responsible
+            for proper storage. We cannot accept responsibility for products that have not been
+            stored correctly or have been left unrefrigerated.
+          </p>
+
+          <h2>9. Intellectual Property</h2>
           <p>
             All content on this website, including text, images, logos, and designs, is owned
             by Ollie&apos;s Kimchi and protected by copyright and other intellectual property laws.
             You may not reproduce, distribute, or use our content without written permission.
           </p>
 
-          <h2>9. Limitation of Liability</h2>
+          <h2>10. Limitation of Liability</h2>
           <p>
             To the fullest extent permitted by law, Ollie&apos;s Kimchi shall not be liable for any
             indirect, incidental, special, consequential, or punitive damages arising from your
@@ -112,15 +183,9 @@ export default function TermsPage() {
           </p>
           <p>
             Our total liability for any claim shall not exceed the amount you paid for the
-            products in question.
-          </p>
-
-          <h2>10. Allergen Information</h2>
-          <p>
-            Our products may contain allergens including fish (fish sauce) and may be produced
-            in facilities that handle other allergens. Please check product labels carefully.
-            If you have specific dietary requirements or allergies, please contact us before
-            ordering.
+            products in question. Nothing in these terms excludes or limits our liability for
+            death or personal injury caused by our negligence, fraud, or any other liability
+            that cannot be excluded by law.
           </p>
 
           <h2>11. Governing Law</h2>

@@ -219,10 +219,12 @@ export default async function ShopPage() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  {/* Guardian Badge - Top Right */}
-                  <div className="absolute top-2 right-2 z-10">
-                    <GuardianBadge size="sm" />
-                  </div>
+                  {/* Guardian Badge - Top Right (only for kimchi products) */}
+                  {guardianQuotes[product.handle] && (
+                    <div className="absolute top-2 right-2 z-10">
+                      <GuardianBadge size="sm" />
+                    </div>
+                  )}
                   {/* Guardian Quote - Bottom Left */}
                   {guardianQuotes[product.handle] && (
                     <div className="absolute bottom-2 left-2 z-10">

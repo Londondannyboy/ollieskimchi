@@ -190,10 +190,12 @@ export default async function ProductPage({ params }: Props) {
                 className="object-cover"
                 priority
               />
-              {/* Guardian Badge - Top Right */}
-              <div className="absolute top-4 right-4 z-10">
-                <GuardianBadge size="lg" />
-              </div>
+              {/* Guardian Badge - Top Right (only for kimchi products) */}
+              {guardianQuotes[product.handle] && (
+                <div className="absolute top-4 right-4 z-10">
+                  <GuardianBadge size="lg" />
+                </div>
+              )}
               {/* Guardian Quote - Bottom Left */}
               {guardianQuotes[product.handle] && (
                 <div className="absolute bottom-4 left-4 z-10">
