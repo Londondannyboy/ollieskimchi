@@ -14,7 +14,7 @@ export default function TermsPage() {
         </h1>
 
         <p className="text-gray-600 mb-8">
-          Last updated: December 2025
+          Last updated: January 2026
         </p>
 
         <div className="prose prose-gray max-w-none">
@@ -61,7 +61,7 @@ export default function TermsPage() {
             due to circumstances beyond our control.
           </p>
           <p>
-            Free delivery is available on orders over &pound;30. Standard delivery typically
+            Free delivery is available on orders over £35. Standard delivery typically
             takes 2-3 working days.
           </p>
 

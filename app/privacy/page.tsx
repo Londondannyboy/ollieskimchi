@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         </h1>
 
         <p className="text-gray-600 mb-8">
-          Last updated: December 2025
+          Last updated: January 2026
         </p>
 
         <div className="prose prose-gray max-w-none">
