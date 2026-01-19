@@ -443,7 +443,7 @@ export default function HomePage() {
                   Classic 3 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Perfect for sharing (or not...)</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£22.95</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£17.97</p>
               </div>
             </Link>
 
@@ -473,7 +473,7 @@ export default function HomePage() {
                   Classic 6 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">For the true kimchi addict</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£43.35</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£35.94</p>
               </div>
             </Link>
 
@@ -500,7 +500,7 @@ export default function HomePage() {
                   Classic 2 Pack
                 </h3>
                 <p className="text-gray-600 mt-2">Dip your toes in</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£16.15</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£12.98</p>
               </div>
             </Link>
           </div>
