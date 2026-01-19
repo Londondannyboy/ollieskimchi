@@ -28,14 +28,14 @@ const productStatus: Record<string, { comingSoon?: boolean }> = {
   'classic-kimchi-6-pack': { comingSoon: false },
 }
 
-// Demo products when Shopify isn't configured
+// Demo products when Shopify isn't configured (prices match Shopify)
 const demoProducts = [
   {
     id: '1',
-    title: "Ollie's Kimchi Original",
+    title: "Ollie's Kimchi",
     handle: 'classic-napa-cabbage-kimchi',
     description: 'Spicy, funky, crisp, and fresh. Traditional and vegan, with plenty of sauce.',
-    price: '7.99',
+    price: '6.99',
     image: '/Assets/Kimchi_B004_23-04-25.jpg',
     comingSoon: false,
   },
@@ -43,8 +43,8 @@ const demoProducts = [
     id: '2',
     title: 'Classic Kimchi - 2 Pack',
     handle: 'classic-kimchi-2-pack',
-    description: 'Two jars of our signature Classic Napa Cabbage Kimchi.',
-    price: '15.98',
+    description: 'Save 5%! Two jars of our signature Classic Napa Cabbage Kimchi.',
+    price: '16.15',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
     comingSoon: false,
   },
@@ -52,8 +52,8 @@ const demoProducts = [
     id: '3',
     title: 'Classic Kimchi - 3 Pack',
     handle: 'classic-kimchi-3-pack',
-    description: 'Save! Three jars of our signature Classic Napa Cabbage Kimchi at £7.49 each.',
-    price: '22.47',
+    description: 'Save 10%! Three jars of our signature Classic Napa Cabbage Kimchi.',
+    price: '22.95',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
     comingSoon: false,
   },
@@ -61,8 +61,8 @@ const demoProducts = [
     id: '4',
     title: 'Classic Kimchi - 6 Pack',
     handle: 'classic-kimchi-6-pack',
-    description: 'Best value! Six jars of our signature Classic Napa Cabbage Kimchi at £7.49 each.',
-    price: '44.94',
+    description: 'Save 15%! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
+    price: '43.35',
     image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
     comingSoon: false,
   },
