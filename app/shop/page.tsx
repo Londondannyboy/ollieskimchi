@@ -11,6 +11,14 @@ const guardianQuotes: Record<string, string> = {
   'classic-kimchi-6-pack': 'Full and well-rounded',
 }
 
+// Only show these product handles (filter out old/discontinued products)
+const allowedProductHandles = [
+  'classic-napa-cabbage-kimchi',
+  'classic-kimchi-2-pack',
+  'classic-kimchi-3-pack',
+  'classic-kimchi-6-pack',
+]
+
 // Coming soon status by product handle (images now come from Shopify)
 const productStatus: Record<string, { comingSoon?: boolean }> = {
   'classic-napa-cabbage-kimchi': { comingSoon: false },
@@ -67,7 +75,11 @@ export default async function ShopPage() {
     try {
       const shopifyProducts = await getAllProducts()
       if (shopifyProducts.length > 0) {
-        products = shopifyProducts.map(p => {
+        // Filter to only show allowed products (removes vegan, spicy, old products)
+        const filteredProducts = shopifyProducts.filter(p =>
+          allowedProductHandles.includes(p.handle)
+        )
+        products = filteredProducts.map(p => {
           const status = productStatus[p.handle] || {}
           return {
             id: p.id,

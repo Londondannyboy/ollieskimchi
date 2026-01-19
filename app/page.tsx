@@ -2,29 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import GuardianBadge from '@/components/GuardianBadge'
 
-// Guardian review quotes from Tom Hunt's article
-const guardianQuotes: Record<string, string> = {
-  'classic-napa-cabbage-kimchi': 'Bold and punchy',
-  'classic-kimchi-3-pack': 'Big flavour',
-  'classic-kimchi-6-pack': 'Full and well-rounded',
-  'classic-kimchi-2-pack': 'Well seasoned',
-}
-
-// Fermentation bubbles component
-function FermentationBubbles() {
-  return (
-    <div className="bubbles-container">
-      <div className="bubble" />
-      <div className="bubble" />
-      <div className="bubble" />
-      <div className="bubble" />
-      <div className="bubble" />
-      <div className="bubble" />
-      <div className="bubble" />
-    </div>
-  )
-}
-
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
@@ -54,8 +31,6 @@ export default function HomePage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-red-900/5 blur-3xl" />
         </div>
 
-        {/* Fermentation bubbles */}
-        <FermentationBubbles />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 min-h-[85vh] flex items-center">
           {/* Content - takes up left/center */}
@@ -63,29 +38,34 @@ export default function HomePage() {
             {/* Tagline with personality */}
             <div className="space-y-2">
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
-                Fresh Kimchi, Made in London
+                Fantastic Kimchi,
               </h1>
-              <p className="text-2xl sm:text-3xl text-gray-300 font-display">
-                Handcrafted, naturally fermented,
-                <span className="text-red-900"> bursting with life.</span>
+              <p className="text-2xl sm:text-3xl text-white/90 font-sans pl-8">
+                — made in London
               </p>
             </div>
 
-            {/* Ollie's Kimchi – IT'S ALIVE! */}
+            {/* IT'S ALIVE! */}
             <div className="py-4">
-              <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white inline-block">
-                Ollie&apos;s Kimchi <span className="text-white electric-alive italic">– It&apos;s Alive!</span>
+              <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+                It&apos;s Alive!
               </p>
-              <p className="text-gray-300 mt-2 text-lg">
-                Naturally fermented with live cultures in every jar.
+              <p className="text-white/80 mt-2 text-lg font-sans">
+                Full of life and bursting with flavour!
               </p>
             </div>
 
-            {/* Fun personality text */}
-            <p className="text-xl text-gray-300 max-w-xl">
-              No shortcuts. No pasteurisation. Just time, love, and a whole lot of cabbage.
-              Made fresh in London by Ollie (that&apos;s me!).
-            </p>
+            {/* Brand copy - alternating serif/sans */}
+            <div className="space-y-3 max-w-xl">
+              <p className="text-xl text-white">
+                <span className="font-display">Fresh, handcrafted kimchi,</span>{' '}
+                <span className="font-sans text-white/80">naturally fermented in London by Ollie and his team.</span>
+              </p>
+              <p className="text-xl text-white">
+                <span className="font-display">No shortcuts. No pasteurisation.</span>{' '}
+                <span className="font-sans text-white/80">Just time, love and a whole lot of cabbage.</span>
+              </p>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -94,7 +74,7 @@ export default function HomePage() {
                 className="btn-fun inline-flex items-center justify-center px-10 py-5 bg-red-900 text-white font-bold rounded-full text-xl hover:bg-red-600 transition-all transform hover:scale-105 shadow-lg pulse-glow"
               >
                 <span className="mr-2">Shop Now</span>
-                <svg className="w-6 h-6 bounce-alive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
@@ -102,7 +82,7 @@ export default function HomePage() {
                 href="/about"
                 className="inline-flex items-center justify-center px-10 py-5 border-2 border-white/30 text-white font-bold rounded-full text-xl hover:bg-white hover:text-gray-900 transition-all"
               >
-                Olli&apos;s Story
+                Ollie&apos;s Kimchi Journey
               </Link>
             </div>
           </div>
@@ -157,25 +137,25 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar - Animated */}
-      <section className="bg-red-900 py-8 relative overflow-hidden">
+      <section className="bg-red-900 py-5 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-kimchi-red via-red-500 to-kimchi-red bg-[length:200%_100%] animate-[gradient-shift_3s_ease_infinite]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
             <div className="group cursor-default">
-              <p className="text-4xl lg:text-5xl font-black group-hover:scale-110 transition-transform">100%</p>
-              <p className="text-sm lg:text-base opacity-90">Natural Ingredients</p>
+              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">100%</p>
+              <p className="text-xs lg:text-sm opacity-90">Natural Ingredients</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-4xl lg:text-5xl font-black group-hover:scale-110 transition-transform">London</p>
-              <p className="text-sm lg:text-base opacity-90">Made Fresh Weekly</p>
+              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">Fresh</p>
+              <p className="text-xs lg:text-sm opacity-90">Made in London</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-4xl lg:text-5xl font-black group-hover:scale-110 transition-transform heartbeat">Live</p>
-              <p className="text-sm lg:text-base opacity-90">Probiotics</p>
+              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform heartbeat">Live</p>
+              <p className="text-xs lg:text-sm opacity-90">Probiotics</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-4xl lg:text-5xl font-black group-hover:scale-110 transition-transform">Small</p>
-              <p className="text-sm lg:text-base opacity-90">Batch Crafted</p>
+              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">Delicious!</p>
+              <p className="text-xs lg:text-sm opacity-90">&nbsp;</p>
             </div>
           </div>
         </div>
@@ -229,8 +209,8 @@ export default function HomePage() {
                   so I kept on making it.
                 </p>
                 <p>
-                  Naturally, I&apos;m pretty chuffed that The Guardian called my kimchi the <span className="font-semibold text-gray-900">&ldquo;Best All-Rounder&rdquo;</span> with
-                  5 stars - but honestly, the best feeling is when someone tells me it&apos;s the tastiest kimchi they&apos;ve ever had.
+                  As you can imagine, I&apos;m pretty chuffed that The Guardian called my kimchi the <span className="font-semibold text-gray-900">&ldquo;Best All-Rounder&rdquo;</span> with
+                  5 stars – but honestly, the best feeling is when someone tells me it&apos;s the tastiest kimchi they&apos;ve ever had.
                 </p>
                 <p>
                   We make every batch by hand, using traditional methods, a liberal dash of love, and a great deal of patience.
@@ -242,7 +222,7 @@ export default function HomePage() {
                   href="/shop"
                   className="inline-flex items-center justify-center px-8 py-4 bg-red-900 text-white font-bold rounded-full hover:bg-red-600 transition-all transform hover:scale-105"
                 >
-                  Try My Kimchi
+                  Try Ollie&apos;s Kimchi
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -251,7 +231,7 @@ export default function HomePage() {
                   href="/about"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-200 text-gray-700 font-bold rounded-full hover:border-kimchi-red hover:text-red-900 transition-all"
                 >
-                  Read My Story
+                  The Full Story
                 </Link>
               </div>
             </div>
@@ -404,9 +384,8 @@ export default function HomePage() {
               Ollie&apos;s <span className="text-gradient-alive">Kimchi</span>
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-              Buy kimchi online, handcrafted in London using traditional Korean methods.
+              Handcrafted in London using traditional Korean methods.
               Every jar is naturally fermented and packed with billions of live cultures.
-              <span className="text-red-900 font-bold"> It&apos;s alive, remember?</span>
             </p>
           </div>
 
@@ -433,7 +412,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
                   Classic Kimchi
                 </h3>
-                <p className="text-gray-600 mt-2">The OG. The one that started it all.</p>
+                <p className="text-gray-600 mt-2">The OG.</p>
                 <p className="text-2xl font-bold text-red-900 mt-4">£7.99</p>
               </div>
             </Link>
@@ -644,8 +623,6 @@ export default function HomePage() {
 
       {/* Big CTA Section */}
       <section className="relative py-28 lg:py-36 bg-red-900 overflow-hidden">
-        {/* Background bubbles */}
-        <FermentationBubbles />
 
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">

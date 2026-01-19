@@ -23,7 +23,7 @@ export default function NavBar() {
               className="h-12 md:h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
               priority
             />
-            <span className="hidden sm:block font-display text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
+            <span className="hidden sm:block font-sans text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
               Ollie&apos;s Kimchi
             </span>
           </Link>
