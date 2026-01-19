@@ -66,6 +66,15 @@ const demoProducts = [
     image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
     comingSoon: false,
   },
+  {
+    id: '5',
+    title: 'OK Cap',
+    handle: 'ok-cap',
+    description: "Ollie's Kimchi cap with OK embroidered in red on a high quality, black cap. One size.",
+    price: '19.99',
+    image: 'https://cdn.shopify.com/s/files/1/0939/1403/8605/files/Cap3GreenBGcopy.jpg',
+    comingSoon: false,
+  },
 ]
 
 export default async function ShopPage() {
