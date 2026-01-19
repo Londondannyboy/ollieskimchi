@@ -17,6 +17,7 @@ const allowedProductHandles = [
   'classic-kimchi-2-pack',
   'classic-kimchi-3-pack',
   'classic-kimchi-6-pack',
+  'ok-cap',
 ]
 
 // Coming soon status by product handle (images now come from Shopify)
@@ -69,7 +70,6 @@ const demoProducts = [
 
 export default async function ShopPage() {
   let products = demoProducts
-  let isDemo = true
 
   if (isShopifyConfigured()) {
     try {
@@ -91,7 +91,6 @@ export default async function ShopPage() {
             comingSoon: status.comingSoon ?? false,
           }
         })
-        isDemo = false
       }
     } catch (error) {
       console.error('Error fetching products:', error)
@@ -163,16 +162,6 @@ export default async function ShopPage() {
         </div>
       </div>
 
-      {/* Demo Mode Banner */}
-      {isDemo && (
-        <div className="bg-yellow-50 border-b border-yellow-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <p className="text-sm text-yellow-800 text-center">
-              Demo Mode: Connect your Shopify store to display live products.
-            </p>
-          </div>
-        </div>
-      )}
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

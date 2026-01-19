@@ -413,7 +413,7 @@ export default function HomePage() {
                   Classic Kimchi
                 </h3>
                 <p className="text-gray-600 mt-2">The OG.</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£7.99</p>
+                <p className="text-2xl font-bold text-red-900 mt-4">£6.99</p>
               </div>
             </Link>
 
