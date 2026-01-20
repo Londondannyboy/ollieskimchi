@@ -88,19 +88,19 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Product Image - Bottom Right, Overlapping into red banner */}
-        <div className="absolute bottom-0 right-0 lg:right-[5%] translate-y-1/4 z-20 hidden md:block">
+        {/* Product Image - Bottom Right */}
+        <div className="absolute bottom-8 right-0 lg:right-[5%] z-20 hidden md:block">
           <div className="relative float">
             <Image
-              src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
-              alt="Ollie's Kimchi 3 Pack"
-              width={380}
-              height={380}
-              className="drop-shadow-2xl"
+              src="/Assets/Kimchi_B004_23-04-25.jpg"
+              alt="Ollie's Kimchi Jar"
+              width={320}
+              height={320}
+              className="drop-shadow-2xl rounded-2xl"
               priority
             />
             {/* Glowing circle behind */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] bg-red-900/30 rounded-full blur-xl pulse-glow -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] bg-red-900/30 rounded-full blur-xl pulse-glow -z-10" />
             {/* Floating badges */}
             <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
               Made in London
@@ -359,24 +359,6 @@ export default function HomePage() {
 
       {/* Products Section */}
       <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
-        {/* Subtle background product image */}
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-[0.03] pointer-events-none hidden lg:block">
-          <Image
-            src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </div>
-        <div className="absolute -left-32 bottom-0 w-[400px] h-[400px] opacity-[0.02] pointer-events-none rotate-12 hidden lg:block">
-          <Image
-            src="/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png"
-            alt=""
-            fill
-            className="object-contain"
-          />
-        </div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-red-900 font-bold text-lg mb-2">Buy Kimchi Online</p>
@@ -389,123 +371,93 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Classic Single */}
-            <Link href="/shop/classic-napa-cabbage-kimchi" className="group">
-              <div className="product-card bg-gray-50 rounded-3xl p-6">
-                <div className="aspect-square relative mb-6 overflow-hidden rounded-2xl">
-                  <Image
-                    src="/Assets/Kimchi_B004_23-04-25.jpg"
-                    alt="Buy kimchi online - Classic Napa Cabbage Kimchi"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-2 right-2 z-10">
-                    <GuardianBadge size="sm" />
-                  </div>
-                  <div className="absolute bottom-2 left-2 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
-                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Bold and punchy&rdquo;</p>
-                    </div>
-                  </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Large Product Image */}
+            <div className="relative">
+              <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl max-w-lg mx-auto">
+                <Image
+                  src="/Assets/Kimchi_B004_23-04-25.jpg"
+                  alt="Ollie's Classic Kimchi - Buy kimchi online"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute top-4 right-4 z-10">
+                  <GuardianBadge size="md" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
-                  Classic Kimchi
-                </h3>
-                <p className="text-gray-600 mt-2">The OG.</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£6.99</p>
               </div>
-            </Link>
+              {/* Floating quote */}
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 max-w-[200px] hidden md:block">
+                <p className="text-gray-700 text-sm italic">&ldquo;Bold and punchy... Big, full flavour&rdquo;</p>
+                <p className="text-xs text-gray-500 mt-1">— The Guardian</p>
+              </div>
+            </div>
 
-            {/* 3 Pack */}
-            <Link href="/shop/classic-kimchi-3-pack" className="group">
-              <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 left-4 bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full wiggle z-20">
-                  SAVE 10%
-                </span>
-                <div className="aspect-square relative mb-6">
-                  <Image
-                    src="/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png"
-                    alt="Classic Kimchi 3 Pack"
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-2 right-2 z-10">
-                    <GuardianBadge size="sm" />
-                  </div>
-                  <div className="absolute bottom-2 left-2 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
-                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Big flavour&rdquo;</p>
-                    </div>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
-                  Classic 3 Pack
-                </h3>
-                <p className="text-gray-600 mt-2">Perfect for sharing (or not...)</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£17.97</p>
-              </div>
-            </Link>
+            {/* Pricing Options */}
+            <div className="space-y-4">
+              <h3 className="font-display text-2xl font-semibold text-gray-900 mb-6">
+                Classic Napa Cabbage Kimchi
+              </h3>
+              <p className="text-gray-600 mb-8">
+                The OG. Spicy, funky, crisp and fresh. Traditional and vegan, with plenty of sauce.
+              </p>
 
-            {/* 6 Pack */}
-            <Link href="/shop/classic-kimchi-6-pack" className="group">
-              <div className="product-card bg-gray-50 rounded-3xl p-6 relative">
-                <span className="absolute top-4 left-4 bg-red-900 text-white text-xs font-bold px-3 py-1 rounded-full pulse-glow z-20">
-                  BEST VALUE
-                </span>
-                <div className="aspect-square relative mb-6">
-                  <Image
-                    src="/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png"
-                    alt="Classic Kimchi 6 Pack"
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-2 right-2 z-10">
-                    <GuardianBadge size="sm" />
+              {/* Single Jar */}
+              <Link href="/shop/classic-napa-cabbage-kimchi" className="block group">
+                <div className="flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors border-2 border-transparent hover:border-red-900">
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-red-900 transition-colors">Single Jar</p>
+                    <p className="text-sm text-gray-500">320g</p>
                   </div>
-                  <div className="absolute bottom-2 left-2 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
-                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Full and well-rounded&rdquo;</p>
-                    </div>
-                  </div>
+                  <p className="text-2xl font-bold text-red-900">£6.99</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
-                  Classic 6 Pack
-                </h3>
-                <p className="text-gray-600 mt-2">For the true kimchi addict</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£35.94</p>
-              </div>
-            </Link>
+              </Link>
 
-            {/* 2 Pack */}
-            <Link href="/shop/classic-kimchi-2-pack" className="group">
-              <div className="product-card bg-gray-50 rounded-3xl p-6">
-                <div className="aspect-square relative mb-6">
-                  <Image
-                    src="/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png"
-                    alt="Classic Kimchi 2 Pack"
-                    fill
-                    className="object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-2 right-2 z-10">
-                    <GuardianBadge size="sm" />
+              {/* 2 Pack */}
+              <Link href="/shop/classic-kimchi-2-pack" className="block group">
+                <div className="flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors border-2 border-transparent hover:border-red-900">
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-red-900 transition-colors">2 Pack</p>
+                    <p className="text-sm text-gray-500">2 × 320g</p>
                   </div>
-                  <div className="absolute bottom-2 left-2 z-10">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
-                      <p className="text-[10px] text-gray-700 font-medium italic">&ldquo;Well seasoned&rdquo;</p>
-                    </div>
-                  </div>
+                  <p className="text-2xl font-bold text-red-900">£12.98</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
-                  Classic 2 Pack
-                </h3>
-                <p className="text-gray-600 mt-2">Dip your toes in</p>
-                <p className="text-2xl font-bold text-red-900 mt-4">£12.98</p>
-              </div>
-            </Link>
+              </Link>
+
+              {/* 3 Pack */}
+              <Link href="/shop/classic-kimchi-3-pack" className="block group">
+                <div className="flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors border-2 border-transparent hover:border-red-900 relative">
+                  <span className="absolute -top-2 left-4 bg-green-700 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                    SAVE 10%
+                  </span>
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-red-900 transition-colors">3 Pack</p>
+                    <p className="text-sm text-gray-500">3 × 320g</p>
+                  </div>
+                  <p className="text-2xl font-bold text-red-900">£17.97</p>
+                </div>
+              </Link>
+
+              {/* 6 Pack */}
+              <Link href="/shop/classic-kimchi-6-pack" className="block group">
+                <div className="flex items-center justify-between p-5 bg-red-50 rounded-2xl hover:bg-red-100 transition-colors border-2 border-red-900 relative">
+                  <span className="absolute -top-2 left-4 bg-red-900 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                    BEST VALUE
+                  </span>
+                  <div>
+                    <p className="font-bold text-gray-900 group-hover:text-red-900 transition-colors">6 Pack</p>
+                    <p className="text-sm text-gray-500">6 × 320g • Free shipping</p>
+                  </div>
+                  <p className="text-2xl font-bold text-red-900">£35.94</p>
+                </div>
+              </Link>
+
+              <p className="text-sm text-gray-500 text-center mt-6">
+                Free UK delivery on orders over £35
+              </p>
+            </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <Link
               href="/shop"
               className="inline-flex items-center text-red-900 font-bold text-lg underline-animate"

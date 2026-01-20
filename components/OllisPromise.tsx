@@ -10,7 +10,7 @@ export default function OllisPromise({ variant = 'default' }: OllisPromiseProps)
       <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-4">
         <Image
           src="/Assets/Ollie Photo.png"
-          alt="Olli"
+          alt="Ollie"
           width={48}
           height={48}
           className="rounded-full"
@@ -19,7 +19,7 @@ export default function OllisPromise({ variant = 'default' }: OllisPromiseProps)
           <p className="text-sm text-gray-700 italic">
             &ldquo;I promise you, my kimchi will set your tastebuds alive!&rdquo;
           </p>
-          <p className="text-xs text-gray-500 mt-0.5">— Olli, Founder</p>
+          <p className="text-xs text-gray-500 mt-0.5">— Ollie, Founder</p>
         </div>
       </div>
     )
@@ -31,7 +31,7 @@ export default function OllisPromise({ variant = 'default' }: OllisPromiseProps)
         <div className="flex-shrink-0">
           <Image
             src="/Assets/Ollie Photo.png"
-            alt="Olli - Founder"
+            alt="Ollie - Founder"
             width={80}
             height={80}
             className="rounded-full border-4 border-white shadow-lg"
@@ -39,7 +39,7 @@ export default function OllisPromise({ variant = 'default' }: OllisPromiseProps)
         </div>
         <div className="flex-grow">
           <h4 className="font-display text-lg font-semibold text-gray-900">
-            Olli&apos;s Promise
+            Ollie&apos;s Promise
           </h4>
           <p className="text-gray-600 mt-2 leading-relaxed">
             &ldquo;You can&apos;t go wrong with this kimchi. I&apos;ve spent years perfecting
@@ -47,7 +47,7 @@ export default function OllisPromise({ variant = 'default' }: OllisPromiseProps)
             I can find. I promise you, it&apos;ll set your tastebuds alive!&rdquo;
           </p>
           <div className="flex items-center gap-2 mt-3">
-            <span className="text-sm font-semibold text-gray-900">— Olli</span>
+            <span className="text-sm font-semibold text-gray-900">— Ollie</span>
             <span className="text-sm text-gray-500">Chef & Founder</span>
           </div>
         </div>

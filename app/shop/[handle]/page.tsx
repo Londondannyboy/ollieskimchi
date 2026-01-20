@@ -70,8 +70,8 @@ const demoProducts: Record<string, {
     descriptionHtml: '<p><strong>Save £6!</strong> Six jars of our signature Classic Napa Cabbage Kimchi - best value!</p><p>Our signature kimchi made with crisp napa cabbage, Korean red pepper flakes (gochugaru), garlic, ginger, and fish sauce.</p><h3>What\'s Included</h3><p>6 x 350g jars of Classic Napa Cabbage Kimchi</p>',
     price: '35.94',
     variantId: 'gid://shopify/ProductVariant/53034599317837',
-    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
-    images: ['/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png'],
+    image: '/Ollies Kimchi 6 units product shot.png',
+    images: ['/Ollies Kimchi 6 units product shot.png'],
   },
   'ok-cap': {
     id: '8',

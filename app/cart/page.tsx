@@ -10,7 +10,7 @@ const productImageOverrides: Record<string, string> = {
   'classic-napa-cabbage-kimchi': '/Assets/Kimchi_B004_23-04-25.jpg',
   'classic-kimchi-2-pack': '/Product Images/Ollies Kimchi - Kimchi Product 2 Set.png',
   'classic-kimchi-3-pack': '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png',
-  'classic-kimchi-6-pack': '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+  'classic-kimchi-6-pack': '/Ollies Kimchi 6 units product shot.png',
   'spicy-kimchi': "/Product Images/Ollie's Kimchi Spicy Kimchi Product.png",
   'mild-kimchi': "/Product Images/Ollie's Kimchi Mild Kimchi Product.png",
   'vegan-kimchi': "/Product Images/Ollie's Kimchi Vegan Kimchi Product.png",

@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata = {
-  title: "Olli's Story | Ollie's Kimchi",
-  description: "Meet Olli - a London chef who turned his passion for fermentation into handcrafted kimchi. Learn how Ollie's Kimchi came to be.",
+  title: "Ollie's Story | Ollie's Kimchi",
+  description: "Meet Ollie - a London chef who turned his passion for fermentation into handcrafted kimchi. Learn how Ollie's Kimchi came to be.",
 }
 
 export default function AboutPage() {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl lg:text-6xl font-semibold mb-6">
-            Olli&apos;s <span className="text-red-900">Story</span>
+            Ollie&apos;s <span className="text-red-900">Story</span>
           </h1>
           <p className="text-xl lg:text-2xl text-gray-300">
             From professional kitchens to jars of living, breathing kimchi.
@@ -29,15 +29,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Olli's Story Section */}
+      {/* Ollie's Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Photo of Olli */}
+            {/* Photo of Ollie */}
             <div className="relative order-2 lg:order-1">
               <Image
                 src="/Assets/Ollie Photo.png"
-                alt="Olli - Founder of Ollie's Kimchi"
+                alt="Ollie - Founder of Ollie's Kimchi"
                 width={500}
                 height={600}
                 className="rounded-2xl shadow-xl mx-auto"
@@ -50,7 +50,7 @@ export default function AboutPage() {
             {/* Story */}
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900 mb-6">
-                Meet <span className="text-red-900">Olli</span>
+                Meet <span className="text-red-900">Ollie</span>
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>

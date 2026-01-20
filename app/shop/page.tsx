@@ -63,7 +63,7 @@ const demoProducts = [
     handle: 'classic-kimchi-6-pack',
     description: 'Save £6! Six jars of our signature Classic Napa Cabbage Kimchi - best value!',
     price: '35.94',
-    image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png',
+    image: '/Ollies Kimchi 6 units product shot.png',
     comingSoon: false,
   },
   {

@@ -23,7 +23,7 @@ const defaultPosts: InstagramPost[] = [
   { id: '2', image: '/Assets/Kimchi_B006_30-11-20.jpg', caption: 'That crunch though' },
   { id: '3', image: '/Product Images/Ollies Kimchi - Kimchi Product 3 Pack.png', caption: '3 pack perfection' },
   { id: '4', image: '/Assets/Kimchi_B012_24-04-21.jpg', caption: 'Making magic' },
-  { id: '5', image: '/Product Images/Ollies Kimchi - Kimchi Product 6 Pack.png', caption: 'Stocked up!' },
+  { id: '5', image: '/Ollies Kimchi 6 units product shot.png', caption: 'Stocked up!' },
   { id: '6', image: '/Assets/Kimchi_B014_02-04-21.jpg', caption: 'Fermentation vibes' },
 ]
 
