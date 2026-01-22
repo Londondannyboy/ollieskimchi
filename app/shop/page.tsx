@@ -1,15 +1,7 @@
 import { getAllProducts, formatPrice, isShopifyConfigured } from '@/lib/shopify'
 import Image from 'next/image'
 import Link from 'next/link'
-import GuardianBadge from '@/components/GuardianBadge'
-
-// Guardian review quotes from Tom Hunt's article - rotate by product
-const guardianQuotes: Record<string, string> = {
-  'classic-napa-cabbage-kimchi': 'Bold and punchy',
-  'classic-kimchi-2-pack': 'Big flavour',
-  'classic-kimchi-3-pack': 'Well seasoned',
-  'classic-kimchi-6-pack': 'Full and well-rounded',
-}
+import ShopProductCard from '@/components/ShopProductCard'
 
 // Only show these product handles (filter out old/discontinued products)
 const allowedProductHandles = [
@@ -174,7 +166,7 @@ export default async function ShopPage() {
 
       {/* Products Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {products.map((product) => (
             product.comingSoon ? (
               <div
@@ -207,48 +199,15 @@ export default async function ShopPage() {
                 </div>
               </div>
             ) : (
-              <Link
+              <ShopProductCard
                 key={product.id}
-                href={`/shop/${product.handle}`}
-                className="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl"
-              >
-                <div className="aspect-square relative overflow-hidden bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  {/* Guardian Badge - Top Right (only for kimchi products) */}
-                  {guardianQuotes[product.handle] && (
-                    <div className="absolute top-2 right-2 z-10">
-                      <GuardianBadge size="sm" />
-                    </div>
-                  )}
-                  {/* Guardian Quote - Bottom Left */}
-                  {guardianQuotes[product.handle] && (
-                    <div className="absolute bottom-2 left-2 z-10">
-                      <div className="bg-white/95 backdrop-blur-sm rounded-lg px-2 py-1 shadow-md">
-                        <p className="text-[10px] text-gray-700 font-medium italic">
-                          &ldquo;{guardianQuotes[product.handle]}&rdquo;
-                        </p>
-                        <p className="text-[8px] text-gray-500">— The Guardian</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-red-900 transition-colors">
-                    {product.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-600 line-clamp-2">
-                    {product.description}
-                  </p>
-                  <p className="mt-4 text-lg font-bold text-red-900">
-                    {formatPrice(product.price)}
-                  </p>
-                </div>
-              </Link>
+                id={product.id}
+                title={product.title}
+                handle={product.handle}
+                description={product.description}
+                price={product.price}
+                image={product.image}
+              />
             )
           ))}
         </div>
