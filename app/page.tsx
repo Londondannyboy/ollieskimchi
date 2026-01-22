@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import GuardianBadge from '@/components/GuardianBadge'
+import MobileShopNow from '@/components/MobileShopNow'
 
 export default function HomePage() {
   return (
@@ -632,6 +633,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Mobile Sticky Shop Now */}
+      <MobileShopNow />
     </div>
   )
 }
