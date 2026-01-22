@@ -5,7 +5,7 @@ import GuardianBadge from '@/components/GuardianBadge'
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - IT'S ALIVE! */}
+      {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Kimchi background image */}
         <div className="absolute inset-0">
@@ -42,16 +42,6 @@ export default function HomePage() {
               </h1>
               <p className="text-2xl sm:text-3xl text-white/90 font-sans pl-8">
                 — made in London
-              </p>
-            </div>
-
-            {/* IT'S ALIVE! */}
-            <div className="py-4">
-              <p className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-                It&apos;s Alive!
-              </p>
-              <p className="text-white/80 mt-2 text-lg font-sans">
-                Full of life and bursting with flavour!
               </p>
             </div>
 
@@ -244,7 +234,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-gray-500 font-semibold text-sm tracking-wider uppercase mb-2">As Featured In</p>
             <h2 className="font-display text-3xl lg:text-4xl font-semibold text-gray-900">
               What The Critics Say
             </h2>
