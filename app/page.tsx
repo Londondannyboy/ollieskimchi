@@ -17,6 +17,8 @@ export default function HomePage() {
             className="object-cover"
             priority
             fetchPriority="high"
+            quality={60}
+            sizes="100vw"
           />
           {/* Dark overlay for text readability - lighter to show more food */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/50 via-gray-900/35 to-gray-900/45" />
@@ -176,6 +178,7 @@ export default function HomePage() {
                   alt="Ollie making kimchi"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               {/* Floating quote card */}
@@ -187,6 +190,7 @@ export default function HomePage() {
                     width={80}
                     height={26}
                     className="h-4 w-auto opacity-70"
+                    sizes="80px"
                   />
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
@@ -264,9 +268,10 @@ export default function HomePage() {
                 <Image
                   src="/Assets/The_Guardian_logo.png"
                   alt="The Guardian"
-                  width={200}
-                  height={40}
+                  width={170}
+                  height={34}
                   className="h-8 lg:h-10 w-auto mb-4 mx-auto lg:mx-0"
+                  sizes="170px"
                 />
                 {/* 5 Stars */}
                 <div className="flex items-center justify-center lg:justify-start gap-1 mb-4">
@@ -382,6 +387,7 @@ export default function HomePage() {
                   alt="Ollie's Classic Kimchi - Buy kimchi online"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 512px"
                 />
                 <div className="absolute top-4 right-4 z-10">
                   <GuardianBadge size="md" />
@@ -441,15 +447,15 @@ export default function HomePage() {
 
               {/* 6 Pack */}
               <Link href="/shop/classic-kimchi-6-pack" className="block group">
-                <div className="flex items-center justify-between p-5 bg-red-50 rounded-2xl hover:bg-red-100 transition-colors border-2 border-red-900 relative">
-                  <span className="absolute -top-2 left-4 bg-red-900 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                <div className="flex items-center justify-between p-6 bg-red-900 rounded-2xl hover:bg-red-800 transition-colors relative">
+                  <span className="absolute -top-2 left-4 bg-white text-red-900 text-xs font-bold px-2 py-0.5 rounded-full">
                     BEST VALUE
                   </span>
                   <div>
-                    <p className="font-bold text-gray-900 group-hover:text-red-900 transition-colors">6 Pack</p>
-                    <p className="text-sm text-gray-500">6 × 320g • Free shipping</p>
+                    <p className="font-bold text-white">6 Pack</p>
+                    <p className="text-sm text-red-100">6 × 320g • Free shipping</p>
                   </div>
-                  <p className="text-2xl font-bold text-red-900">£35.94</p>
+                  <p className="text-2xl font-bold text-white">£35.94</p>
                 </div>
               </Link>
 
