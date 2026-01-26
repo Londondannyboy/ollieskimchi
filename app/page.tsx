@@ -17,7 +17,7 @@ export default function HomePage() {
             className="object-cover"
             priority
             fetchPriority="high"
-            quality={50}
+            quality={40}
             sizes="100vw"
           />
           {/* Dark overlay for text readability - lighter to show more food */}
