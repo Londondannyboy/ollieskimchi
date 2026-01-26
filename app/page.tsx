@@ -35,26 +35,34 @@ export default function HomePage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 min-h-[85vh] flex items-center">
           {/* Content - takes up left/center */}
-          <div className="text-center lg:text-left space-y-6 max-w-2xl">
-            {/* Tagline with personality */}
-            <div className="space-y-2">
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight">
-                Fantastic Kimchi,
+          <div className="text-center lg:text-left space-y-5 max-w-2xl">
+            {/* Main headline - It's Alive! */}
+            <div className="space-y-1">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight">
+                <span className="underline decoration-2 underline-offset-8">It&apos;s Alive!</span>
               </h1>
-              <p className="text-2xl sm:text-3xl text-white/90 font-sans pl-8">
-                — made in London
+              <p className="text-lg sm:text-xl text-white/80 font-sans">
+                - Full of life and bursting with flavour!
               </p>
             </div>
 
-            {/* Brand copy - alternating serif/sans */}
-            <div className="space-y-3 max-w-xl">
-              <p className="text-xl text-white">
-                <span className="font-display">Fresh, handcrafted kimchi,</span>{' '}
-                <span className="font-sans text-white/80">naturally fermented in London by Ollie and his team.</span>
+            {/* Fantastic Kimchi section */}
+            <div className="space-y-1">
+              <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-light text-white">
+                Fantastic Kimchi.
               </p>
-              <p className="text-xl text-white">
-                <span className="font-display">No shortcuts. No pasteurisation.</span>{' '}
-                <span className="font-sans text-white/80">Just time, love and a whole lot of cabbage.</span>
+              <p className="text-lg sm:text-xl text-white/80 font-sans">
+                Naturally fermented in London by Ollie and his team.
+              </p>
+            </div>
+
+            {/* No shortcuts section */}
+            <div className="space-y-1">
+              <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-light text-red-500">
+                No shortcuts. No pasteurisation.
+              </p>
+              <p className="text-lg sm:text-xl text-white/80 font-sans">
+                Just time, love and a whole lot of cabbage.
               </p>
             </div>
 
@@ -80,43 +88,47 @@ export default function HomePage() {
         </div>
 
         {/* Product Image - Bottom Right */}
-        <div className="absolute bottom-8 right-0 lg:right-[5%] z-20 hidden md:block">
-          <div className="relative float">
+        <div className="absolute bottom-24 right-0 lg:right-[5%] z-20 hidden md:block">
+          <Link href="/shop" className="block relative float group">
             <Image
               src="/Assets/Kimchi_B004_23-04-25.jpg"
-              alt="Ollie's Kimchi Jar"
+              alt="Ollie's Kimchi Jar - Click to shop"
               width={320}
               height={320}
-              className="drop-shadow-2xl rounded-2xl"
+              className="drop-shadow-2xl rounded-2xl group-hover:scale-105 transition-transform"
               priority
             />
             {/* Glowing circle behind */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] bg-red-900/30 rounded-full blur-xl pulse-glow -z-10" />
             {/* Floating badges */}
-            <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow">
+            <div className="absolute -top-4 -left-4 bg-white text-gray-900 px-3 py-1.5 rounded-full font-display font-normal text-sm shadow-xl wiggle-slow">
               Made in London
             </div>
-            <div className="absolute bottom-16 -left-8 bg-green-800 text-white px-3 py-1.5 rounded-full font-display font-semibold text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
+            <div className="absolute bottom-16 -left-8 bg-green-800 text-white px-3 py-1.5 rounded-full font-display font-normal text-sm shadow-xl wiggle-slow" style={{ animationDelay: '0.5s' }}>
               100% Natural
             </div>
-            {/* Guardian Badge */}
-            <Link
-              href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute -bottom-2 right-0 bg-gray-900 text-white pl-3 pr-4 py-2 rounded-full font-semibold text-xs shadow-xl flex items-center gap-2 hover:bg-gray-800 transition-colors wiggle-slow"
-              style={{ animationDelay: '1s' }}
-            >
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              THE GUARDIAN
-            </Link>
-          </div>
+            {/* Shop Now badge */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-red-900 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-xl opacity-0 group-hover:opacity-100 transition-opacity">
+              Shop Now
+            </div>
+          </Link>
+          {/* Guardian Badge - outside the shop link */}
+          <Link
+            href="https://www.theguardian.com/food/2025/may/03/best-kimchi-tasted-rated-food-filter-tom-hunt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute -bottom-2 right-0 bg-gray-900 text-white pl-3 pr-4 py-2 rounded-full font-normal text-xs shadow-xl flex items-center gap-2 hover:bg-gray-800 transition-colors wiggle-slow"
+            style={{ animationDelay: '1s' }}
+          >
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            THE GUARDIAN
+          </Link>
         </div>
 
         {/* Scroll indicator */}
@@ -128,25 +140,25 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar - Animated */}
-      <section className="bg-red-900 py-5 relative overflow-hidden">
+      <section className="bg-red-900 py-3 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-kimchi-red via-red-500 to-kimchi-red bg-[length:200%_100%] animate-[gradient-shift_3s_ease_infinite]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
             <div className="group cursor-default">
-              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">100%</p>
-              <p className="text-xs lg:text-sm opacity-90">Natural Ingredients</p>
+              <p className="text-xl lg:text-2xl font-semibold group-hover:scale-110 transition-transform">100%</p>
+              <p className="text-xs opacity-90">Natural Ingredients</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">Fresh</p>
-              <p className="text-xs lg:text-sm opacity-90">Made in London</p>
+              <p className="text-xl lg:text-2xl font-semibold group-hover:scale-110 transition-transform">Fresh</p>
+              <p className="text-xs opacity-90">Made in London</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform heartbeat">Live</p>
-              <p className="text-xs lg:text-sm opacity-90">Probiotics</p>
+              <p className="text-xl lg:text-2xl font-semibold group-hover:scale-110 transition-transform heartbeat">Live</p>
+              <p className="text-xs opacity-90">Probiotics</p>
             </div>
             <div className="group cursor-default">
-              <p className="text-2xl lg:text-3xl font-black group-hover:scale-110 transition-transform">Delicious!</p>
-              <p className="text-xs lg:text-sm opacity-90">&nbsp;</p>
+              <p className="text-xl lg:text-2xl font-semibold group-hover:scale-110 transition-transform">Delicious!</p>
+              <p className="text-xs opacity-90">&nbsp;</p>
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ export default function NavBar() {
               className="h-12 md:h-14 w-auto rounded-lg group-hover:scale-105 transition-transform"
               priority
             />
-            <span className="hidden sm:block font-sans text-xl md:text-2xl font-bold text-gray-900 group-hover:text-red-900 transition-colors">
+            <span className="hidden sm:block font-sans text-xl md:text-2xl font-normal text-gray-900 group-hover:text-red-900 transition-colors">
               Ollie&apos;s Kimchi
             </span>
           </Link>
@@ -34,13 +34,13 @@ export default function NavBar() {
               href="/shop"
               className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
             >
-              My Shop
+              Shop
             </Link>
             <Link
               href="/about"
               className="text-gray-700 hover:text-red-900 font-medium transition-colors underline-animate"
             >
-              About Me
+              About
             </Link>
           </div>
 
@@ -104,14 +104,14 @@ export default function NavBar() {
               className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              My Shop
+              Shop
             </Link>
             <Link
               href="/about"
               className="text-gray-700 hover:text-red-900 font-medium transition-colors text-center py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About Me
+              About
             </Link>
 
             {/* Mobile Shop CTA */}
