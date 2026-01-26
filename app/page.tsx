@@ -17,7 +17,7 @@ export default function HomePage() {
             className="object-cover"
             priority
             fetchPriority="high"
-            quality={60}
+            quality={50}
             sizes="100vw"
           />
           {/* Dark overlay for text readability - lighter to show more food */}
@@ -96,7 +96,7 @@ export default function HomePage() {
               src="/Assets/Kimchi_B004_23-04-25.jpg"
               alt="Ollie's Kimchi Jar - Click to shop"
               width={320}
-              height={320}
+              height={314}
               className="drop-shadow-2xl rounded-2xl group-hover:scale-105 transition-transform"
               priority
             />
@@ -179,6 +179,7 @@ export default function HomePage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={60}
                 />
               </div>
               {/* Floating quote card */}
@@ -488,6 +489,7 @@ export default function HomePage() {
             alt=""
             fill
             className="object-cover rounded-full"
+            sizes="450px"
           />
         </div>
         {/* Decorative circles */}
@@ -503,6 +505,8 @@ export default function HomePage() {
                 width={600}
                 height={600}
                 className="rounded-3xl shadow-2xl"
+                quality={60}
+                sizes="(max-width: 1024px) 100vw, 600px"
               />
               {/* Fun floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-red-900 text-white px-6 py-4 rounded-2xl font-display font-semibold text-lg shadow-xl wiggle-slow">

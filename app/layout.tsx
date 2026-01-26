@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${sourceSerif.variable}`}>
       <head>
-        <link rel="preconnect" href="https://izmiad-nu.myshopify.com" />
+        <link rel="preconnect" href="https://izmiad-nu.myshopify.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://izmiad-nu.myshopify.com" />
       </head>
       <body className="min-h-screen flex flex-col">
