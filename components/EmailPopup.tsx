@@ -94,6 +94,7 @@ export default function EmailPopup() {
                   alt="Kimchi"
                   fill
                   className="object-contain drop-shadow-xl"
+                  sizes="96px"
                 />
               </div>
             </div>
