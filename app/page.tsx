@@ -39,10 +39,10 @@ export default function HomePage() {
             {/* Main headline - It's Alive! */}
             <div className="space-y-1">
               <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-tight">
-                <span className="underline decoration-2 underline-offset-8">It&apos;s Alive!</span>
+                <span>It&apos;s Alive!</span>
               </h1>
               <p className="text-lg sm:text-xl text-white/80 font-sans">
-                - Full of life and bursting with flavour!
+                Full of life and bursting with flavour!
               </p>
             </div>
 
