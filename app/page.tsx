@@ -58,7 +58,7 @@ export default function HomePage() {
 
             {/* No shortcuts section */}
             <div className="space-y-1">
-              <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-light text-red-500">
+              <p className="font-display text-2xl sm:text-3xl lg:text-4xl font-light text-white">
                 No shortcuts. No pasteurisation.
               </p>
               <p className="text-lg sm:text-xl text-white/80 font-sans">
