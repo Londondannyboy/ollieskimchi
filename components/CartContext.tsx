@@ -28,6 +28,19 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
 const CART_ID_KEY = 'ollieskimchi-cart-id'
+const SHOPIFY_CHECKOUT_DOMAIN = 'izmiad-nu.myshopify.com'
+
+// Helper to rewrite checkout URL to use Shopify domain (fixes 404 on headless sites)
+function rewriteCheckoutUrl(url: string | undefined): string | null {
+  if (!url) return null
+  try {
+    const urlObj = new URL(url)
+    urlObj.hostname = SHOPIFY_CHECKOUT_DOMAIN
+    return urlObj.toString()
+  } catch {
+    return url
+  }
+}
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [cart, setCart] = useState<Cart | null>(null)
@@ -140,7 +153,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const cartTotal = cart
     ? formatPrice(cart.cost.totalAmount.amount, cart.cost.totalAmount.currencyCode)
     : '£0.00'
-  const checkoutUrl = cart?.checkoutUrl ?? null
+  const checkoutUrl = rewriteCheckoutUrl(cart?.checkoutUrl)
 
   return (
     <CartContext.Provider
