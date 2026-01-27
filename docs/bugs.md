@@ -2,25 +2,36 @@
 
 ## Resolved
 
-### Checkout 404 Error (Jan 2026)
+### Checkout 404 Error (27 Jan 2026)
 
 **Symptom:** Users clicking "Checkout" from cart received a 404 error.
 
-**URL pattern:** `https://ollieskimchi.co.uk/cart/c/{cartToken}?key=...`
+**URL patterns affected:**
+- `https://ollieskimchi.co.uk/cart/c/{token}?key=...`
+- `https://ollieskimchi.co.uk/checkouts/cn/{token}/...`
 
-**Root cause:** Shopify Storefront API generates `checkoutUrl` using the store's primary domain (`ollieskimchi.co.uk`). Since this is a headless Next.js site, the `/cart/c/` route doesn't exist - that path is Shopify's checkout, not a Next.js route.
+**Root cause:** Shopify Storefront API generates `checkoutUrl` using the store's primary domain (`ollieskimchi.co.uk`). Since this is a headless Next.js site, checkout paths don't exist - they're Shopify routes, not Next.js routes.
 
-**Fix:** Added `rewriteCheckoutUrl()` helper in `components/CartContext.tsx` that rewrites the checkout URL hostname to `izmiad-nu.myshopify.com` where Shopify hosts the checkout.
+**Fix (multi-layered):**
+1. Added `rewriteCheckoutUrl()` in `CartContext.tsx` - rewrites checkout URL hostname client-side
+2. Added server-side redirects in `next.config.ts` - catches any checkout URLs that hit the custom domain
+3. Disabled Shopify store password protection (was blocking checkout)
 
 **Files changed:**
 - `components/CartContext.tsx` - client-side URL rewrite
-- `next.config.ts` - server-side redirects (fallback)
+- `next.config.ts` - server-side redirects for `/cart/c/*` and `/checkouts/*`
 
 **Commits:**
 - `bfe2075` - "Fix checkout 404 by rewriting checkout URL to Shopify domain"
 - `ad90790` - "Add server-side redirects for Shopify checkout URLs"
 
-**Note:** Also required disabling Shopify store password protection in Shopify Admin → Online Store → Preferences.
+**Shopify Admin changes:**
+- Disabled password protection: Online Store → Preferences → Password protection
+
+**Expected behavior after fix:**
+- Users browse/add to cart on `ollieskimchi.co.uk`
+- Checkout redirects to `izmiad-nu.myshopify.com/checkouts/...`
+- This is normal for headless Shopify (custom checkout domains require Shopify Plus)
 
 ---
 
