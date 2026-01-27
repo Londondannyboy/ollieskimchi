@@ -13,9 +13,14 @@
 **Fix:** Added `rewriteCheckoutUrl()` helper in `components/CartContext.tsx` that rewrites the checkout URL hostname to `izmiad-nu.myshopify.com` where Shopify hosts the checkout.
 
 **Files changed:**
-- `components/CartContext.tsx`
+- `components/CartContext.tsx` - client-side URL rewrite
+- `next.config.ts` - server-side redirects (fallback)
 
-**Commit:** `bfe2075` - "Fix checkout 404 by rewriting checkout URL to Shopify domain"
+**Commits:**
+- `bfe2075` - "Fix checkout 404 by rewriting checkout URL to Shopify domain"
+- `ad90790` - "Add server-side redirects for Shopify checkout URLs"
+
+**Note:** Also required disabling Shopify store password protection in Shopify Admin → Online Store → Preferences.
 
 ---
 
