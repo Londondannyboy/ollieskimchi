@@ -44,6 +44,12 @@ Cart state is managed via React Context (`components/CartContext.tsx`):
 4. Cart ID persisted to localStorage
 5. On checkout, redirect to `cart.checkoutUrl`
 
+### Checkout URL Rewriting
+
+The Storefront API returns `checkoutUrl` using the store's primary domain (`ollieskimchi.co.uk`). Since checkout is hosted by Shopify (not Next.js), we rewrite the URL to use `izmiad-nu.myshopify.com`.
+
+This is handled by `rewriteCheckoutUrl()` in `CartContext.tsx`. See [bugs.md](./bugs.md) for details.
+
 ## Product Variant IDs
 
 Hardcoded in `components/ShopProductCard.tsx`:
